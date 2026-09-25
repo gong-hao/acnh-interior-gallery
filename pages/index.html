@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集合啦！動物森友會 - 室內裝潢圖庫全輯 (壁紙 / 地板 / 地毯)</title>
+    <style>
+        :root {
+            --primary: #2b5c5f;
+            --primary-light: #3d797d;
+            --bg-color: #f6f8f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #556052;
+            --accent: #f5a623;
+            --accent-red: #ff4757;
+            --tag-green: #2a9d8f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Top Navigation Bar */
+        .site-nav {
+            background: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-sub);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary);
+            background: #eef3ef;
+        }
+        .nav-link.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(43, 92, 95, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.5px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-sub);
+            line-height: 1.7;
+        }
+
+        /* Feature Cards Grid */
+        .portal-grid {
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+        .portal-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            border: 2px solid transparent;
+            border-top: 6px solid var(--primary);
+        }
+        .portal-card.wallpapers { border-top-color: #2a9d8f; }
+        .portal-card.floors { border-top-color: #8f654b; }
+        .portal-card.rugs { border-top-color: #e76f51; }
+
+        .portal-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        }
+        .portal-card.wallpapers:hover { border-color: rgba(42, 157, 143, 0.25); border-top-color: #2a9d8f; }
+        .portal-card.floors:hover { border-color: rgba(143, 101, 75, 0.25); border-top-color: #8f654b; }
+        .portal-card.rugs:hover { border-color: rgba(231, 111, 81, 0.25); border-top-color: #e76f51; }
+
+        .portal-card.wallpapers .enter-btn { background: #2a9d8f; }
+        .portal-card.wallpapers:hover .enter-btn { background: #238276; }
+        .portal-card.floors .enter-btn { background: #8f654b; }
+        .portal-card.floors:hover .enter-btn { background: #735039; }
+        .portal-card.rugs .enter-btn { background: #e76f51; }
+        .portal-card.rugs:hover .enter-btn { background: #cf5538; }
+        .card-body {
+            padding: 28px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-count {
+            font-size: 1.05rem;
+            background: #eef3ef;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        .card-specs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .spec-tag {
+            font-size: 0.82rem;
+            background: #f1f4f0;
+            color: #556052;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .enter-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 20px;
+            transition: all 0.2s;
+        }
+        .portal-card:hover .enter-btn {
+            background: var(--primary-light);
+            box-shadow: 0 4px 14px rgba(43, 92, 95, 0.3);
+        }
+
+        /* Highlights Section */
+        .features {
+            background: #ffffff;
+            border-radius: 24px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .features-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 16px;
+        }
+        .feature-icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        .feature-name {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        /* Site Footer */
+        .site-footer {
+            background: #ffffff;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 28px 20px;
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            margin-top: auto;
+            line-height: 1.6;
+        }
+        .site-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">動森室內圖庫</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">首頁導覽</a>
+                <a href="wallpapers.html" class="nav-link">壁紙 (312)</a>
+                <a href="floors.html" class="nav-link">地板 (215)</a>
+                <a href="rugs.html" class="nav-link">地毯 (210)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-badge">Animal Crossing: New Horizons</div>
+        <h1>集合啦！動物森友會<br>室內裝潢圖庫全輯</h1>
+        <p>收錄全系列壁紙、地板與地毯的 1280x720 高清遊戲實景截圖與官方圖示。<br>支援實景大圖優先排序、即時搜尋、鍵盤方向鍵導航與離線個人最愛收藏。</p>
+    </div>
+
+    <!-- Portal Cards -->
+    <div class="portal-grid">
+        <!-- Wallpapers Card -->
+        <a href="wallpapers.html" class="portal-card wallpapers">
+            <div class="card-body">
+                <div class="card-title">
+                    <span>壁紙圖庫</span>
+                    <span class="card-count">312 款</span>
+                </div>
+                <div class="card-desc">
+                    涵蓋常規商店、駱嵐不可思議壁紙、非賣品活動獎勵與三麗鷗聯名款。260 款室內 1280x720 實拍大圖與 52 款官方高畫質備選圖示。
+                </div>
+                <div class="card-specs">
+                    <span class="spec-tag">📸 260 款實景大圖</span>
+                    <span class="spec-tag">✨ 實景優先 + 名稱排序</span>
+                    <span class="spec-tag">♥ 我的最愛</span>
+                </div>
+                <div class="enter-btn">
+                    進入壁紙圖庫 ➔
+                </div>
+            </div>
+        </a>
+
+        <!-- Floors Card -->
+        <a href="floors.html" class="portal-card floors">
+            <div class="card-body">
+                <div class="card-title">
+                    <span>地板圖庫</span>
+                    <span class="card-count">215 款</span>
+                </div>
+                <div class="card-desc">
+                    收錄實木拼花、復古磁磚、戶外自然場景、動態地磚與特殊材質地板。187 款室內鋪設 1280x720 實拍照與 28 款官方圖示。
+                </div>
+                <div class="card-specs">
+                    <span class="spec-tag">📸 187 款實景大圖</span>
+                    <span class="spec-tag">✨ 實景優先 + 名稱排序</span>
+                    <span class="spec-tag">♥ 我的最愛</span>
+                </div>
+                <div class="enter-btn">
+                    進入地板圖庫 ➔
+                </div>
+            </div>
+        </a>
+
+        <!-- Rugs Card -->
+        <a href="rugs.html" class="portal-card rugs">
+            <div class="card-body">
+                <div class="card-title">
+                    <span>地毯圖庫</span>
+                    <span class="card-count">210 款</span>
+                </div>
+                <div class="card-desc">
+                    全系列大、中、小型與趣味特殊造型地毯，包括駱嵐限定地毯、蔬果造型地毯與季節限定圖騰。完整標註遊戲內 1×1 ~ 5×5 佔地尺寸與 S/M/L 篩選分類。
+                </div>
+                <div class="card-specs">
+                    <span class="spec-tag">📐 S / M / L 尺寸篩選</span>
+                    <span class="spec-tag">✨ 尺寸大到小 + 字母排序</span>
+                    <span class="spec-tag">♥ 我的最愛</span>
+                </div>
+                <div class="enter-btn">
+                    進入地毯圖庫 ➔
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="features">
+        <h2 class="features-title">✨ 核心功能特色</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-name">三語即時搜尋</div>
+                <div class="feature-desc">支援繁體中文（台灣繁中）、英文以及日文原文即時過濾查找。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔤</div>
+                <div class="feature-name">英文字母 A-Z 排序</div>
+                <div class="feature-desc">依照英文名稱字母順序整齊編排，方便精確定位與參照社群資料。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">♥</div>
+                <div class="feature-name">獨立最愛收藏</div>
+                <div class="feature-desc">各類別具備獨立 LocalStorage 最愛清單，搭配自訂風格確認彈窗與快速切換。</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🖼️</div>
+                <div class="feature-name">大圖檢視與底部分頁</div>
+                <div class="feature-desc">支援超廣角點擊感應立柱、全螢幕輪播切換與底部前伸後延縮圖分頁條。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer with Image Sources -->
+    <footer class="site-footer">
+        <p>資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
+        <p style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
+    </footer>
+</body>
+</html>
