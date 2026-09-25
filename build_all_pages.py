@@ -94,15 +94,15 @@ def generate_gallery_page(
         <div class="card" data-index="{idx}" data-type="{filter_type}" data-name="{name_zh.lower()} {name_en.lower()} {name_ja.lower()}" onclick="openLightboxByIndex({idx})">
             <button class="card-fav-btn" id="fav-btn-{idx}" onclick="toggleFavorite('{safe_en}', event)" title="加入我的最愛"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
             <div class="img-container">
-                <img src="{rel_path}" alt="{name_zh}">
+                <img src="{rel_path}" alt="{name_zh}" loading="lazy">
             </div>
             <div class="info">
                 <div class="info-content">
                     <div class="info-texts">
-                        <h3 class="name-zh">{name_zh}</h3>
-                        <p class="name-en">{name_en}</p>
-                        <p class="name-ja">{name_ja}</p>
-                        <p class="dim">{dim_text}</p>
+                        <h3 class="name-zh name-primary" id="title-{idx}">{name_zh}</h3>
+                        <p class="name-ja name-sub1" id="sub1-{idx}">{name_ja}</p>
+                        <p class="name-en name-sub2" id="sub2-{idx}">{name_en}</p>
+                        <p class="dim" id="dim-{idx}">{dim_text}</p>
                     </div>
                     {rug_grid_box}
                 </div>
@@ -125,24 +125,25 @@ def generate_gallery_page(
         count_M = sum(1 for x in sorted_items if x.get("size_category") == "M")
         count_S = sum(1 for x in sorted_items if x.get("size_category") == "S")
         filter_buttons_html = f"""
-            <button class="filter-btn active" onclick="setFilter('all', this)">全部 ({len(sorted_items)})</button>
-            <button class="filter-btn" onclick="setFilter('L', this)">大型 L ({count_L})</button>
-            <button class="filter-btn" onclick="setFilter('M', this)">中型 M ({count_M})</button>
-            <button class="filter-btn" onclick="setFilter('S', this)">小型 S ({count_S})</button>
+            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)">全部 ({len(sorted_items)})</button>
+            <button class="filter-btn" id="filterBtnL" onclick="setFilter('L', this)">大型 L ({count_L})</button>
+            <button class="filter-btn" id="filterBtnM" onclick="setFilter('M', this)">中型 M ({count_M})</button>
+            <button class="filter-btn" id="filterBtnS" onclick="setFilter('S', this)">小型 S ({count_S})</button>
             <button class="filter-btn fav-filter-btn" id="favFilterBtn" onclick="setFilter('favorite', this)">♥ 我的最愛 (<span id="favCount">0</span>)</button>
             <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;">🗑 清空最愛</button>
         """
     else:
+        count_L = count_M = count_S = 0
         filter_buttons_html = f"""
-            <button class="filter-btn active" onclick="setFilter('all', this)">全部 ({len(sorted_items)})</button>
-            <button class="filter-btn" onclick="setFilter('screenshot', this)">實景大圖 ({has_screenshot_count})</button>
-            <button class="filter-btn" onclick="setFilter('icon', this)">尚無大圖 ({no_screenshot_count})</button>
+            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)">全部 ({len(sorted_items)})</button>
+            <button class="filter-btn" id="filterBtnShot" onclick="setFilter('screenshot', this)">實景大圖 ({has_screenshot_count})</button>
+            <button class="filter-btn" id="filterBtnIcon" onclick="setFilter('icon', this)">尚無大圖 ({no_screenshot_count})</button>
             <button class="filter-btn fav-filter-btn" id="favFilterBtn" onclick="setFilter('favorite', this)">♥ 我的最愛 (<span id="favCount">0</span>)</button>
             <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;">🗑 清空最愛</button>
         """
 
     html = f"""<!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -163,7 +164,7 @@ def generate_gallery_page(
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             min-height: 100vh;
@@ -224,6 +225,43 @@ def generate_gallery_page(
             color: #ffffff;
         }}
 
+        /* Language Switcher */
+        .lang-selector-wrap {{
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #eef3ef;
+            padding: 3px 8px 3px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(43, 92, 95, 0.22);
+            transition: all 0.2s ease;
+            margin-left: 6px;
+        }}
+        .lang-selector-wrap:hover {{
+            background: #e5ede7;
+            border-color: var(--primary);
+        }}
+        .lang-globe {{
+            font-size: 0.95rem;
+            line-height: 1;
+            user-select: none;
+        }}
+        .lang-select {{
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--primary);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 4px 4px 0;
+            font-family: inherit;
+        }}
+        .lang-select option {{
+            background: #ffffff;
+            color: #333333;
+        }}
+
         /* Main Container */
         .main-wrapper {{
             flex: 1;
@@ -248,8 +286,19 @@ def generate_gallery_page(
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 24px;
+            margin-bottom: 14px;
             align-items: center;
+        }}
+        .showing-stats {{
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }}
+        .showing-stats strong {{
+            color: var(--primary);
+            font-weight: 700;
         }}
         .search-box {{
             padding: 10px 18px;
@@ -258,74 +307,85 @@ def generate_gallery_page(
             border-radius: 24px;
             width: 320px;
             outline: none;
-            transition: all 0.2s;
+            transition: all 0.3s;
             background: #fff;
         }}
         .search-box:focus {{
             border-color: var(--primary);
-            box-shadow: 0 0 8px rgba(43,92,95,0.2);
+            box-shadow: 0 0 8px rgba(43, 92, 95, 0.2);
         }}
         .filter-btn {{
-            padding: 9px 18px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            border: 2px solid #ddd;
+            border-radius: 24px;
+            background: #fff;
+            color: var(--text-sub);
             cursor: pointer;
-            font-size: 0.92rem;
-            font-weight: 500;
             transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            font-weight: 600;
         }}
         .filter-btn:hover {{
-            background-color: #eee;
+            background: #eef3ef;
+            border-color: #cbdad0;
         }}
         .filter-btn.active {{
-            background-color: var(--primary);
+            background: var(--primary);
             color: #fff;
             border-color: var(--primary);
         }}
-        .fav-filter-btn.active {{
-            background-color: var(--accent-red);
+        .filter-btn.fav-filter-btn {{
+            color: var(--accent-red);
+            border-color: #ffd2d6;
+            background: #fff9f9;
+        }}
+        .filter-btn.fav-filter-btn:hover {{
+            background: #ffebee;
             border-color: var(--accent-red);
+        }}
+        .filter-btn.fav-filter-btn.active {{
+            background: var(--accent-red);
             color: #fff;
+            border-color: var(--accent-red);
         }}
-        .clear-fav-btn {{
-            border-color: #ffd2d2;
-            color: #d63031;
-            background: #fff5f5;
+        .filter-btn.clear-fav-btn {{
+            border-color: #e2e8f0;
+            color: #718096;
+            background: #f8fafc;
+            padding: 10px 16px;
         }}
-        .clear-fav-btn:hover {{
-            background: #ffe3e3;
-            border-color: #ff7675;
+        .filter-btn.clear-fav-btn:hover {{
+            background: #fee2e2;
+            color: #ef4444;
+            border-color: #fca5a5;
         }}
-        
-        /* Grid Layout */
+
+        /* Responsive Grid */
         .grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 20px;
         }}
         .card {{
-            background-color: var(--card-bg);
-            border-radius: 16px;
+            background: var(--card-bg);
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.06);
             cursor: pointer;
             position: relative;
         }}
         .card:hover {{
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }}
         .card-fav-btn {{
             position: absolute;
             top: 10px;
-            left: 10px;
+            right: 10px;
             width: 36px;
             height: 36px;
             border-radius: 50%;
@@ -387,20 +447,6 @@ def generate_gallery_page(
         .card:hover .img-container img {{
             transform: scale(1.05);
         }}
-        .badge {{
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-            padding: 4px 8px;
-            font-size: 0.72rem;
-            border-radius: 12px;
-            color: #fff;
-            font-weight: 600;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-        }}
-        .badge-screenshot {{ background-color: var(--tag-green); }}
-        .badge-icon {{ background-color: var(--tag-orange); }}
-        .badge-rug-size {{ background-color: var(--primary); }}
         .info {{
             padding: 14px;
             flex-grow: 1;
@@ -421,30 +467,29 @@ def generate_gallery_page(
             display: flex;
             flex-direction: column;
         }}
-        .name-zh {{
+        .name-zh, .name-primary {{
             font-size: 1.15rem;
             font-weight: bold;
             color: var(--text-main);
             margin-bottom: 4px;
+            line-height: 1.25;
         }}
-        .name-en {{
-            font-size: 0.9rem;
+        .name-en, .name-sub1 {{
+            font-size: 0.92rem;
             color: var(--text-sub);
             margin-bottom: 2px;
+            line-height: 1.25;
         }}
-        .name-ja {{
+        .name-ja, .name-sub2 {{
             font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 8px;
+            color: #888888;
+            margin-bottom: 6px;
+            line-height: 1.25;
         }}
         .dim {{
-            font-size: 0.8rem;
-            color: #aaa;
+            font-size: 0.82rem;
+            color: #888;
             margin-top: auto;
-        }}
-        .dim strong {{
-            color: var(--primary);
-            font-size: 0.85rem;
         }}
         .rug-grid-box {{
             background: #faeedb;
@@ -498,21 +543,23 @@ def generate_gallery_page(
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 12, 16, 0.93);
+            background: rgba(10, 12, 16, 0.94);
             z-index: 999;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             user-select: none;
+            padding: 10px;
+            box-sizing: border-box;
         }}
         .modal.active {{ display: flex; }}
 
         .modal-close {{
             position: absolute;
-            top: 18px;
-            right: 28px;
+            top: 14px;
+            right: 22px;
             color: #fff;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             cursor: pointer;
             transition: all 0.2s;
             z-index: 1002;
@@ -547,13 +594,13 @@ def generate_gallery_page(
         }}
 
         .nav-btn {{
-            width: 58px;
-            height: 58px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.16);
             border: 2px solid rgba(255, 255, 255, 0.45);
             color: #ffffff;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -836,6 +883,7 @@ def generate_gallery_page(
         .site-footer a:hover {{
             text-decoration: underline;
         }}
+
         /* Full-Page Preloader Overlay */
         .preloader-overlay {{
             position: fixed;
@@ -918,6 +966,25 @@ def generate_gallery_page(
         }}
     </style>
     <script>
+        function getInitialLanguage() {{
+            try {{
+                var saved = localStorage.getItem('acnh_lang');
+                if (saved && (saved === 'zh-TW' || saved === 'en-US' || saved === 'ja-JP')) {{
+                    return saved;
+                }}
+            }} catch(e) {{}}
+            
+            var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
+            for (var i = 0; i < langs.length; i++) {{
+                var l = (langs[i] || '').toLowerCase();
+                if (l.indexOf('zh') === 0) return 'zh-TW';
+                if (l.indexOf('ja') === 0) return 'ja-JP';
+            }}
+            return 'en-US';
+        }}
+        var currentLang = getInitialLanguage();
+        document.documentElement.lang = currentLang;
+
         try {{
             if (localStorage.getItem('acnh_preloaded_{page_type}')) {{
                 document.documentElement.classList.add('preloaded');
@@ -941,31 +1008,41 @@ def generate_gallery_page(
             <button class="preloader-skip-btn" onclick="dismissPreloader()" title="跳過預載直接瀏覽">跳過等待直接瀏覽 ➔</button>
         </div>
     </div>
+
     <!-- Top Navigation Bar -->
     <nav class="site-nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">動森室內圖庫</a>
+            <a href="index.html" class="nav-brand" id="navBrand">動森室內圖庫</a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">首頁導覽</a>
-                <a href="wallpapers.html" class="nav-link {nav_wall_active}">壁紙 ({stats_counts.get('wallpapers', 312)})</a>
-                <a href="floors.html" class="nav-link {nav_floor_active}">地板 ({stats_counts.get('floors', 215)})</a>
-                <a href="rugs.html" class="nav-link {nav_rug_active}">地毯 ({stats_counts.get('rugs', 210)})</a>
+                <a href="index.html" class="nav-link" id="navHome">首頁導覽</a>
+                <a href="wallpapers.html" class="nav-link {nav_wall_active}" id="navWallpapers">壁紙 ({stats_counts.get('wallpapers', 312)})</a>
+                <a href="floors.html" class="nav-link {nav_floor_active}" id="navFloors">地板 ({stats_counts.get('floors', 215)})</a>
+                <a href="rugs.html" class="nav-link {nav_rug_active}" id="navRugs">地毯 ({stats_counts.get('rugs', 210)})</a>
+                <div class="lang-selector-wrap">
+                    <span class="lang-globe">🌐</span>
+                    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="ja-JP">日本語</option>
+                        <option value="en-US">English</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
 
     <div class="main-wrapper">
         <header>
-            <h1>集合啦！動物森友會 - {page_title}</h1>
+            <h1 id="headerTitle">集合啦！動物森友會 - {page_title}</h1>
             <div class="controls">
-                <input type="text" id="search" class="search-box" placeholder="搜尋中文、英文、日文名稱..." oninput="filterCards()">
+                <input type="text" id="search" class="search-box" placeholder="搜尋名稱 (中/英/日)..." oninput="filterCards()">
                 {filter_buttons_html}
             </div>
+            <div id="showingStats" class="showing-stats"></div>
         </header>
 
         <div class="empty-state" id="emptyState" style="display: none;">
-            <h3>沒有找到相符的項目</h3>
-            <p>請嘗試其他搜尋關鍵字或切換篩選分類標籤。</p>
+            <h3 id="emptyTitle">找不到符合條件的項目</h3>
+            <p id="emptyDesc">請嘗試調整搜尋關鍵字或切換分類篩選。</p>
         </div>
 
         <div class="grid" id="galleryGrid">
@@ -1011,7 +1088,7 @@ def generate_gallery_page(
         <div class="confirm-box" onclick="event.stopPropagation()">
             <div class="confirm-icon">🗑️</div>
             <div class="confirm-title">清空我的最愛</div>
-            <div class="confirm-desc">
+            <div class="confirm-desc" id="confirmDesc">
                 確定要清空已收藏的 <strong id="confirmFavCount">0</strong> 款項目嗎？<br>
                 清空後將無法復原。
             </div>
@@ -1024,17 +1101,344 @@ def generate_gallery_page(
 
     <!-- Site Footer with Image Sources -->
     <footer class="site-footer">
-        <p>資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
-        <p style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
+        <p id="footerSrc">資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
+        <p id="footerNote" style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
     </footer>
 
     <script>
         const galleryData = {gallery_data_json};
         const STORAGE_KEY = '{storage_key}';
+        const STATS = {{
+            total: {len(sorted_items)},
+            has_shot: {has_screenshot_count if page_type != 'rugs' else 0},
+            no_shot: {no_screenshot_count if page_type != 'rugs' else 0},
+            count_L: {count_L if page_type == 'rugs' else 0},
+            count_M: {count_M if page_type == 'rugs' else 0},
+            count_S: {count_S if page_type == 'rugs' else 0},
+            wall_total: {stats_counts.get('wallpapers', 312)},
+            floor_total: {stats_counts.get('floors', 215)},
+            rug_total: {stats_counts.get('rugs', 210)},
+            page_type: '{page_type}'
+        }};
+
+        const I18N_DATA = {{
+            'zh-TW': {{
+                brand: '動森室內圖庫',
+                nav_home: '首頁導覽',
+                nav_wallpapers: '壁紙',
+                nav_floors: '地板',
+                nav_rugs: '地毯',
+                preloader_title: '集合啦！動物森友會',
+                preloader_sub_wallpapers: '壁紙圖庫・正在讀取全輯高清圖片',
+                preloader_sub_floors: '地板圖庫・正在讀取全輯高清圖片',
+                preloader_sub_rugs: '地毯圖庫・正在讀取全輯高清圖片',
+                preloader_loading: '準備讀取中...',
+                preloader_counter: '已讀取 {{loaded}} / {{total}} 張',
+                preloader_done: '已讀取 {{total}} / {{total}} 張（完成！）',
+                preloader_skip: '跳過等待直接瀏覽 ➔',
+                page_title_wallpapers: '壁紙全輯圖庫',
+                page_title_floors: '地板全輯圖庫',
+                page_title_rugs: '地毯全輯圖庫',
+                filter_all: '全部 ({{count}})',
+                filter_screenshot: '實景大圖 ({{count}})',
+                filter_icon: '尚無大圖 ({{count}})',
+                filter_rug_L: '大型 L ({{count}})',
+                filter_rug_M: '中型 M ({{count}})',
+                filter_rug_S: '小型 S ({{count}})',
+                filter_fav: '♥ 我的最愛 (<span id="favCount">{{count}}</span>)',
+                clear_fav_btn: '🗑 清空最愛',
+                search_placeholder: '搜尋名稱 (中/日/英)...',
+                showing_stats: '顯示中: <strong>{{match}}</strong> / {{total}} 款',
+                empty_title: '找不到符合條件的項目',
+                empty_desc: '請嘗試調整搜尋關鍵字或切換分類篩選。',
+                fav_add: '加入我的最愛',
+                fav_remove: '取消收藏',
+                lightbox_fav_add: '收藏',
+                lightbox_fav_active: '已收藏',
+                lightbox_prev: '上一張 (← 方向鍵)',
+                lightbox_next: '下一張 (→ 方向鍵)',
+                lightbox_close: '關閉 (Esc)',
+                res_label: '解析度: {{w}} &times; {{h}} px',
+                rug_footprint: '佔地尺寸: <strong>{{grid}}</strong>（{{label}}）',
+                rug_grid_hint: '房間 5×5 基準網格',
+                confirm_title: '清空我的最愛',
+                confirm_desc: '確定要清空已收藏的 <strong id="confirmFavCount">{{count}}</strong> 款項目嗎？<br>清空後將無法復原。',
+                confirm_cancel: '取消',
+                confirm_ok: '確認清空',
+                footer_src: '資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)',
+                footer_note: '非官方社群圖庫工具，僅供個人鑑賞與交流用途。'
+            }},
+            'en-US': {{
+                brand: 'ACNH Interior Gallery',
+                nav_home: 'Home',
+                nav_wallpapers: 'Wallpapers',
+                nav_floors: 'Flooring',
+                nav_rugs: 'Rugs',
+                preloader_title: 'Animal Crossing: New Horizons',
+                preloader_sub_wallpapers: 'Wallpapers・Loading HD Images...',
+                preloader_sub_floors: 'Flooring・Loading HD Images...',
+                preloader_sub_rugs: 'Rugs・Loading HD Images...',
+                preloader_loading: 'Preparing...',
+                preloader_counter: 'Loaded {{loaded}} / {{total}} images',
+                preloader_done: 'Loaded {{total}} / {{total}} images (Completed!)',
+                preloader_skip: 'Skip & Browse Directly ➔',
+                page_title_wallpapers: 'Wallpapers Gallery',
+                page_title_floors: 'Flooring Gallery',
+                page_title_rugs: 'Rugs Gallery',
+                filter_all: 'All ({{count}})',
+                filter_screenshot: 'Screenshots ({{count}})',
+                filter_icon: 'Icons Only ({{count}})',
+                filter_rug_L: 'Large L ({{count}})',
+                filter_rug_M: 'Medium M ({{count}})',
+                filter_rug_S: 'Small S ({{count}})',
+                filter_fav: '♥ Favorites (<span id="favCount">{{count}}</span>)',
+                clear_fav_btn: '🗑 Clear Favorites',
+                search_placeholder: 'Search name (EN / ZH / JA)...',
+                showing_stats: 'Showing: <strong>{{match}}</strong> / {{total}} items',
+                empty_title: 'No matching items found',
+                empty_desc: 'Try adjusting your search query or switching filters.',
+                fav_add: 'Add to favorites',
+                fav_remove: 'Remove from favorites',
+                lightbox_fav_add: 'Favorite',
+                lightbox_fav_active: 'Favorited',
+                lightbox_prev: 'Previous (← Arrow)',
+                lightbox_next: 'Next (→ Arrow)',
+                lightbox_close: 'Close (Esc)',
+                res_label: 'Resolution: {{w}} &times; {{h}} px',
+                rug_footprint: 'Footprint: <strong>{{grid}}</strong> ({{label}})',
+                rug_grid_hint: 'Room 5×5 Reference Grid',
+                confirm_title: 'Clear Favorites',
+                confirm_desc: 'Are you sure you want to clear <strong id="confirmFavCount">{{count}}</strong> favorited item(s)?<br>This action cannot be undone.',
+                confirm_cancel: 'Cancel',
+                confirm_ok: 'Clear All',
+                footer_src: 'Data & images source: <a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> & Nintendo Animal Crossing: New Horizons',
+                footer_note: 'Unofficial fan gallery tool, for personal appreciation and reference only.'
+            }},
+            'ja-JP': {{
+                brand: 'あつ森インテリア図鑑',
+                nav_home: 'ホーム',
+                nav_wallpapers: 'かべがみ',
+                nav_floors: 'ゆかいた',
+                nav_rugs: 'ラグ',
+                preloader_title: 'あつまれ どうぶつの森',
+                preloader_sub_wallpapers: 'かべがみ図鑑・HD画像を読み込み中...',
+                preloader_sub_floors: 'ゆかいた図鑑・HD画像を読み込み中...',
+                preloader_sub_rugs: 'ラグ図鑑・HD画像を読み込み中...',
+                preloader_loading: '読み込み準備中...',
+                preloader_counter: '{{loaded}} / {{total}} 枚を読み込み済み',
+                preloader_done: '全 {{total}} 枚を読み込み完了！',
+                preloader_skip: 'スキップして閲覧 ➔',
+                page_title_wallpapers: 'かべがみ図鑑 全集',
+                page_title_floors: 'ゆかいた図鑑 全集',
+                page_title_rugs: 'ラグ図鑑 全集',
+                filter_all: 'すべて ({{count}})',
+                filter_screenshot: '実機写真 ({{count}})',
+                filter_icon: 'アイコンのみ ({{count}})',
+                filter_rug_L: 'Lサイズ ({{count}})',
+                filter_rug_M: 'Mサイズ ({{count}})',
+                filter_rug_S: 'Sサイズ ({{count}})',
+                filter_fav: '♥ お気に入り (<span id="favCount">{{count}}</span>)',
+                clear_fav_btn: '🗑 お気に入りを全消去',
+                search_placeholder: '名前で検索 (日 / 英 / 中)...',
+                showing_stats: '表示中: <strong>{{match}}</strong> / {{total}} 種',
+                empty_title: '該当する項目が見つかりません',
+                empty_desc: '検索キーワードやフィルターを変更してください。',
+                fav_add: 'お気に入りに追加',
+                fav_remove: 'お気に入りから削除',
+                lightbox_fav_add: 'お気に入り',
+                lightbox_fav_active: '登録済み',
+                lightbox_prev: '前へ (← キー)',
+                lightbox_next: '次へ (→ キー)',
+                lightbox_close: '閉じる (Esc)',
+                res_label: '解像度: {{w}} &times; {{h}} px',
+                rug_footprint: 'サイズ: <strong>{{grid}}</strong>（{{label}}）',
+                rug_grid_hint: '部屋 5×5 基準グリッド',
+                confirm_title: 'お気に入りを全消去',
+                confirm_desc: '登録済みの <strong id="confirmFavCount">{{count}}</strong> 件のお気に入りをすべて削除しますか？<br>この操作は元に戻せません。',
+                confirm_cancel: 'キャンセル',
+                confirm_ok: '削除する',
+                footer_src: 'データ・画像出典：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> および 任天堂『あつまれ どうぶつの森』',
+                footer_note: '非公式ファンサイトです。個人の鑑賞および交流を目的としています。'
+            }}
+        }};
+
         let favorites = new Set();
         let currentFilter = 'all';
         let filteredIndices = galleryData.map((_, i) => i);
         let currentPos = 0; // index in filteredIndices
+
+        function getLocalizedRugSizeLabel(cat, lang) {{
+            if (lang === 'en-US') {{
+                if (cat === 'L') return 'Large (L)';
+                if (cat === 'M') return 'Medium (M)';
+                if (cat === 'S') return 'Small (S)';
+                return cat || '';
+            }}
+            if (lang === 'ja-JP') {{
+                if (cat === 'L') return 'Lサイズ';
+                if (cat === 'M') return 'Mサイズ';
+                if (cat === 'S') return 'Sサイズ';
+                return cat || '';
+            }}
+            if (cat === 'L') return '大型 (L)';
+            if (cat === 'M') return '中型 (M)';
+            if (cat === 'S') return '小型 (S)';
+            return cat || '';
+        }}
+
+        function changeLanguage(lang) {{
+            if (!['zh-TW', 'en-US', 'ja-JP'].includes(lang)) return;
+            currentLang = lang;
+            try {{
+                localStorage.setItem('acnh_lang', lang);
+            }} catch(e) {{}}
+            document.documentElement.lang = lang;
+
+            var sel = document.getElementById('langSelect');
+            if (sel && sel.value !== lang) sel.value = lang;
+
+            applyLanguage(lang);
+        }}
+
+        function applyCardLanguage(lang) {{
+            const d = I18N_DATA[lang] || I18N_DATA['zh-TW'];
+            for (let i = 0; i < galleryData.length; i++) {{
+                const it = galleryData[i];
+                const titleEl = document.getElementById('title-' + i);
+                const sub1El = document.getElementById('sub1-' + i);
+                const sub2El = document.getElementById('sub2-' + i);
+                const dimEl = document.getElementById('dim-' + i);
+                const favBtn = document.getElementById('fav-btn-' + i);
+                const isFav = favorites.has(it.name_en);
+
+                if (lang === 'zh-TW') {{
+                    if (titleEl) titleEl.textContent = it.name_zh;
+                    if (sub1El) sub1El.textContent = it.name_ja;
+                    if (sub2El) sub2El.textContent = it.name_en;
+                }} else if (lang === 'en-US') {{
+                    if (titleEl) titleEl.textContent = it.name_en;
+                    if (sub1El) sub1El.textContent = it.name_zh;
+                    if (sub2El) sub2El.textContent = it.name_ja;
+                }} else if (lang === 'ja-JP') {{
+                    if (titleEl) titleEl.textContent = it.name_ja;
+                    if (sub1El) sub1El.textContent = it.name_en;
+                    if (sub2El) sub2El.textContent = it.name_zh;
+                }}
+
+                if (favBtn) {{
+                    favBtn.title = isFav ? d.fav_remove : d.fav_add;
+                }}
+
+                if (dimEl && it.grid_size) {{
+                    const szLbl = getLocalizedRugSizeLabel(it.size_category, lang);
+                    dimEl.innerHTML = d.rug_footprint.replace('{{grid}}', it.grid_size).replace('{{label}}', szLbl);
+                }}
+            }}
+        }}
+
+        function applyLanguage(lang) {{
+            if (!I18N_DATA[lang]) lang = 'zh-TW';
+            const d = I18N_DATA[lang];
+
+            const pageKey = 'page_title_' + STATS.page_type;
+            const catTitle = d[pageKey] || '';
+
+            if (lang === 'en-US') {{
+                document.title = catTitle + ' (' + STATS.total + ' items) - Animal Crossing: New Horizons';
+                const h1 = document.getElementById('headerTitle');
+                if (h1) h1.textContent = 'Animal Crossing: New Horizons - ' + catTitle + ' (' + STATS.total + ')';
+            }} else if (lang === 'ja-JP') {{
+                document.title = catTitle + '（' + STATS.total + '種）- あつまれ どうぶつの森';
+                const h1 = document.getElementById('headerTitle');
+                if (h1) h1.textContent = 'あつまれ どうぶつの森 - ' + catTitle + '（' + STATS.total + '種）';
+            }} else {{
+                document.title = '集合啦！動物森友會 - ' + catTitle + ' (' + STATS.total + '款)';
+                const h1 = document.getElementById('headerTitle');
+                if (h1) h1.textContent = '集合啦！動物森友會 - ' + catTitle + ' (' + STATS.total + '款)';
+            }}
+
+            const navBrand = document.getElementById('navBrand');
+            if (navBrand) navBrand.textContent = d.brand;
+            const navHome = document.getElementById('navHome');
+            if (navHome) navHome.textContent = d.nav_home;
+            const navWall = document.getElementById('navWallpapers');
+            if (navWall) navWall.textContent = d.nav_wallpapers + ' (' + STATS.wall_total + ')';
+            const navFloor = document.getElementById('navFloors');
+            if (navFloor) navFloor.textContent = d.nav_floors + ' (' + STATS.floor_total + ')';
+            const navRug = document.getElementById('navRugs');
+            if (navRug) navRug.textContent = d.nav_rugs + ' (' + STATS.rug_total + ')';
+
+            const searchInput = document.getElementById('search');
+            if (searchInput) searchInput.placeholder = d.search_placeholder;
+
+            const btnAll = document.getElementById('filterBtnAll');
+            if (btnAll) btnAll.textContent = d.filter_all.replace('{{count}}', STATS.total);
+
+            if (STATS.page_type === 'rugs') {{
+                const btnL = document.getElementById('filterBtnL');
+                if (btnL) btnL.textContent = d.filter_rug_L.replace('{{count}}', STATS.count_L);
+                const btnM = document.getElementById('filterBtnM');
+                if (btnM) btnM.textContent = d.filter_rug_M.replace('{{count}}', STATS.count_M);
+                const btnS = document.getElementById('filterBtnS');
+                if (btnS) btnS.textContent = d.filter_rug_S.replace('{{count}}', STATS.count_S);
+            }} else {{
+                const btnShot = document.getElementById('filterBtnShot');
+                if (btnShot) btnShot.textContent = d.filter_screenshot.replace('{{count}}', STATS.has_shot);
+                const btnIcon = document.getElementById('filterBtnIcon');
+                if (btnIcon) btnIcon.textContent = d.filter_icon.replace('{{count}}', STATS.no_shot);
+            }}
+
+            const favFilterBtn = document.getElementById('favFilterBtn');
+            if (favFilterBtn) favFilterBtn.innerHTML = d.filter_fav.replace('{{count}}', favorites.size);
+
+            const clearFavBtn = document.getElementById('clearFavBtn');
+            if (clearFavBtn) clearFavBtn.textContent = d.clear_fav_btn;
+
+            const emptyTitle = document.getElementById('emptyTitle');
+            if (emptyTitle) emptyTitle.textContent = d.empty_title;
+            const emptyDesc = document.getElementById('emptyDesc');
+            if (emptyDesc) emptyDesc.textContent = d.empty_desc;
+
+            const preSub = document.querySelector('.preloader-subtitle');
+            if (preSub) {{
+                if (STATS.page_type === 'wallpapers') preSub.textContent = d.preloader_sub_wallpapers;
+                else if (STATS.page_type === 'floors') preSub.textContent = d.preloader_sub_floors;
+                else if (STATS.page_type === 'rugs') preSub.textContent = d.preloader_sub_rugs;
+            }}
+            const preTitle = document.querySelector('.preloader-title');
+            if (preTitle) preTitle.textContent = d.preloader_title;
+            const preSkip = document.querySelector('.preloader-skip-btn');
+            if (preSkip) preSkip.textContent = d.preloader_skip;
+
+            const prevBtn = document.getElementById('prevBtn');
+            if (prevBtn) prevBtn.title = d.lightbox_prev;
+            const nextBtn = document.getElementById('nextBtn');
+            if (nextBtn) nextBtn.title = d.lightbox_next;
+            const closeBtn = document.querySelector('.modal-close');
+            if (closeBtn) closeBtn.title = d.lightbox_close;
+
+            const confirmTitle = document.querySelector('.confirm-title');
+            if (confirmTitle) confirmTitle.textContent = d.confirm_title;
+            const confirmDesc = document.getElementById('confirmDesc');
+            if (confirmDesc) confirmDesc.innerHTML = d.confirm_desc.replace('{{count}}', favorites.size);
+            const confirmCancel = document.querySelector('.confirm-btn-cancel');
+            if (confirmCancel) confirmCancel.textContent = d.confirm_cancel;
+            const confirmDanger = document.querySelector('.confirm-btn-danger');
+            if (confirmDanger) confirmDanger.textContent = d.confirm_ok;
+
+            const footerSrc = document.getElementById('footerSrc');
+            if (footerSrc) footerSrc.innerHTML = d.footer_src;
+            const footerNote = document.getElementById('footerNote');
+            if (footerNote) footerNote.textContent = d.footer_note;
+
+            applyCardLanguage(lang);
+            filterCards();
+
+            const modal = document.getElementById('lightboxModal');
+            if (modal && modal.classList.contains('active')) {{
+                updateLightbox();
+            }}
+        }}
 
         // Global Image Preloader & Progress Bar
         var preloaderDismissed = false;
@@ -1065,18 +1469,31 @@ def generate_gallery_page(
             var barFill = document.getElementById('preloaderBarFill');
             var counter = document.getElementById('preloaderCounter');
             var percent = document.getElementById('preloaderPercent');
+            var animFrameId = null;
+
+            function updateProgressUI() {{
+                var pct = Math.min(100, Math.floor((loaded / total) * 100));
+                if (barFill) barFill.style.width = pct + '%';
+                if (percent) percent.textContent = pct + '%';
+                var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+                if (counter) {{
+                    counter.textContent = d.preloader_counter.replace('{{loaded}}', loaded).replace('{{total}}', total);
+                }}
+            }}
 
             function onSingleImageDone() {{
                 loaded++;
-                var pct = Math.min(100, Math.floor((loaded / total) * 100));
-                if (barFill) barFill.style.width = pct + '%';
-                if (counter) counter.textContent = '已讀取 ' + loaded + ' / ' + total + ' 張';
-                if (percent) percent.textContent = pct + '%';
+                if (!animFrameId) {{
+                    animFrameId = requestAnimationFrame(function() {{
+                        animFrameId = null;
+                        updateProgressUI();
+                    }});
+                }}
 
                 if (loaded >= total) {{
-                    if (barFill) barFill.style.width = '100%';
-                    if (percent) percent.textContent = '100%';
-                    if (counter) counter.textContent = '已讀取 ' + total + ' / ' + total + ' 張（完成！）';
+                    updateProgressUI();
+                    var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+                    if (counter) counter.textContent = d.preloader_done.replace('{{total}}', total);
                     try {{
                         localStorage.setItem('acnh_preloaded_{page_type}', 'true');
                     }} catch (e) {{}}
@@ -1137,6 +1554,10 @@ def generate_gallery_page(
         function clearFavorites() {{
             if (favorites.size === 0) return;
             document.getElementById('confirmFavCount').textContent = favorites.size;
+            const d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+            const desc = document.getElementById('confirmDesc');
+            if (desc) desc.innerHTML = d.confirm_desc.replace('{{count}}', favorites.size);
+
             const modal = document.getElementById('confirmModal');
             modal.style.display = 'flex';
             setTimeout(() => modal.classList.add('active'), 10);
@@ -1172,12 +1593,14 @@ def generate_gallery_page(
                 clearBtn.style.display = count > 0 ? 'inline-flex' : 'none';
             }}
 
+            const d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+
             galleryData.forEach((item, idx) => {{
                 const btn = document.getElementById(`fav-btn-${{idx}}`);
                 if (btn) {{
                     const isFav = favorites.has(item.name_en);
                     btn.classList.toggle('active', isFav);
-                    btn.title = isFav ? '取消收藏' : '加入我的最愛';
+                    btn.title = isFav ? d.fav_remove : d.fav_add;
                 }}
             }});
             updateLightboxFavBtn();
@@ -1190,6 +1613,8 @@ def generate_gallery_page(
             if (!btn || filteredIndices.length === 0) return;
             const item = galleryData[filteredIndices[currentPos]];
             const isFav = favorites.has(item.name_en);
+            const d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+
             btn.classList.toggle('active', isFav);
             if (icon) {{
                 icon.innerHTML = isFav 
@@ -1197,9 +1622,9 @@ def generate_gallery_page(
                     : '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:-2px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
             }}
             if (text) {{
-                text.textContent = isFav ? '已收藏' : '加入最愛';
+                text.textContent = isFav ? d.lightbox_fav_active : d.lightbox_fav_add;
             }}
-            btn.title = isFav ? '點擊取消收藏' : '點擊加入我的最愛';
+            btn.title = isFav ? d.fav_remove : d.fav_add;
         }}
 
         function setFilter(type, btn) {{
@@ -1242,6 +1667,12 @@ def generate_gallery_page(
             }} else {{
                 emptyState.style.display = 'none';
             }}
+
+            const showingStats = document.getElementById('showingStats');
+            if (showingStats) {{
+                const d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+                showingStats.innerHTML = d.showing_stats.replace('{{match}}', filteredIndices.length).replace('{{total}}', galleryData.length);
+            }}
         }}
 
         function openLightboxByIndex(itemIndex) {{
@@ -1271,34 +1702,43 @@ def generate_gallery_page(
             if (filteredIndices.length === 0) return;
             const itemIndex = filteredIndices[currentPos];
             const item = galleryData[itemIndex];
+            const d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
 
             const img = document.getElementById('lightboxImg');
             img.src = item.local_rel_path;
-            img.alt = item.name_zh;
+            img.alt = (currentLang === 'en-US' ? item.name_en : (currentLang === 'ja-JP' ? item.name_ja : item.name_zh));
 
             let detailInfo = '';
             if (item.grid_size) {{
+                const szLbl = getLocalizedRugSizeLabel(item.size_category, currentLang);
                 detailInfo = `
                     <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px;">
                         ${{getRugGridSvg(item.grid_size, 38)}}
                         <div style="text-align:left; font-size:0.88rem; color:#fff;">
-                            <div>佔地尺寸: <strong>${{item.grid_size}}</strong>（${{item.size_label}}）</div>
-                            <div style="font-size:0.75rem; color:#bbb; margin-top:1px;">房間 5×5 基準網格</div>
+                            <div>${{d.rug_footprint.replace('{{grid}}', item.grid_size).replace('{{label}}', szLbl)}}</div>
+                            <div style="font-size:0.75rem; color:#bbb; margin-top:1px;">${{d.rug_grid_hint}}</div>
                         </div>
                     </div>`;
             }} else {{
-                detailInfo = `<div style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">解析度: ${{item.width}} &times; ${{item.height}} px</div>`;
+                detailInfo = `<div style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">${{d.res_label.replace('{{w}}', item.width).replace('{{h}}', item.height)}}</div>`;
             }}
 
-            document.getElementById('lightboxCaption').innerHTML = 
-                `<strong>${{item.name_zh}}</strong> / ${{item.name_en}} (${{item.name_ja}})` + detailInfo;
+            let captionText = '';
+            if (currentLang === 'en-US') {{
+                captionText = `<strong>${{item.name_en}}</strong> / ${{item.name_ja}} (${{item.name_zh}})`;
+            }} else if (currentLang === 'ja-JP') {{
+                captionText = `<strong>${{item.name_ja}}</strong> / ${{item.name_en}} (${{item.name_zh}})`;
+            }} else {{
+                captionText = `<strong>${{item.name_zh}}</strong> / ${{item.name_ja}} (${{item.name_en}})`;
+            }}
 
+            document.getElementById('lightboxCaption').innerHTML = captionText + detailInfo;
             document.getElementById('lightboxCounter').textContent = `${{currentPos + 1}} / ${{filteredIndices.length}}`;
 
             updateLightboxFavBtn();
             renderThumbnailStrip();
 
-            // Preload adjacent images for butter-smooth keyboard navigation
+            // Preload adjacent images
             if (currentPos + 1 < filteredIndices.length) {{
                 const nextItem = galleryData[filteredIndices[currentPos + 1]];
                 if (nextItem && nextItem.local_rel_path) {{
@@ -1347,7 +1787,9 @@ def generate_gallery_page(
                 const it = galleryData[idx];
                 const div = document.createElement('div');
                 div.className = 'thumb-item' + (pos === currentPos ? ' active' : '');
-                div.title = `${{it.name_zh}} (${{it.name_en}})`;
+                
+                const dispTitle = (currentLang === 'en-US' ? `${{it.name_en}} (${{it.name_ja}})` : (currentLang === 'ja-JP' ? `${{it.name_ja}} (${{it.name_en}})` : `${{it.name_zh}} (${{it.name_en}})`));
+                div.title = dispTitle;
                 div.onclick = (e) => {{
                     e.stopPropagation();
                     currentPos = pos;
@@ -1356,7 +1798,7 @@ def generate_gallery_page(
 
                 const thumbImg = document.createElement('img');
                 thumbImg.src = it.local_rel_path;
-                thumbImg.alt = it.name_zh;
+                thumbImg.alt = dispTitle;
                 thumbImg.loading = 'lazy';
                 div.appendChild(thumbImg);
                 strip.appendChild(div);
@@ -1377,23 +1819,18 @@ def generate_gallery_page(
             updateLightbox();
         }}
 
-        function closeLightbox(e) {{
-            if (!e || e.target.id === 'lightboxModal' || e.target.classList.contains('modal-close')) {{
-                document.getElementById('lightboxModal').classList.remove('active');
-            }}
-        }}
-
-        // Keyboard navigation
-        window.addEventListener('keydown', (e) => {{
-            const confirmModal = document.getElementById('confirmModal');
-            if (confirmModal && confirmModal.classList.contains('active')) {{
-                if (e.key === 'Escape') {{
-                    closeConfirmModal();
-                }}
+        function closeLightbox(event) {{
+            if (event && event.target && event.target.id !== 'lightboxModal' && !event.target.classList.contains('modal-close')) {{
                 return;
             }}
+            document.getElementById('lightboxModal').classList.remove('active');
+        }}
+
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {{
             const modal = document.getElementById('lightboxModal');
             if (!modal.classList.contains('active')) return;
+
             if (e.key === 'ArrowLeft') {{
                 navigateLightbox(-1);
             }} else if (e.key === 'ArrowRight') {{
@@ -1403,15 +1840,18 @@ def generate_gallery_page(
             }}
         }});
 
-        // Initialize favorites on load
-        loadFavorites();
-
-        // Clean up any Service Worker to ensure maximum native HTTP/2 download speed
+        // Clean up any Service Worker
         if ('serviceWorker' in navigator) {{
             navigator.serviceWorker.getRegistrations().then(function(regs) {{
                 for (var r of regs) r.unregister();
             }});
         }}
+
+        // Initialize language and favorites
+        loadFavorites();
+        var sel = document.getElementById('langSelect');
+        if (sel) sel.value = currentLang;
+        applyLanguage(currentLang);
     </script>
 </body>
 </html>
@@ -1423,8 +1863,12 @@ def generate_gallery_page(
     return dest_path
 
 def generate_index_page(stats_counts):
+    wall_count = stats_counts.get('wallpapers', 312)
+    floor_count = stats_counts.get('floors', 215)
+    rug_count = stats_counts.get('rugs', 210)
+
     index_html = f"""<!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1443,7 +1887,7 @@ def generate_index_page(stats_counts):
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             min-height: 100vh;
@@ -1504,40 +1948,78 @@ def generate_index_page(stats_counts):
             color: #ffffff;
         }}
 
-        /* Hero Section */
+        /* Language Switcher */
+        .lang-selector-wrap {{
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #eef3ef;
+            padding: 3px 8px 3px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(43, 92, 95, 0.22);
+            transition: all 0.2s ease;
+            margin-left: 6px;
+        }}
+        .lang-selector-wrap:hover {{
+            background: #e5ede7;
+            border-color: var(--primary);
+        }}
+        .lang-globe {{
+            font-size: 0.95rem;
+            line-height: 1;
+            user-select: none;
+        }}
+        .lang-select {{
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--primary);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 4px 4px 0;
+            font-family: inherit;
+        }}
+        .lang-select option {{
+            background: #ffffff;
+            color: #333333;
+        }}
+
+        /* Hero Banner */
         .hero {{
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 24px 30px;
             max-width: 900px;
             margin: 0 auto;
         }}
         .hero-badge {{
             display: inline-block;
-            background: rgba(43, 92, 95, 0.1);
+            background: #e1ede8;
             color: var(--primary);
             padding: 6px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 16px;
+            letter-spacing: 0.5px;
         }}
         .hero h1 {{
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--primary);
+            line-height: 1.3;
             margin-bottom: 16px;
-            line-height: 1.25;
             letter-spacing: 0.5px;
         }}
         .hero p {{
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--text-sub);
             line-height: 1.7;
         }}
 
-        /* Feature Cards Grid */
+        /* Portals Grid */
         .portal-grid {{
             max-width: 1200px;
-            margin: 20px auto 60px;
+            margin: 20px auto 50px;
             padding: 0 24px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1545,7 +2027,7 @@ def generate_index_page(stats_counts):
         }}
         .portal-card {{
             background: #ffffff;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1648,25 +2130,26 @@ def generate_index_page(stats_counts):
             text-align: center;
             font-size: 1.6rem;
             color: var(--primary);
-            margin-bottom: 30px;
+            margin-bottom: 32px;
+            font-weight: bold;
         }}
         .features-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
         }}
         .feature-item {{
             text-align: center;
             padding: 16px;
         }}
         .feature-icon {{
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             margin-bottom: 12px;
         }}
         .feature-name {{
             font-size: 1.15rem;
             font-weight: bold;
-            color: var(--text-main);
+            color: var(--primary);
             margin-bottom: 8px;
         }}
         .feature-desc {{
@@ -1679,12 +2162,12 @@ def generate_index_page(stats_counts):
         .site-footer {{
             background: #ffffff;
             border-top: 1px solid rgba(0, 0, 0, 0.08);
-            padding: 28px 20px;
+            padding: 28px;
             text-align: center;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             color: var(--text-sub);
-            margin-top: auto;
             line-height: 1.6;
+            margin-top: auto;
         }}
         .site-footer a {{
             color: var(--primary);
@@ -1695,26 +2178,54 @@ def generate_index_page(stats_counts):
             text-decoration: underline;
         }}
     </style>
+    <script>
+        function getInitialLanguage() {{
+            try {{
+                var saved = localStorage.getItem('acnh_lang');
+                if (saved && (saved === 'zh-TW' || saved === 'en-US' || saved === 'ja-JP')) {{
+                    return saved;
+                }}
+            }} catch(e) {{}}
+            
+            var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
+            for (var i = 0; i < langs.length; i++) {{
+                var l = (langs[i] || '').toLowerCase();
+                if (l.indexOf('zh') === 0) return 'zh-TW';
+                if (l.indexOf('ja') === 0) return 'ja-JP';
+            }}
+            return 'en-US';
+        }}
+        var currentLang = getInitialLanguage();
+        document.documentElement.lang = currentLang;
+    </script>
 </head>
 <body>
     <!-- Top Navigation Bar -->
     <nav class="site-nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">動森室內圖庫</a>
+            <a href="index.html" class="nav-brand" id="navBrand">動森室內圖庫</a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link active">首頁導覽</a>
-                <a href="wallpapers.html" class="nav-link">壁紙 ({stats_counts.get('wallpapers', 312)})</a>
-                <a href="floors.html" class="nav-link">地板 ({stats_counts.get('floors', 215)})</a>
-                <a href="rugs.html" class="nav-link">地毯 ({stats_counts.get('rugs', 210)})</a>
+                <a href="index.html" class="nav-link active" id="navHome">首頁導覽</a>
+                <a href="wallpapers.html" class="nav-link" id="navWallpapers">壁紙 ({wall_count})</a>
+                <a href="floors.html" class="nav-link" id="navFloors">地板 ({floor_count})</a>
+                <a href="rugs.html" class="nav-link" id="navRugs">地毯 ({rug_count})</a>
+                <div class="lang-selector-wrap">
+                    <span class="lang-globe">🌐</span>
+                    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="ja-JP">日本語</option>
+                        <option value="en-US">English</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-badge">Animal Crossing: New Horizons</div>
-        <h1>集合啦！動物森友會<br>室內裝潢圖庫全輯</h1>
-        <p>收錄全系列壁紙、地板與地毯的 1280x720 高清遊戲實景截圖與官方圖示。<br>支援實景大圖優先排序、即時搜尋、鍵盤方向鍵導航與離線個人最愛收藏。</p>
+        <div class="hero-badge" id="heroBadge">Animal Crossing: New Horizons</div>
+        <h1 id="heroTitle">集合啦！動物森友會<br>室內裝潢圖庫全輯</h1>
+        <p id="heroDesc">收錄全系列壁紙、地板與地毯的 1280x720 高清遊戲實景截圖與官方圖示。<br>支援實景大圖優先排序、即時搜尋、鍵盤方向鍵導航與離線個人最愛收藏。</p>
     </div>
 
     <!-- Portal Cards -->
@@ -1723,18 +2234,18 @@ def generate_index_page(stats_counts):
         <a href="wallpapers.html" class="portal-card wallpapers">
             <div class="card-body">
                 <div class="card-title">
-                    <span>壁紙圖庫</span>
-                    <span class="card-count">{stats_counts.get('wallpapers', 312)} 款</span>
+                    <span id="wallCardTitle">壁紙圖庫</span>
+                    <span class="card-count" id="wallCardCount">{wall_count} 款</span>
                 </div>
-                <div class="card-desc">
+                <div class="card-desc" id="wallCardDesc">
                     涵蓋常規商店、駱嵐不可思議壁紙、非賣品活動獎勵與三麗鷗聯名款。260 款室內 1280x720 實拍大圖與 52 款官方高畫質備選圖示。
                 </div>
-                <div class="card-specs">
+                <div class="card-specs" id="wallSpecs">
                     <span class="spec-tag">📸 260 款實景大圖</span>
                     <span class="spec-tag">✨ 實景優先 + 名稱排序</span>
                     <span class="spec-tag">♥ 我的最愛</span>
                 </div>
-                <div class="enter-btn">
+                <div class="enter-btn" id="wallCardBtn">
                     進入壁紙圖庫 ➔
                 </div>
             </div>
@@ -1744,18 +2255,18 @@ def generate_index_page(stats_counts):
         <a href="floors.html" class="portal-card floors">
             <div class="card-body">
                 <div class="card-title">
-                    <span>地板圖庫</span>
-                    <span class="card-count">{stats_counts.get('floors', 215)} 款</span>
+                    <span id="floorCardTitle">地板圖庫</span>
+                    <span class="card-count" id="floorCardCount">{floor_count} 款</span>
                 </div>
-                <div class="card-desc">
+                <div class="card-desc" id="floorCardDesc">
                     收錄實木拼花、復古磁磚、戶外自然場景、動態地磚與特殊材質地板。187 款室內鋪設 1280x720 實拍照與 28 款官方圖示。
                 </div>
-                <div class="card-specs">
+                <div class="card-specs" id="floorSpecs">
                     <span class="spec-tag">📸 187 款實景大圖</span>
                     <span class="spec-tag">✨ 實景優先 + 名稱排序</span>
                     <span class="spec-tag">♥ 我的最愛</span>
                 </div>
-                <div class="enter-btn">
+                <div class="enter-btn" id="floorCardBtn">
                     進入地板圖庫 ➔
                 </div>
             </div>
@@ -1765,18 +2276,18 @@ def generate_index_page(stats_counts):
         <a href="rugs.html" class="portal-card rugs">
             <div class="card-body">
                 <div class="card-title">
-                    <span>地毯圖庫</span>
-                    <span class="card-count">{stats_counts.get('rugs', 210)} 款</span>
+                    <span id="rugCardTitle">地毯圖庫</span>
+                    <span class="card-count" id="rugCardCount">{rug_count} 款</span>
                 </div>
-                <div class="card-desc">
+                <div class="card-desc" id="rugCardDesc">
                     全系列大、中、小型與趣味特殊造型地毯，包括駱嵐限定地毯、蔬果造型地毯與季節限定圖騰。完整標註遊戲內 1×1 ~ 5×5 佔地尺寸與 S/M/L 篩選分類。
                 </div>
-                <div class="card-specs">
+                <div class="card-specs" id="rugSpecs">
                     <span class="spec-tag">📐 S / M / L 尺寸篩選</span>
                     <span class="spec-tag">✨ 尺寸大到小 + 字母排序</span>
                     <span class="spec-tag">♥ 我的最愛</span>
                 </div>
-                <div class="enter-btn">
+                <div class="enter-btn" id="rugCardBtn">
                     進入地毯圖庫 ➔
                 </div>
             </div>
@@ -1785,43 +2296,245 @@ def generate_index_page(stats_counts):
 
     <!-- Highlights Section -->
     <div class="features">
-        <h2 class="features-title">✨ 核心功能特色</h2>
+        <h2 class="features-title" id="featuresTitle">✨ 核心功能特色</h2>
         <div class="features-grid">
             <div class="feature-item">
                 <div class="feature-icon">🔍</div>
-                <div class="feature-name">三語即時搜尋</div>
-                <div class="feature-desc">支援繁體中文（台灣繁中）、英文以及日文原文即時過濾查找。</div>
+                <div class="feature-name" id="feat1Title">三語即時搜尋</div>
+                <div class="feature-desc" id="feat1Desc">支援繁體中文（台灣繁中）、英文以及日文原文即時過濾查找。</div>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">🔤</div>
-                <div class="feature-name">英文字母 A-Z 排序</div>
-                <div class="feature-desc">依照英文名稱字母順序整齊編排，方便精確定位與參照社群資料。</div>
+                <div class="feature-name" id="feat2Title">英文字母 A-Z 排序</div>
+                <div class="feature-desc" id="feat2Desc">依照英文名稱字母順序整齊編排，方便精確定位與參照社群資料。</div>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">♥</div>
-                <div class="feature-name">獨立最愛收藏</div>
-                <div class="feature-desc">各類別具備獨立 LocalStorage 最愛清單，搭配自訂風格確認彈窗與快速切換。</div>
+                <div class="feature-name" id="feat3Title">離線個人收藏</div>
+                <div class="feature-desc" id="feat3Desc">點擊愛心即可標記喜歡的壁紙與地板，資料保存在瀏覽器本地。</div>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">🖼️</div>
-                <div class="feature-name">大圖檢視與底部分頁</div>
-                <div class="feature-desc">支援超廣角點擊感應立柱、全螢幕輪播切換與底部前伸後延縮圖分頁條。</div>
+                <div class="feature-name" id="feat4Title">沉浸式全螢幕檢視</div>
+                <div class="feature-desc" id="feat4Desc">支援點擊看大圖、鍵盤左右鍵快速切圖、原圖細節清晰可見。</div>
             </div>
         </div>
     </div>
 
     <!-- Site Footer with Image Sources -->
     <footer class="site-footer">
-        <p>資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
-        <p style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
+        <p id="footerSrc">資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
+        <p id="footerNote" style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
     </footer>
 
     <script>
+        const COUNTS = {{
+            wall: {wall_count},
+            floor: {floor_count},
+            rug: {rug_count}
+        }};
+
+        const INDEX_I18N_DATA = {{
+            'zh-TW': {{
+                brand: '動森室內圖庫',
+                nav_home: '首頁導覽',
+                nav_wallpapers: '壁紙 (' + COUNTS.wall + ')',
+                nav_floors: '地板 (' + COUNTS.floor + ')',
+                nav_rugs: '地毯 (' + COUNTS.rug + ')',
+                hero_badge: 'Animal Crossing: New Horizons',
+                hero_title: '集合啦！動物森友會<br>室內裝潢圖庫全輯',
+                hero_desc: '收錄全系列壁紙、地板與地毯的 1280x720 高清遊戲實景截圖與官方圖示。<br>支援實景大圖優先排序、即時搜尋、鍵盤方向鍵導航與離線個人最愛收藏。',
+                wall_title: '壁紙圖庫',
+                wall_count: COUNTS.wall + ' 款',
+                wall_desc: '涵蓋常規商店、駱嵐不可思議壁紙、非賣品活動獎勵與三麗鷗聯名款。260 款室內 1280x720 實拍大圖與 52 款官方高畫質備選圖示。',
+                wall_specs: ['📸 260 款實景大圖', '✨ 實景優先 + 名稱排序', '♥ 我的最愛'],
+                wall_btn: '進入壁紙圖庫 ➔',
+                floor_title: '地板圖庫',
+                floor_count: COUNTS.floor + ' 款',
+                floor_desc: '收錄實木拼花、復古磁磚、戶外自然場景、動態地磚與特殊材質地板。187 款室內鋪設 1280x720 實拍照與 28 款官方圖示。',
+                floor_specs: ['📸 187 款實景大圖', '✨ 實景優先 + 名稱排序', '♥ 我的最愛'],
+                floor_btn: '進入地板圖庫 ➔',
+                rug_title: '地毯圖庫',
+                rug_count: COUNTS.rug + ' 款',
+                rug_desc: '全系列大、中、小型與趣味特殊造型地毯，包括駱嵐限定地毯、蔬果造型地毯與季節限定圖騰。完整標註遊戲內 1×1 ~ 5×5 佔地尺寸與 S/M/L 篩選分類。',
+                rug_specs: ['📐 S / M / L 尺寸篩選', '✨ 尺寸大到小 + 字母排序', '♥ 我的最愛'],
+                rug_btn: '進入地毯圖庫 ➔',
+                features_title: '✨ 核心功能特色',
+                feat1_title: '三語即時搜尋',
+                feat1_desc: '支援繁體中文（台灣繁中）、英文以及日文原文即時過濾查找。',
+                feat2_title: '英文字母 A-Z 排序',
+                feat2_desc: '依照英文名稱字母順序整齊編排，方便精確定位與參照社群資料。',
+                feat3_title: '離線個人收藏',
+                feat3_desc: '點擊愛心即可標記喜歡的壁紙與地板，資料保存在瀏覽器本地。',
+                feat4_title: '沉浸式全螢幕檢視',
+                feat4_desc: '支援點擊看大圖、鍵盤左右鍵快速切圖、原圖細節清晰可見。',
+                footer_src: '資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)',
+                footer_note: '非官方社群圖庫工具，僅供個人鑑賞與交流用途。'
+            }},
+            'en-US': {{
+                brand: 'ACNH Interior Gallery',
+                nav_home: 'Home',
+                nav_wallpapers: 'Wallpapers (' + COUNTS.wall + ')',
+                nav_floors: 'Flooring (' + COUNTS.floor + ')',
+                nav_rugs: 'Rugs (' + COUNTS.rug + ')',
+                hero_badge: 'Animal Crossing: New Horizons',
+                hero_title: 'Animal Crossing: New Horizons<br>Complete Interior Gallery',
+                hero_desc: 'Complete collection of wallpapers, flooring, and rugs with 1280x720 HD in-game screenshots and official icons.<br>Features screenshot-first sorting, real-time multilingual search, arrow key navigation, and offline favorites.',
+                wall_title: 'Wallpapers',
+                wall_count: COUNTS.wall + ' items',
+                wall_desc: "Includes Nook's Cranny, Saharah mysterious wallpapers, seasonal event rewards, and Sanrio items. 260 HD in-game screenshots and 52 official icons.",
+                wall_specs: ['📸 260 HD Screenshots', '✨ Screenshot-First Sort', '♥ Favorites'],
+                wall_btn: 'Browse Wallpapers ➔',
+                floor_title: 'Flooring',
+                floor_count: COUNTS.floor + ' items',
+                floor_desc: 'Parquet, vintage tiles, outdoor natural grounds, animated floors, and special textures. 187 HD in-game room photos and 28 official icons.',
+                floor_specs: ['📸 187 HD Screenshots', '✨ Screenshot-First Sort', '♥ Favorites'],
+                floor_btn: 'Browse Flooring ➔',
+                rug_title: 'Rugs',
+                rug_count: COUNTS.rug + ' items',
+                rug_desc: 'Large, Medium, Small, and uniquely shaped rugs, including Saharah exclusives and seasonal designs. Annotated with 1×1 to 5×5 footprints and S/M/L filters.',
+                rug_specs: ['📐 S / M / L Size Filter', '✨ Size + Name Sort', '♥ Favorites'],
+                rug_btn: 'Browse Rugs ➔',
+                features_title: '✨ Key Features',
+                feat1_title: 'Trilingual Search',
+                feat1_desc: 'Instant search across Traditional Chinese, English, and Japanese.',
+                feat2_title: 'Alphabetical A-Z Order',
+                feat2_desc: 'Arranged alphabetically by English name for easy lookup and community cross-referencing.',
+                feat3_title: 'Local Favorites',
+                feat3_desc: 'Bookmark your favorite items with a click, saved directly in your browser.',
+                feat4_title: 'Fullscreen Lightbox',
+                feat4_desc: 'Full HD preview with keyboard arrow navigation and thumbnail filmstrip.',
+                footer_src: 'Data & images source: <a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> & Nintendo Animal Crossing: New Horizons',
+                footer_note: 'Unofficial fan gallery tool, for personal appreciation and reference only.'
+            }},
+            'ja-JP': {{
+                brand: 'あつ森インテリア図鑑',
+                nav_home: 'ホーム',
+                nav_wallpapers: 'かべがみ (' + COUNTS.wall + ')',
+                nav_floors: 'ゆかいた (' + COUNTS.floor + ')',
+                nav_rugs: 'ラグ (' + COUNTS.rug + ')',
+                hero_badge: 'あつまれ どうぶつの森',
+                hero_title: 'あつまれ どうぶつの森<br>インテリア図鑑 全集',
+                hero_desc: 'すべてのかべがみ、ゆかいた、ラグを収録。1280x720のHD実機スクリーンショットと公式アイコン。<br>実機写真優先ソート、リアルタイム多言語検索、矢印キー操作、お気に入り保存に対応。',
+                wall_title: 'かべがみ図鑑',
+                wall_count: COUNTS.wall + ' 種',
+                wall_desc: 'タヌキ商店、ローランのふしぎなかべがみ、イベント報酬、サンリオコラボまで網羅。260枚のHD実機写真と52枚の公式アイコン。',
+                wall_specs: ['📸 260枚の実機写真', '✨ 実機写真優先ソート', '♥ お気に入り'],
+                wall_btn: 'かべがみを見る ➔',
+                floor_title: 'ゆかいた図鑑',
+                floor_count: COUNTS.floor + ' 種',
+                floor_desc: '木目調、タイル、屋外の自然な地面、動く床など多彩な床材。187枚のHD部屋写真と28枚の公式アイコン。',
+                floor_specs: ['📸 187枚の実機写真', '✨ 実機写真優先ソート', '♥ お気に入り'],
+                floor_btn: 'ゆかいたを見る ➔',
+                rug_title: 'ラグ図鑑',
+                rug_count: COUNTS.rug + ' 種',
+                rug_desc: '大・中・小および特殊形状のラグを網羅。ローラン限定品や季節限定デザインを含む。1×1〜5×5の実寸サイズとS/M/L絞り込み対応。',
+                rug_specs: ['📐 S/M/L サイズ絞り込み', '✨ サイズ順＋名前順', '♥ お気に入り'],
+                rug_btn: 'ラグを見る ➔',
+                features_title: '✨ 主な機能と特徴',
+                feat1_title: '3言語リアルタイム検索',
+                feat1_desc: '日本語・英語・繁体字中国語でのリアルタイム絞り込みに対応。',
+                feat2_title: 'アルファベット順ソート',
+                feat2_desc: '英語名称のアルファベット順に整理され、コミュニティ情報の参照に便利。',
+                feat3_title: 'お気に入り機能',
+                feat3_desc: 'ハートアイコンをクリックしてお気に入り登録。ブラウザに自動保存されます。',
+                feat4_title: '全画面ビューアー',
+                feat4_desc: '矢印キーでの高速切り替え、サムネイル一覧付きの高画質プレビュー。',
+                footer_src: 'データ・画像出典：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> および 任天堂『あつまれ どうぶつの森』',
+                footer_note: '非公式ファンサイトです。個人の鑑賞および交流を目的としています。'
+            }}
+        }};
+
+        function changeLanguage(lang) {{
+            if (!['zh-TW', 'en-US', 'ja-JP'].includes(lang)) return;
+            currentLang = lang;
+            try {{
+                localStorage.setItem('acnh_lang', lang);
+            }} catch(e) {{}}
+            document.documentElement.lang = lang;
+
+            var sel = document.getElementById('langSelect');
+            if (sel && sel.value !== lang) sel.value = lang;
+
+            applyLanguage(lang);
+        }}
+
+        function applyLanguage(lang) {{
+            if (!INDEX_I18N_DATA[lang]) lang = 'zh-TW';
+            const d = INDEX_I18N_DATA[lang];
+
+            if (lang === 'en-US') {{
+                document.title = 'Animal Crossing: New Horizons - Complete Interior Gallery (Wallpapers / Flooring / Rugs)';
+            }} else if (lang === 'ja-JP') {{
+                document.title = 'あつまれ どうぶつの森 - インテリア図鑑 全集 (かべがみ / ゆかいた / ラグ)';
+            }} else {{
+                document.title = '集合啦！動物森友會 - 室內裝潢圖庫全輯 (壁紙 / 地板 / 地毯)';
+            }}
+
+            const navBrand = document.getElementById('navBrand');
+            if (navBrand) navBrand.textContent = d.brand;
+            const navHome = document.getElementById('navHome');
+            if (navHome) navHome.textContent = d.nav_home;
+            const navWall = document.getElementById('navWallpapers');
+            if (navWall) navWall.textContent = d.nav_wallpapers;
+            const navFloor = document.getElementById('navFloors');
+            if (navFloor) navFloor.textContent = d.nav_floors;
+            const navRug = document.getElementById('navRugs');
+            if (navRug) navRug.textContent = d.nav_rugs;
+
+            const heroBadge = document.getElementById('heroBadge');
+            if (heroBadge) heroBadge.textContent = d.hero_badge;
+            const heroTitle = document.getElementById('heroTitle');
+            if (heroTitle) heroTitle.innerHTML = d.hero_title;
+            const heroDesc = document.getElementById('heroDesc');
+            if (heroDesc) heroDesc.innerHTML = d.hero_desc;
+
+            // Cards
+            document.getElementById('wallCardTitle').textContent = d.wall_title;
+            document.getElementById('wallCardCount').textContent = d.wall_count;
+            document.getElementById('wallCardDesc').textContent = d.wall_desc;
+            document.getElementById('wallCardBtn').textContent = d.wall_btn;
+            document.getElementById('wallSpecs').innerHTML = d.wall_specs.map(s => `<span class="spec-tag">${{s}}</span>`).join('');
+
+            document.getElementById('floorCardTitle').textContent = d.floor_title;
+            document.getElementById('floorCardCount').textContent = d.floor_count;
+            document.getElementById('floorCardDesc').textContent = d.floor_desc;
+            document.getElementById('floorCardBtn').textContent = d.floor_btn;
+            document.getElementById('floorSpecs').innerHTML = d.floor_specs.map(s => `<span class="spec-tag">${{s}}</span>`).join('');
+
+            document.getElementById('rugCardTitle').textContent = d.rug_title;
+            document.getElementById('rugCardCount').textContent = d.rug_count;
+            document.getElementById('rugCardDesc').textContent = d.rug_desc;
+            document.getElementById('rugCardBtn').textContent = d.rug_btn;
+            document.getElementById('rugSpecs').innerHTML = d.rug_specs.map(s => `<span class="spec-tag">${{s}}</span>`).join('');
+
+            // Features
+            document.getElementById('featuresTitle').textContent = d.features_title;
+            document.getElementById('feat1Title').textContent = d.feat1_title;
+            document.getElementById('feat1Desc').textContent = d.feat1_desc;
+            document.getElementById('feat2Title').textContent = d.feat2_title;
+            document.getElementById('feat2Desc').textContent = d.feat2_desc;
+            document.getElementById('feat3Title').textContent = d.feat3_title;
+            document.getElementById('feat3Desc').textContent = d.feat3_desc;
+            document.getElementById('feat4Title').textContent = d.feat4_title;
+            document.getElementById('feat4Desc').textContent = d.feat4_desc;
+
+            // Footer
+            document.getElementById('footerSrc').innerHTML = d.footer_src;
+            document.getElementById('footerNote').textContent = d.footer_note;
+        }}
+
+        // Clean up any Service Worker
         if ('serviceWorker' in navigator) {{
             navigator.serviceWorker.getRegistrations().then(function(regs) {{
                 for (var r of regs) r.unregister();
             }});
         }}
+
+        // Initialize language
+        var sel = document.getElementById('langSelect');
+        if (sel) sel.value = currentLang;
+        applyLanguage(currentLang);
     </script>
 </body>
 </html>
@@ -1843,7 +2556,7 @@ def build_all():
     if os.path.exists(floors_file):
         with open(floors_file, "r", encoding="utf-8") as f:
             floors = json.load(f)
-
+            
     # Load Rugs
     rugs_file = os.path.join(OUTPUT_DIR, "rugs.json")
     rugs = []
@@ -1851,13 +2564,12 @@ def build_all():
         with open(rugs_file, "r", encoding="utf-8") as f:
             rugs = json.load(f)
 
-    stats = {
+    stats_counts = {
         "wallpapers": len(wallpapers),
-        "floors": len(floors) if floors else 215,
-        "rugs": len(rugs) if rugs else 210
+        "floors": len(floors),
+        "rugs": len(rugs),
     }
 
-    # Generate wallpapers.html in pages/
     generate_gallery_page(
         items_data=wallpapers,
         page_type="wallpapers",
@@ -1865,35 +2577,30 @@ def build_all():
         page_icon="🖼️",
         storage_key="acnh_wallpaper_favorites_v1",
         out_filename="wallpapers.html",
-        stats_counts=stats
+        stats_counts=stats_counts,
     )
 
-    # Generate floors.html if floors data exists
-    if floors:
-        generate_gallery_page(
-            items_data=floors,
-            page_type="floors",
-            page_title="地板圖庫全輯",
-            page_icon="🪵",
-            storage_key="acnh_flooring_favorites_v1",
-            out_filename="floors.html",
-            stats_counts=stats
-        )
+    generate_gallery_page(
+        items_data=floors,
+        page_type="floors",
+        page_title="地板圖庫全輯",
+        page_icon="🪵",
+        storage_key="acnh_floor_favorites_v1",
+        out_filename="floors.html",
+        stats_counts=stats_counts,
+    )
 
-    # Generate rugs.html if rugs data exists
-    if rugs:
-        generate_gallery_page(
-            items_data=rugs,
-            page_type="rugs",
-            page_title="地毯圖庫全輯",
-            page_icon="🧶",
-            storage_key="acnh_rug_favorites_v1",
-            out_filename="rugs.html",
-            stats_counts=stats
-        )
+    generate_gallery_page(
+        items_data=rugs,
+        page_type="rugs",
+        page_title="地毯圖庫全輯",
+        page_icon="🧶",
+        storage_key="acnh_rug_favorites_v1",
+        out_filename="rugs.html",
+        stats_counts=stats_counts,
+    )
 
-    # Generate index.html (Portal / Guide page)
-    generate_index_page(stats)
+    generate_index_page(stats_counts)
     print("All pages generated successfully!")
 
 if __name__ == "__main__":
