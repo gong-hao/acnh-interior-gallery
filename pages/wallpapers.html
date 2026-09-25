@@ -747,19 +747,29 @@
             color: var(--primary);
             border-color: var(--primary);
         }
+        html.preloaded .preloader-overlay {
+            display: none !important;
+        }
     </style>
+    <script>
+        try {
+            if (localStorage.getItem('acnh_preloaded_wallpapers')) {
+                document.documentElement.classList.add('preloaded');
+            }
+        } catch(e) {}
+    </script>
 </head>
 <body>
     <!-- Full-Page Preloader Overlay -->
     <div class="preloader-overlay" id="preloaderOverlay">
         <div class="preloader-card">
             <div class="preloader-title">集合啦！動物森友會</div>
-            <div class="preloader-subtitle">壁紙圖庫全輯・正在快取全輯高清圖片</div>
+            <div class="preloader-subtitle">壁紙圖庫全輯・正在讀取全輯高清圖片</div>
             <div class="preloader-bar-track">
                 <div class="preloader-bar-fill" id="preloaderBarFill"></div>
             </div>
             <div class="preloader-info">
-                <span id="preloaderCounter">準備載入中...</span>
+                <span id="preloaderCounter">準備讀取中...</span>
                 <span id="preloaderPercent">0%</span>
             </div>
             <button class="preloader-skip-btn" onclick="dismissPreloader()" title="跳過預載直接瀏覽">跳過等待直接瀏覽 ➔</button>
@@ -6811,8 +6821,12 @@
 
         (function startImagePreload() {
             var total = galleryData.length;
-            if (total === 0) {
+            if (total === 0 || document.documentElement.classList.contains('preloaded')) {
                 dismissPreloader();
+                galleryData.forEach(function(item) {
+                    var img = new Image();
+                    img.src = item.local_rel_path;
+                });
                 return;
             }
             var loaded = 0;
@@ -6824,10 +6838,13 @@
                 loaded++;
                 var pct = Math.min(100, Math.floor((loaded / total) * 100));
                 if (barFill) barFill.style.width = pct + '%';
-                if (counter) counter.textContent = '已快取 ' + loaded + ' / ' + total + ' 張';
+                if (counter) counter.textContent = '已讀取 ' + loaded + ' / ' + total + ' 張';
                 if (percent) percent.textContent = pct + '%';
 
                 if (loaded >= total) {
+                    try {
+                        localStorage.setItem('acnh_preloaded_wallpapers', 'true');
+                    } catch (e) {}
                     setTimeout(dismissPreloader, 250);
                 }
             }
