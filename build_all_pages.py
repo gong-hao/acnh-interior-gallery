@@ -1052,10 +1052,13 @@ def generate_gallery_page(
                 if (percent) percent.textContent = pct + '%';
 
                 if (loaded >= total) {{
+                    if (barFill) barFill.style.width = '100%';
+                    if (percent) percent.textContent = '100%';
+                    if (counter) counter.textContent = '已讀取 ' + total + ' / ' + total + ' 張（完成！）';
                     try {{
                         localStorage.setItem('acnh_preloaded_{page_type}', 'true');
                     }} catch (e) {{}}
-                    setTimeout(dismissPreloader, 250);
+                    setTimeout(dismissPreloader, 400);
                 }}
             }}
 
@@ -1064,9 +1067,6 @@ def generate_gallery_page(
                 img.onload = img.onerror = onSingleImageDone;
                 img.src = item.local_rel_path;
             }});
-
-            // Fallback safety timeout (15s max)
-            setTimeout(dismissPreloader, 15000);
         }})();
 
         function loadFavorites() {{
