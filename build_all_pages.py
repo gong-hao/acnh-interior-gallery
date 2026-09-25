@@ -1114,6 +1114,22 @@ def generate_gallery_page(
 
             updateLightboxFavBtn();
             renderThumbnailStrip();
+
+            // Preload adjacent images for butter-smooth keyboard navigation
+            if (currentPos + 1 < filteredIndices.length) {{
+                const nextItem = galleryData[filteredIndices[currentPos + 1]];
+                if (nextItem && nextItem.local_rel_path) {{
+                    const nextImg = new Image();
+                    nextImg.src = nextItem.local_rel_path;
+                }}
+            }}
+            if (currentPos - 1 >= 0) {{
+                const prevItem = galleryData[filteredIndices[currentPos - 1]];
+                if (prevItem && prevItem.local_rel_path) {{
+                    const prevImg = new Image();
+                    prevImg.src = prevItem.local_rel_path;
+                }}
+            }}
         }}
 
         function renderThumbnailStrip() {{

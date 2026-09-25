@@ -11,7 +11,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9983,
-    "local_rel_path": "images/rugs/橡栗地毯_Acorn_rug.png",
+    "local_rel_path": "images/rugs/橡栗地毯_Acorn_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -28,7 +28,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7064,
-    "local_rel_path": "images/rugs/鋁箔地墊_Aluminum_rug.png",
+    "local_rel_path": "images/rugs/鋁箔地墊_Aluminum_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -45,7 +45,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8536,
-    "local_rel_path": "images/rugs/蘋果地毯_Apple_rug.png",
+    "local_rel_path": "images/rugs/蘋果地毯_Apple_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -62,7 +62,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9017,
-    "local_rel_path": "images/rugs/鈴錢袋地毯_Bell-bag_rug.png",
+    "local_rel_path": "images/rugs/鈴錢袋地毯_Bell-bag_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -79,7 +79,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11890,
-    "local_rel_path": "images/rugs/灰階配色磚塊地毯_Black_blocks_rug.png",
+    "local_rel_path": "images/rugs/灰階配色磚塊地毯_Black_blocks_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -96,7 +96,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9881,
-    "local_rel_path": "images/rugs/黑色木甲板地毯_Black_wooden-deck_rug.png",
+    "local_rel_path": "images/rugs/黑色木甲板地毯_Black_wooden-deck_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -113,7 +113,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9133,
-    "local_rel_path": "images/rugs/黑色圖案廚房地墊_Black-design_kitchen_mat.png",
+    "local_rel_path": "images/rugs/黑色圖案廚房地墊_Black-design_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -130,7 +130,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10637,
-    "local_rel_path": "images/rugs/藍色菱格紋地毯_Blue_argyle_rug.png",
+    "local_rel_path": "images/rugs/藍色菱格紋地毯_Blue_argyle_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -147,7 +147,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12858,
-    "local_rel_path": "images/rugs/藍色磚塊地毯_Blue_blocks_rug.png",
+    "local_rel_path": "images/rugs/藍色磚塊地毯_Blue_blocks_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -164,7 +164,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10633,
-    "local_rel_path": "images/rugs/藍色點點地墊_Blue_dotted_rug.png",
+    "local_rel_path": "images/rugs/藍色點點地墊_Blue_dotted_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -181,7 +181,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8783,
-    "local_rel_path": "images/rugs/藍色體操墊_Blue_exercise_mat.png",
+    "local_rel_path": "images/rugs/藍色體操墊_Blue_exercise_mat.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -198,7 +198,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11664,
-    "local_rel_path": "images/rugs/藍色夏威夷拼布地毯_Blue_Hawaiian_quilt_rug.png",
+    "local_rel_path": "images/rugs/藍色夏威夷拼布地毯_Blue_Hawaiian_quilt_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -215,7 +215,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13219,
-    "local_rel_path": "images/rugs/藍色基裡姆地毯_Blue_kilim-style_carpet.png",
+    "local_rel_path": "images/rugs/藍色基裡姆地毯_Blue_kilim-style_carpet.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -232,7 +232,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9563,
-    "local_rel_path": "images/rugs/藍色廚房地墊_Blue_kitchen_mat.png",
+    "local_rel_path": "images/rugs/藍色廚房地墊_Blue_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -249,7 +249,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8005,
-    "local_rel_path": "images/rugs/中型藍色圓地墊_Blue_medium_round_mat.png",
+    "local_rel_path": "images/rugs/中型藍色圓地墊_Blue_medium_round_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -266,7 +266,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8193,
-    "local_rel_path": "images/rugs/藍色訊息地墊_Blue_message_mat.png",
+    "local_rel_path": "images/rugs/藍色訊息地墊_Blue_message_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -283,7 +283,7 @@
     "width": 128,
     "height": 128,
     "filesize": 14085,
-    "local_rel_path": "images/rugs/藍色波斯地毯_Blue_Persian_rug.png",
+    "local_rel_path": "images/rugs/藍色波斯地毯_Blue_Persian_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -300,7 +300,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12016,
-    "local_rel_path": "images/rugs/藍色長毛地毯_Blue_shaggy_rug.png",
+    "local_rel_path": "images/rugs/藍色長毛地毯_Blue_shaggy_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -317,7 +317,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8246,
-    "local_rel_path": "images/rugs/小型藍色圓地墊_Blue_small_round_mat.png",
+    "local_rel_path": "images/rugs/小型藍色圓地墊_Blue_small_round_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -334,7 +334,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9489,
-    "local_rel_path": "images/rugs/藍色粗橫紋地毯_Blue_stripes_rug.png",
+    "local_rel_path": "images/rugs/藍色粗橫紋地毯_Blue_stripes_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -351,7 +351,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9954,
-    "local_rel_path": "images/rugs/藍色塑膠墊_Blue_vinyl_sheet.png",
+    "local_rel_path": "images/rugs/藍色塑膠墊_Blue_vinyl_sheet.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -368,7 +368,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9754,
-    "local_rel_path": "images/rugs/藍色波浪地毯_Blue_wavy_rug.png",
+    "local_rel_path": "images/rugs/藍色波浪地毯_Blue_wavy_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -385,7 +385,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9500,
-    "local_rel_path": "images/rugs/藍色婚禮地毯_Blue_wedding_rug.png",
+    "local_rel_path": "images/rugs/藍色婚禮地毯_Blue_wedding_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -402,7 +402,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9150,
-    "local_rel_path": "images/rugs/藍色圖案廚房地墊_Blue-design_kitchen_mat.png",
+    "local_rel_path": "images/rugs/藍色圖案廚房地墊_Blue-design_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -419,7 +419,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7658,
-    "local_rel_path": "images/rugs/骨頭玄關地毯_Bone_entrance_mat.png",
+    "local_rel_path": "images/rugs/骨頭玄關地毯_Bone_entrance_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -436,7 +436,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12043,
-    "local_rel_path": "images/rugs/植物圖案地毯_Botanical_rug.png",
+    "local_rel_path": "images/rugs/植物圖案地毯_Botanical_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -453,7 +453,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9864,
-    "local_rel_path": "images/rugs/茶色菱格紋地毯_Brown_argyle_rug.png",
+    "local_rel_path": "images/rugs/茶色菱格紋地毯_Brown_argyle_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -470,7 +470,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8178,
-    "local_rel_path": "images/rugs/棕色皮革地毯_Brown_cow-print_rug.png",
+    "local_rel_path": "images/rugs/棕色皮革地毯_Brown_cow-print_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -487,7 +487,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9228,
-    "local_rel_path": "images/rugs/茶色廚房地墊_Brown_kitchen_mat.png",
+    "local_rel_path": "images/rugs/茶色廚房地墊_Brown_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -504,7 +504,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11900,
-    "local_rel_path": "images/rugs/茶色長毛地毯_Brown_shaggy_rug.png",
+    "local_rel_path": "images/rugs/茶色長毛地毯_Brown_shaggy_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -521,7 +521,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10121,
-    "local_rel_path": "images/rugs/茶色木甲板地毯_Brown_wooden-deck_rug.png",
+    "local_rel_path": "images/rugs/茶色木甲板地毯_Brown_wooden-deck_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -538,7 +538,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9797,
-    "local_rel_path": "images/rugs/復活節地毯_Bunny_Day_rug.png",
+    "local_rel_path": "images/rugs/復活節地毯_Bunny_Day_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -555,7 +555,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7090,
-    "local_rel_path": "images/rugs/櫻桃地毯_Cherry_rug.png",
+    "local_rel_path": "images/rugs/櫻桃地毯_Cherry_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -572,7 +572,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6884,
-    "local_rel_path": "images/rugs/櫻花地毯_Cherry-blossom_rug.png",
+    "local_rel_path": "images/rugs/櫻花地毯_Cherry-blossom_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -589,7 +589,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6174,
-    "local_rel_path": "images/rugs/Cinnamoroll地毯_Cinnamoroll_rug.png",
+    "local_rel_path": "images/rugs/Cinnamoroll地毯_Cinnamoroll_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -606,7 +606,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11506,
-    "local_rel_path": "images/rugs/椰子地墊_Coconut_mat.png",
+    "local_rel_path": "images/rugs/椰子地墊_Coconut_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -623,7 +623,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9070,
-    "local_rel_path": "images/rugs/彩色塑膠墊_Colorful_vinyl_sheet.png",
+    "local_rel_path": "images/rugs/彩色塑膠墊_Colorful_vinyl_sheet.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -640,7 +640,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9062,
-    "local_rel_path": "images/rugs/餅乾地毯_Cookie_rug.png",
+    "local_rel_path": "images/rugs/餅乾地毯_Cookie_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -657,7 +657,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9657,
-    "local_rel_path": "images/rugs/深色竹子浴室地墊_Dark_bamboo_bath_mat.png",
+    "local_rel_path": "images/rugs/深色竹子浴室地墊_Dark_bamboo_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -674,7 +674,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11065,
-    "local_rel_path": "images/rugs/深色竹地毯_Dark_bamboo_rug.png",
+    "local_rel_path": "images/rugs/深色竹地毯_Dark_bamboo_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -691,7 +691,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11374,
-    "local_rel_path": "images/rugs/深色地磚地毯_Dark_square_tile.png",
+    "local_rel_path": "images/rugs/深色地磚地毯_Dark_square_tile.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -708,7 +708,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11602,
-    "local_rel_path": "images/rugs/深色石頭地毯_Dark_stones_rug.png",
+    "local_rel_path": "images/rugs/深色石頭地毯_Dark_stones_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -725,7 +725,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6958,
-    "local_rel_path": "images/rugs/深木色地板鋪巾_Dark-wood_flooring_sheet.png",
+    "local_rel_path": "images/rugs/深木色地板鋪巾_Dark-wood_flooring_sheet.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -742,7 +742,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8117,
-    "local_rel_path": "images/rugs/深木色地磚地墊_Dark-wood_flooring_tile.png",
+    "local_rel_path": "images/rugs/深木色地磚地墊_Dark-wood_flooring_tile.webp",
     "grid_size": "1.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -759,7 +759,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10455,
-    "local_rel_path": "images/rugs/地球地毯_Earth_rug.png",
+    "local_rel_path": "images/rugs/地球地毯_Earth_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -776,7 +776,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13109,
-    "local_rel_path": "images/rugs/米色優雅地毯_Elegant_beige_rug.png",
+    "local_rel_path": "images/rugs/米色優雅地毯_Elegant_beige_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -793,7 +793,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12319,
-    "local_rel_path": "images/rugs/黑色優雅地毯_Elegant_black_rug.png",
+    "local_rel_path": "images/rugs/黑色優雅地毯_Elegant_black_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -810,7 +810,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12919,
-    "local_rel_path": "images/rugs/藍色優雅地毯_Elegant_blue_rug.png",
+    "local_rel_path": "images/rugs/藍色優雅地毯_Elegant_blue_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -827,7 +827,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12752,
-    "local_rel_path": "images/rugs/棕色優雅地毯_Elegant_brown_rug.png",
+    "local_rel_path": "images/rugs/棕色優雅地毯_Elegant_brown_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -844,7 +844,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13936,
-    "local_rel_path": "images/rugs/聖誕節地毯_Festive_rug.png",
+    "local_rel_path": "images/rugs/聖誕節地毯_Festive_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -861,7 +861,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7143,
-    "local_rel_path": "images/rugs/魚兒地毯_Fish_rug.png",
+    "local_rel_path": "images/rugs/魚兒地毯_Fish_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -878,7 +878,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6450,
-    "local_rel_path": "images/rugs/雲朵地毯_Fluffy_rug.png",
+    "local_rel_path": "images/rugs/雲朵地毯_Fluffy_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -895,7 +895,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12038,
-    "local_rel_path": "images/rugs/美式足球地毯_Football_rug.png",
+    "local_rel_path": "images/rugs/美式足球地毯_Football_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -912,7 +912,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8076,
-    "local_rel_path": "images/rugs/化石地毯_Fossil_rug.png",
+    "local_rel_path": "images/rugs/化石地毯_Fossil_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -929,7 +929,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13184,
-    "local_rel_path": "images/rugs/冰地磚地墊_Frozen_floor_tiles.png",
+    "local_rel_path": "images/rugs/冰地磚地墊_Frozen_floor_tiles.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -946,7 +946,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9877,
-    "local_rel_path": "images/rugs/光蘚地毯_Glowing-moss_rug.png",
+    "local_rel_path": "images/rugs/光蘚地毯_Glowing-moss_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -963,7 +963,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12272,
-    "local_rel_path": "images/rugs/灰色磚塊地毯_Gray_brick_rug.png",
+    "local_rel_path": "images/rugs/灰色磚塊地毯_Gray_brick_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -980,7 +980,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10691,
-    "local_rel_path": "images/rugs/灰色地磚地墊_Gray_floor_tiles.png",
+    "local_rel_path": "images/rugs/灰色地磚地墊_Gray_floor_tiles.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -997,7 +997,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8773,
-    "local_rel_path": "images/rugs/綠色竹子鋪墊_Green_bamboo_mat.png",
+    "local_rel_path": "images/rugs/綠色竹子鋪墊_Green_bamboo_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1014,7 +1014,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13740,
-    "local_rel_path": "images/rugs/綠色格紋拼布地毯_Green_checked_rug.png",
+    "local_rel_path": "images/rugs/綠色格紋拼布地毯_Green_checked_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1031,7 +1031,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8337,
-    "local_rel_path": "images/rugs/綠色體操墊_Green_exercise_mat.png",
+    "local_rel_path": "images/rugs/綠色體操墊_Green_exercise_mat.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1048,7 +1048,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9129,
-    "local_rel_path": "images/rugs/綠色中式地墊_Green_exquisite_rug.png",
+    "local_rel_path": "images/rugs/綠色中式地墊_Green_exquisite_rug.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1065,7 +1065,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11944,
-    "local_rel_path": "images/rugs/綠色夏威夷拼布地毯_Green_Hawaiian_quilt_rug.png",
+    "local_rel_path": "images/rugs/綠色夏威夷拼布地毯_Green_Hawaiian_quilt_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1082,7 +1082,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13537,
-    "local_rel_path": "images/rugs/綠色基裡姆地毯_Green_kilim-style_carpet.png",
+    "local_rel_path": "images/rugs/綠色基裡姆地毯_Green_kilim-style_carpet.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1099,7 +1099,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9222,
-    "local_rel_path": "images/rugs/綠色廚房地墊_Green_kitchen_mat.png",
+    "local_rel_path": "images/rugs/綠色廚房地墊_Green_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1116,7 +1116,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11589,
-    "local_rel_path": "images/rugs/綠色長毛地毯_Green_shaggy_rug.png",
+    "local_rel_path": "images/rugs/綠色長毛地毯_Green_shaggy_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1133,7 +1133,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9699,
-    "local_rel_path": "images/rugs/綠色粗橫紋地毯_Green_stripes_rug.png",
+    "local_rel_path": "images/rugs/綠色粗橫紋地毯_Green_stripes_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1150,7 +1150,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8984,
-    "local_rel_path": "images/rugs/Hello_Kitty地毯_Hello_Kitty_rug.png",
+    "local_rel_path": "images/rugs/Hello_Kitty地毯_Hello_Kitty_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1167,7 +1167,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10717,
-    "local_rel_path": "images/rugs/中式地毯_Imperial_rug.png",
+    "local_rel_path": "images/rugs/中式地毯_Imperial_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1184,7 +1184,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8917,
-    "local_rel_path": "images/rugs/鑄鐵玄關地墊_Iron_entrance_mat.png",
+    "local_rel_path": "images/rugs/鑄鐵玄關地墊_Iron_entrance_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1201,7 +1201,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8894,
-    "local_rel_path": "images/rugs/中型象牙色圓地墊_Ivory_medium_round_mat.png",
+    "local_rel_path": "images/rugs/中型象牙色圓地墊_Ivory_medium_round_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1218,7 +1218,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10045,
-    "local_rel_path": "images/rugs/象牙色簡約浴室地墊_Ivory_simple_bath_mat.png",
+    "local_rel_path": "images/rugs/象牙色簡約浴室地墊_Ivory_simple_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1235,7 +1235,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9066,
-    "local_rel_path": "images/rugs/小型象牙色圓地墊_Ivory_small_round_mat.png",
+    "local_rel_path": "images/rugs/小型象牙色圓地墊_Ivory_small_round_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1252,7 +1252,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10071,
-    "local_rel_path": "images/rugs/Kerokerokeroppi地毯_Kerokerokeroppi_rug.png",
+    "local_rel_path": "images/rugs/Kerokerokeroppi地毯_Kerokerokeroppi_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1269,7 +1269,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8209,
-    "local_rel_path": "images/rugs/Kiki_&_Lala地毯_Kiki_&_Lala_rug.png",
+    "local_rel_path": "images/rugs/Kiki_&_Lala地毯_Kiki_&_Lala_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1286,7 +1286,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8802,
-    "local_rel_path": "images/rugs/蕾絲地毯_Lacy_rug.png",
+    "local_rel_path": "images/rugs/蕾絲地毯_Lacy_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1303,7 +1303,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8781,
-    "local_rel_path": "images/rugs/瓢蟲地毯_Ladybug_rug.png",
+    "local_rel_path": "images/rugs/瓢蟲地毯_Ladybug_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1320,7 +1320,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6235,
-    "local_rel_path": "images/rugs/球蓋姆的雲地毯_Lakitu's_Cloud_rug.png",
+    "local_rel_path": "images/rugs/球蓋姆的雲地毯_Lakitu's_Cloud_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1337,7 +1337,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13656,
-    "local_rel_path": "images/rugs/巧美生活地毯_Large_Paradise_Planning_rug.png",
+    "local_rel_path": "images/rugs/巧美生活地毯_Large_Paradise_Planning_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1354,7 +1354,7 @@
     "width": 128,
     "height": 128,
     "filesize": 5249,
-    "local_rel_path": "images/rugs/LEGO®太空任務地毯_LEGO®_space_logo_rug.png",
+    "local_rel_path": "images/rugs/LEGO®太空任務地毯_LEGO®_space_logo_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1371,7 +1371,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10043,
-    "local_rel_path": "images/rugs/淺色竹子浴室地墊_Light_bamboo_bath_mat.png",
+    "local_rel_path": "images/rugs/淺色竹子浴室地墊_Light_bamboo_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1388,7 +1388,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11367,
-    "local_rel_path": "images/rugs/淺色竹地毯_Light_bamboo_rug.png",
+    "local_rel_path": "images/rugs/淺色竹地毯_Light_bamboo_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1405,7 +1405,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11798,
-    "local_rel_path": "images/rugs/淺色地磚地毯_Light_square_tile.png",
+    "local_rel_path": "images/rugs/淺色地磚地毯_Light_square_tile.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1422,7 +1422,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12185,
-    "local_rel_path": "images/rugs/淺色石頭地毯_Light_stones_rug.png",
+    "local_rel_path": "images/rugs/淺色石頭地毯_Light_stones_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1439,7 +1439,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8335,
-    "local_rel_path": "images/rugs/淺棕色皮革地毯_Light-brown_cow-print_rug.png",
+    "local_rel_path": "images/rugs/淺棕色皮革地毯_Light-brown_cow-print_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1456,7 +1456,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6489,
-    "local_rel_path": "images/rugs/淺木色地板鋪巾_Light-wood_flooring_sheet.png",
+    "local_rel_path": "images/rugs/淺木色地板鋪巾_Light-wood_flooring_sheet.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1473,7 +1473,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8157,
-    "local_rel_path": "images/rugs/淺木色地磚地墊_Light-wood_flooring_tile.png",
+    "local_rel_path": "images/rugs/淺木色地磚地墊_Light-wood_flooring_tile.webp",
     "grid_size": "1.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1490,7 +1490,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11121,
-    "local_rel_path": "images/rugs/魔法陣地毯_Magic-circle_rug.png",
+    "local_rel_path": "images/rugs/魔法陣地毯_Magic-circle_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1507,7 +1507,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7096,
-    "local_rel_path": "images/rugs/楓葉地毯_Maple-leaf_rug.png",
+    "local_rel_path": "images/rugs/楓葉地毯_Maple-leaf_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1524,7 +1524,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6400,
-    "local_rel_path": "images/rugs/人魚地毯_Mermaid_rug.png",
+    "local_rel_path": "images/rugs/人魚地毯_Mermaid_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1541,7 +1541,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10542,
-    "local_rel_path": "images/rugs/摩登波浪地毯_Modern_wavy_rug.png",
+    "local_rel_path": "images/rugs/摩登波浪地毯_Modern_wavy_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1558,7 +1558,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9604,
-    "local_rel_path": "images/rugs/酷感媽媽廚房地墊_Mom's_cool_kitchen_mat.png",
+    "local_rel_path": "images/rugs/酷感媽媽廚房地墊_Mom's_cool_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1575,7 +1575,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9529,
-    "local_rel_path": "images/rugs/活潑媽媽廚房地墊_Mom's_lively_kitchen_mat.png",
+    "local_rel_path": "images/rugs/活潑媽媽廚房地墊_Mom's_lively_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1592,7 +1592,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9282,
-    "local_rel_path": "images/rugs/調皮媽媽廚房地墊_Mom's_playful_kitchen_mat.png",
+    "local_rel_path": "images/rugs/調皮媽媽廚房地墊_Mom's_playful_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1609,7 +1609,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9571,
-    "local_rel_path": "images/rugs/可靠媽媽廚房地墊_Mom's_reliable_kitchen_mat.png",
+    "local_rel_path": "images/rugs/可靠媽媽廚房地墊_Mom's_reliable_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1626,7 +1626,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9110,
-    "local_rel_path": "images/rugs/灰階配色點點地墊_Monochromatic_dotted_rug.png",
+    "local_rel_path": "images/rugs/灰階配色點點地墊_Monochromatic_dotted_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1643,7 +1643,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10289,
-    "local_rel_path": "images/rugs/灰階配色波浪地毯_Monochromatic_wavy_rug.png",
+    "local_rel_path": "images/rugs/灰階配色波浪地毯_Monochromatic_wavy_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1660,7 +1660,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10757,
-    "local_rel_path": "images/rugs/月之地毯_Moon_rug.png",
+    "local_rel_path": "images/rugs/月之地毯_Moon_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1677,7 +1677,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8460,
-    "local_rel_path": "images/rugs/蘑菇地毯_Mush_rug.png",
+    "local_rel_path": "images/rugs/蘑菇地毯_Mush_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1694,7 +1694,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8611,
-    "local_rel_path": "images/rugs/My_Melody地毯_My_Melody_rug.png",
+    "local_rel_path": "images/rugs/My_Melody地毯_My_Melody_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1711,7 +1711,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10685,
-    "local_rel_path": "images/rugs/自然色木甲板地毯_Natural_wooden-deck_rug.png",
+    "local_rel_path": "images/rugs/自然色木甲板地毯_Natural_wooden-deck_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1728,7 +1728,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7039,
-    "local_rel_path": "images/rugs/自然木色地板鋪巾_Natural-wood_flooring_sheet.png",
+    "local_rel_path": "images/rugs/自然木色地板鋪巾_Natural-wood_flooring_sheet.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1745,7 +1745,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9609,
-    "local_rel_path": "images/rugs/自然木色地磚地墊_Natural-wood_flooring_tile.png",
+    "local_rel_path": "images/rugs/自然木色地磚地墊_Natural-wood_flooring_tile.webp",
     "grid_size": "1.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1762,7 +1762,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11912,
-    "local_rel_path": "images/rugs/自然色地磚地毯_Natural-wood_square_tile.png",
+    "local_rel_path": "images/rugs/自然色地磚地毯_Natural-wood_square_tile.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1779,7 +1779,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8723,
-    "local_rel_path": "images/rugs/Nook_Inc.植物圖案地毯_Nook_Inc._botanical_rug.png",
+    "local_rel_path": "images/rugs/Nook_Inc.植物圖案地毯_Nook_Inc._botanical_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1796,7 +1796,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7585,
-    "local_rel_path": "images/rugs/Nook_Inc.地毯_Nook_Inc._rug.png",
+    "local_rel_path": "images/rugs/Nook_Inc.地毯_Nook_Inc._rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1813,7 +1813,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10219,
-    "local_rel_path": "images/rugs/Nook_Inc.正方形地毯_Nook_Inc._silk_rug.png",
+    "local_rel_path": "images/rugs/Nook_Inc.正方形地毯_Nook_Inc._silk_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1830,7 +1830,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9771,
-    "local_rel_path": "images/rugs/橘子地毯_Orange_rug.png",
+    "local_rel_path": "images/rugs/橘子地毯_Orange_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1847,7 +1847,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9838,
-    "local_rel_path": "images/rugs/橢圓形玄關地毯_Oval_entrance_mat.png",
+    "local_rel_path": "images/rugs/橢圓形玄關地毯_Oval_entrance_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -1864,7 +1864,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12035,
-    "local_rel_path": "images/rugs/桃紅色格紋拼布地毯_Peach_checked_rug.png",
+    "local_rel_path": "images/rugs/桃紅色格紋拼布地毯_Peach_checked_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1881,7 +1881,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8956,
-    "local_rel_path": "images/rugs/桃子地毯_Peach_rug.png",
+    "local_rel_path": "images/rugs/桃子地毯_Peach_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1898,7 +1898,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9185,
-    "local_rel_path": "images/rugs/桃紅色粗橫紋地毯_Peach_stripes_rug.png",
+    "local_rel_path": "images/rugs/桃紅色粗橫紋地毯_Peach_stripes_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1915,7 +1915,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9643,
-    "local_rel_path": "images/rugs/梨子地毯_Pear_rug.png",
+    "local_rel_path": "images/rugs/梨子地毯_Pear_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1932,7 +1932,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11605,
-    "local_rel_path": "images/rugs/粉紅色夏威夷拼布地毯_Pink_Hawaiian_quilt_rug.png",
+    "local_rel_path": "images/rugs/粉紅色夏威夷拼布地毯_Pink_Hawaiian_quilt_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -1949,7 +1949,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7474,
-    "local_rel_path": "images/rugs/粉紅色愛心地毯_Pink_heart_rug.png",
+    "local_rel_path": "images/rugs/粉紅色愛心地毯_Pink_heart_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1966,7 +1966,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9261,
-    "local_rel_path": "images/rugs/粉紅色玫瑰地毯_Pink_rose_rug.png",
+    "local_rel_path": "images/rugs/粉紅色玫瑰地毯_Pink_rose_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -1983,7 +1983,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11278,
-    "local_rel_path": "images/rugs/海盜地毯_Pirate_rug.png",
+    "local_rel_path": "images/rugs/海盜地毯_Pirate_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2000,7 +2000,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8434,
-    "local_rel_path": "images/rugs/Pompompurin地毯_Pompompurin_rug.png",
+    "local_rel_path": "images/rugs/Pompompurin地毯_Pompompurin_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2017,7 +2017,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6789,
-    "local_rel_path": "images/rugs/紫色愛心地毯_Purple_heart_rug.png",
+    "local_rel_path": "images/rugs/紫色愛心地毯_Purple_heart_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2034,7 +2034,7 @@
     "width": 128,
     "height": 128,
     "filesize": 14397,
-    "local_rel_path": "images/rugs/紫色波斯地毯_Purple_Persian_rug.png",
+    "local_rel_path": "images/rugs/紫色波斯地毯_Purple_Persian_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2051,7 +2051,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12125,
-    "local_rel_path": "images/rugs/紫色長毛地毯_Purple_shaggy_rug.png",
+    "local_rel_path": "images/rugs/紫色長毛地毯_Purple_shaggy_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2068,7 +2068,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8422,
-    "local_rel_path": "images/rugs/唱片地毯_Record_rug.png",
+    "local_rel_path": "images/rugs/唱片地毯_Record_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2085,7 +2085,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10744,
-    "local_rel_path": "images/rugs/紅色菱格紋地毯_Red_argyle_rug.png",
+    "local_rel_path": "images/rugs/紅色菱格紋地毯_Red_argyle_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2102,7 +2102,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12726,
-    "local_rel_path": "images/rugs/紅色磚塊地毯_Red_blocks_rug.png",
+    "local_rel_path": "images/rugs/紅色磚塊地毯_Red_blocks_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2119,7 +2119,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12321,
-    "local_rel_path": "images/rugs/紅色磚塊地毯_Red_brick_rug.png",
+    "local_rel_path": "images/rugs/紅色磚塊地毯_Red_brick_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2136,7 +2136,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8432,
-    "local_rel_path": "images/rugs/紅地毯_Red_carpet.png",
+    "local_rel_path": "images/rugs/紅地毯_Red_carpet.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2153,7 +2153,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10235,
-    "local_rel_path": "images/rugs/紅色點點地墊_Red_dotted_rug.png",
+    "local_rel_path": "images/rugs/紅色點點地墊_Red_dotted_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2170,7 +2170,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8479,
-    "local_rel_path": "images/rugs/紅色體操墊_Red_exercise_mat.png",
+    "local_rel_path": "images/rugs/紅色體操墊_Red_exercise_mat.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2187,7 +2187,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8842,
-    "local_rel_path": "images/rugs/紅色中式地墊_Red_exquisite_rug.png",
+    "local_rel_path": "images/rugs/紅色中式地墊_Red_exquisite_rug.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2204,7 +2204,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13748,
-    "local_rel_path": "images/rugs/紅色基裡姆地毯_Red_kilim-style_carpet.png",
+    "local_rel_path": "images/rugs/紅色基裡姆地毯_Red_kilim-style_carpet.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2221,7 +2221,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7784,
-    "local_rel_path": "images/rugs/中型紅色圓地墊_Red_medium_round_mat.png",
+    "local_rel_path": "images/rugs/中型紅色圓地墊_Red_medium_round_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2238,7 +2238,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7783,
-    "local_rel_path": "images/rugs/紅色訊息地墊_Red_message_mat.png",
+    "local_rel_path": "images/rugs/紅色訊息地墊_Red_message_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2255,7 +2255,7 @@
     "width": 128,
     "height": 128,
     "filesize": 14271,
-    "local_rel_path": "images/rugs/紅色波斯地毯_Red_Persian_rug.png",
+    "local_rel_path": "images/rugs/紅色波斯地毯_Red_Persian_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2272,7 +2272,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8855,
-    "local_rel_path": "images/rugs/紅色玫瑰地毯_Red_rose_rug.png",
+    "local_rel_path": "images/rugs/紅色玫瑰地毯_Red_rose_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2289,7 +2289,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7815,
-    "local_rel_path": "images/rugs/小型紅色圓地墊_Red_small_round_mat.png",
+    "local_rel_path": "images/rugs/小型紅色圓地墊_Red_small_round_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2306,7 +2306,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8869,
-    "local_rel_path": "images/rugs/紅色塑膠墊_Red_vinyl_sheet.png",
+    "local_rel_path": "images/rugs/紅色塑膠墊_Red_vinyl_sheet.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2323,7 +2323,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8823,
-    "local_rel_path": "images/rugs/紅色西瓜地毯_Red_watermelon_rug.png",
+    "local_rel_path": "images/rugs/紅色西瓜地毯_Red_watermelon_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2340,7 +2340,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9801,
-    "local_rel_path": "images/rugs/紅色波浪地毯_Red_wavy_rug.png",
+    "local_rel_path": "images/rugs/紅色波浪地毯_Red_wavy_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2357,7 +2357,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9680,
-    "local_rel_path": "images/rugs/紅色婚禮地毯_Red_wedding_rug.png",
+    "local_rel_path": "images/rugs/紅色婚禮地毯_Red_wedding_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2374,7 +2374,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13495,
-    "local_rel_path": "images/rugs/紅藍格紋拼布地毯_Red-and-blue_checked_rug.png",
+    "local_rel_path": "images/rugs/紅藍格紋拼布地毯_Red-and-blue_checked_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2391,7 +2391,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8970,
-    "local_rel_path": "images/rugs/紅色圖案廚房地墊_Red-design_kitchen_mat.png",
+    "local_rel_path": "images/rugs/紅色圖案廚房地墊_Red-design_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2408,7 +2408,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10233,
-    "local_rel_path": "images/rugs/復古點點地毯_Retro_dotted_rug.png",
+    "local_rel_path": "images/rugs/復古點點地毯_Retro_dotted_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2425,7 +2425,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10133,
-    "local_rel_path": "images/rugs/硬地墊_Rough_rug.png",
+    "local_rel_path": "images/rugs/硬地墊_Rough_rug.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2442,7 +2442,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9705,
-    "local_rel_path": "images/rugs/光蘚圓形地墊_Round_glowing-moss_rug.png",
+    "local_rel_path": "images/rugs/光蘚圓形地墊_Round_glowing-moss_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2459,7 +2459,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10206,
-    "local_rel_path": "images/rugs/藤蔓圓形地墊_Round_vine_rug.png",
+    "local_rel_path": "images/rugs/藤蔓圓形地墊_Round_vine_rug.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2476,7 +2476,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9693,
-    "local_rel_path": "images/rugs/塑膠刮泥墊_Rubber_mud_mat.png",
+    "local_rel_path": "images/rugs/塑膠刮泥墊_Rubber_mud_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2493,7 +2493,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8278,
-    "local_rel_path": "images/rugs/三葉草地毯_Shamrock_rug.png",
+    "local_rel_path": "images/rugs/三葉草地毯_Shamrock_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2510,7 +2510,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13611,
-    "local_rel_path": "images/rugs/舊草蓆_Shanty_mat.png",
+    "local_rel_path": "images/rugs/舊草蓆_Shanty_mat.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2527,7 +2527,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7363,
-    "local_rel_path": "images/rugs/貝殼地毯_Shell_rug.png",
+    "local_rel_path": "images/rugs/貝殼地毯_Shell_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2544,7 +2544,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7841,
-    "local_rel_path": "images/rugs/簡約玄關地墊_Simple_entrance_mat.png",
+    "local_rel_path": "images/rugs/簡約玄關地墊_Simple_entrance_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2561,7 +2561,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9243,
-    "local_rel_path": "images/rugs/綠色簡約浴室地墊_Simple_green_bath_mat.png",
+    "local_rel_path": "images/rugs/綠色簡約浴室地墊_Simple_green_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2578,7 +2578,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10290,
-    "local_rel_path": "images/rugs/中型卡其色簡約地墊_Simple_medium_avocado_mat.png",
+    "local_rel_path": "images/rugs/中型卡其色簡約地墊_Simple_medium_avocado_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2595,7 +2595,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10078,
-    "local_rel_path": "images/rugs/中型黑色簡約地墊_Simple_medium_black_mat.png",
+    "local_rel_path": "images/rugs/中型黑色簡約地墊_Simple_medium_black_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2612,7 +2612,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10253,
-    "local_rel_path": "images/rugs/中型藍色簡約地墊_Simple_medium_blue_mat.png",
+    "local_rel_path": "images/rugs/中型藍色簡約地墊_Simple_medium_blue_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2629,7 +2629,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10326,
-    "local_rel_path": "images/rugs/中型茶色簡約地墊_Simple_medium_brown_mat.png",
+    "local_rel_path": "images/rugs/中型茶色簡約地墊_Simple_medium_brown_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2646,7 +2646,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8617,
-    "local_rel_path": "images/rugs/中型橘色簡約地墊_Simple_medium_orange_mat.png",
+    "local_rel_path": "images/rugs/中型橘色簡約地墊_Simple_medium_orange_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2663,7 +2663,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11119,
-    "local_rel_path": "images/rugs/中型紫色簡約地墊_Simple_medium_purple_mat.png",
+    "local_rel_path": "images/rugs/中型紫色簡約地墊_Simple_medium_purple_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2680,7 +2680,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10769,
-    "local_rel_path": "images/rugs/中型紅色簡約地墊_Simple_medium_red_mat.png",
+    "local_rel_path": "images/rugs/中型紅色簡約地墊_Simple_medium_red_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2697,7 +2697,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9730,
-    "local_rel_path": "images/rugs/海軍藍簡約浴室地墊_Simple_navy_bath_mat.png",
+    "local_rel_path": "images/rugs/海軍藍簡約浴室地墊_Simple_navy_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2714,7 +2714,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9810,
-    "local_rel_path": "images/rugs/粉紅色簡約浴室地墊_Simple_pink_bath_mat.png",
+    "local_rel_path": "images/rugs/粉紅色簡約浴室地墊_Simple_pink_bath_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2731,7 +2731,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10267,
-    "local_rel_path": "images/rugs/小型卡其色簡約地墊_Simple_small_avocado_mat.png",
+    "local_rel_path": "images/rugs/小型卡其色簡約地墊_Simple_small_avocado_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2748,7 +2748,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10588,
-    "local_rel_path": "images/rugs/小型黑色簡約地墊_Simple_small_black_mat.png",
+    "local_rel_path": "images/rugs/小型黑色簡約地墊_Simple_small_black_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2765,7 +2765,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10314,
-    "local_rel_path": "images/rugs/小型藍色簡約地墊_Simple_small_blue_mat.png",
+    "local_rel_path": "images/rugs/小型藍色簡約地墊_Simple_small_blue_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2782,7 +2782,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10653,
-    "local_rel_path": "images/rugs/小型茶色簡約地墊_Simple_small_brown_mat.png",
+    "local_rel_path": "images/rugs/小型茶色簡約地墊_Simple_small_brown_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2799,7 +2799,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8571,
-    "local_rel_path": "images/rugs/小型橘色簡約地墊_Simple_small_orange_mat.png",
+    "local_rel_path": "images/rugs/小型橘色簡約地墊_Simple_small_orange_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2816,7 +2816,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11512,
-    "local_rel_path": "images/rugs/小型紫色簡約地墊_Simple_small_purple_mat.png",
+    "local_rel_path": "images/rugs/小型紫色簡約地墊_Simple_small_purple_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2833,7 +2833,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11337,
-    "local_rel_path": "images/rugs/小型紅色簡約地墊_Simple_small_red_mat.png",
+    "local_rel_path": "images/rugs/小型紅色簡約地墊_Simple_small_red_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2850,7 +2850,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10794,
-    "local_rel_path": "images/rugs/骷髏地毯_Skull_rug.png",
+    "local_rel_path": "images/rugs/骷髏地毯_Skull_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2867,7 +2867,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8684,
-    "local_rel_path": "images/rugs/邋遢地毯_Sloppy_rug.png",
+    "local_rel_path": "images/rugs/邋遢地毯_Sloppy_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2884,7 +2884,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9226,
-    "local_rel_path": "images/rugs/巧美生活小地墊_Small_Paradise_Planning_mat.png",
+    "local_rel_path": "images/rugs/巧美生活小地墊_Small_Paradise_Planning_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -2901,7 +2901,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9406,
-    "local_rel_path": "images/rugs/雪花地毯_Snowflake_rug.png",
+    "local_rel_path": "images/rugs/雪花地毯_Snowflake_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2918,7 +2918,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13157,
-    "local_rel_path": "images/rugs/萬聖節地毯_Spooky_rug.png",
+    "local_rel_path": "images/rugs/萬聖節地毯_Spooky_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -2935,7 +2935,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10716,
-    "local_rel_path": "images/rugs/舞臺地毯_Stage_rug.png",
+    "local_rel_path": "images/rugs/舞臺地毯_Stage_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2952,7 +2952,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10182,
-    "local_rel_path": "images/rugs/星空地毯_Starry-skies_rug.png",
+    "local_rel_path": "images/rugs/星空地毯_Starry-skies_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2969,7 +2969,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8783,
-    "local_rel_path": "images/rugs/夏天貝殼地毯_Summer-shell_rug.png",
+    "local_rel_path": "images/rugs/夏天貝殼地毯_Summer-shell_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -2986,7 +2986,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8838,
-    "local_rel_path": "images/rugs/向日葵地毯_Sunflower_rug.png",
+    "local_rel_path": "images/rugs/向日葵地毯_Sunflower_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3003,7 +3003,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10172,
-    "local_rel_path": "images/rugs/一張榻榻米_Tatami_mat.png",
+    "local_rel_path": "images/rugs/一張榻榻米_Tatami_mat.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3020,7 +3020,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8810,
-    "local_rel_path": "images/rugs/樹樁地毯_Tree-stump_rug.png",
+    "local_rel_path": "images/rugs/樹樁地毯_Tree-stump_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3037,7 +3037,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9753,
-    "local_rel_path": "images/rugs/南方小島地毯_Tropical_rug.png",
+    "local_rel_path": "images/rugs/南方小島地毯_Tropical_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3054,7 +3054,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13278,
-    "local_rel_path": "images/rugs/感恩節地毯_Turkey_Day_rug.png",
+    "local_rel_path": "images/rugs/感恩節地毯_Turkey_Day_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3071,7 +3071,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8607,
-    "local_rel_path": "images/rugs/藍色愛心地毯_Turquoise_heart_rug.png",
+    "local_rel_path": "images/rugs/藍色愛心地毯_Turquoise_heart_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3088,7 +3088,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8300,
-    "local_rel_path": "images/rugs/白色體操墊_White_exercise_mat.png",
+    "local_rel_path": "images/rugs/白色體操墊_White_exercise_mat.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3105,7 +3105,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7089,
-    "local_rel_path": "images/rugs/白色愛心地毯_White_heart_rug.png",
+    "local_rel_path": "images/rugs/白色愛心地毯_White_heart_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3122,7 +3122,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8048,
-    "local_rel_path": "images/rugs/白色訊息地墊_White_message_mat.png",
+    "local_rel_path": "images/rugs/白色訊息地墊_White_message_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3139,7 +3139,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9013,
-    "local_rel_path": "images/rugs/白色玫瑰地毯_White_rose_rug.png",
+    "local_rel_path": "images/rugs/白色玫瑰地毯_White_rose_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3156,7 +3156,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9519,
-    "local_rel_path": "images/rugs/中型白色簡約地墊_White_simple_medium_mat.png",
+    "local_rel_path": "images/rugs/中型白色簡約地墊_White_simple_medium_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3173,7 +3173,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10443,
-    "local_rel_path": "images/rugs/小型白色簡約地墊_White_simple_small_mat.png",
+    "local_rel_path": "images/rugs/小型白色簡約地墊_White_simple_small_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3190,7 +3190,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10964,
-    "local_rel_path": "images/rugs/白色地磚地毯_White_square_tile.png",
+    "local_rel_path": "images/rugs/白色地磚地毯_White_square_tile.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3207,7 +3207,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8214,
-    "local_rel_path": "images/rugs/白色婚禮地毯_White_wedding_rug.png",
+    "local_rel_path": "images/rugs/白色婚禮地毯_White_wedding_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3224,7 +3224,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9972,
-    "local_rel_path": "images/rugs/白色木甲板地毯_White_wooden-deck_rug.png",
+    "local_rel_path": "images/rugs/白色木甲板地毯_White_wooden-deck_rug.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3241,7 +3241,7 @@
     "width": 128,
     "height": 128,
     "filesize": 6707,
-    "local_rel_path": "images/rugs/白木色地板鋪巾_White-wood_flooring_sheet.png",
+    "local_rel_path": "images/rugs/白木色地板鋪巾_White-wood_flooring_sheet.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3258,7 +3258,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8616,
-    "local_rel_path": "images/rugs/白木色地磚地墊_White-wood_flooring_tile.png",
+    "local_rel_path": "images/rugs/白木色地磚地墊_White-wood_flooring_tile.webp",
     "grid_size": "1.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3275,7 +3275,7 @@
     "width": 128,
     "height": 128,
     "filesize": 10336,
-    "local_rel_path": "images/rugs/黃色菱格紋地毯_Yellow_argyle_rug.png",
+    "local_rel_path": "images/rugs/黃色菱格紋地毯_Yellow_argyle_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3292,7 +3292,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8833,
-    "local_rel_path": "images/rugs/黃色竹子鋪墊_Yellow_bamboo_mat.png",
+    "local_rel_path": "images/rugs/黃色竹子鋪墊_Yellow_bamboo_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3309,7 +3309,7 @@
     "width": 128,
     "height": 128,
     "filesize": 12952,
-    "local_rel_path": "images/rugs/黃色磚塊地毯_Yellow_blocks_rug.png",
+    "local_rel_path": "images/rugs/黃色磚塊地毯_Yellow_blocks_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3326,7 +3326,7 @@
     "width": 128,
     "height": 128,
     "filesize": 13408,
-    "local_rel_path": "images/rugs/黃色格紋拼布地毯_Yellow_checked_rug.png",
+    "local_rel_path": "images/rugs/黃色格紋拼布地毯_Yellow_checked_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3343,7 +3343,7 @@
     "width": 128,
     "height": 128,
     "filesize": 11603,
-    "local_rel_path": "images/rugs/黃色夏威夷拼布地毯_Yellow_Hawaiian_quilt_rug.png",
+    "local_rel_path": "images/rugs/黃色夏威夷拼布地毯_Yellow_Hawaiian_quilt_rug.webp",
     "grid_size": "4.0 × 4.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3360,7 +3360,7 @@
     "width": 128,
     "height": 128,
     "filesize": 14194,
-    "local_rel_path": "images/rugs/黃色基裡姆地毯_Yellow_kilim-style_carpet.png",
+    "local_rel_path": "images/rugs/黃色基裡姆地毯_Yellow_kilim-style_carpet.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3377,7 +3377,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8239,
-    "local_rel_path": "images/rugs/黃色廚房地墊_Yellow_kitchen_mat.png",
+    "local_rel_path": "images/rugs/黃色廚房地墊_Yellow_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3394,7 +3394,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8180,
-    "local_rel_path": "images/rugs/中型黃色圓地墊_Yellow_medium_round_mat.png",
+    "local_rel_path": "images/rugs/中型黃色圓地墊_Yellow_medium_round_mat.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3411,7 +3411,7 @@
     "width": 128,
     "height": 128,
     "filesize": 7589,
-    "local_rel_path": "images/rugs/黃色訊息地墊_Yellow_message_mat.png",
+    "local_rel_path": "images/rugs/黃色訊息地墊_Yellow_message_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3428,7 +3428,7 @@
     "width": 128,
     "height": 128,
     "filesize": 14363,
-    "local_rel_path": "images/rugs/黃色波斯地毯_Yellow_Persian_rug.png",
+    "local_rel_path": "images/rugs/黃色波斯地毯_Yellow_Persian_rug.webp",
     "grid_size": "5.0 × 5.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3445,7 +3445,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9482,
-    "local_rel_path": "images/rugs/黃色玫瑰地毯_Yellow_rose_rug.png",
+    "local_rel_path": "images/rugs/黃色玫瑰地毯_Yellow_rose_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3462,7 +3462,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8228,
-    "local_rel_path": "images/rugs/小型黃色圓地墊_Yellow_small_round_mat.png",
+    "local_rel_path": "images/rugs/小型黃色圓地墊_Yellow_small_round_mat.webp",
     "grid_size": "2.0 × 2.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3479,7 +3479,7 @@
     "width": 128,
     "height": 128,
     "filesize": 5961,
-    "local_rel_path": "images/rugs/黃色星星地毯_Yellow_star_rug.png",
+    "local_rel_path": "images/rugs/黃色星星地毯_Yellow_star_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3496,7 +3496,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9232,
-    "local_rel_path": "images/rugs/黃色粗橫紋地毯_Yellow_stripes_rug.png",
+    "local_rel_path": "images/rugs/黃色粗橫紋地毯_Yellow_stripes_rug.webp",
     "grid_size": "4.0 × 3.0",
     "size_category": "L",
     "size_label": "大型 (L)"
@@ -3513,7 +3513,7 @@
     "width": 128,
     "height": 128,
     "filesize": 9396,
-    "local_rel_path": "images/rugs/黃色塑膠墊_Yellow_vinyl_sheet.png",
+    "local_rel_path": "images/rugs/黃色塑膠墊_Yellow_vinyl_sheet.webp",
     "grid_size": "3.0 × 2.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3530,7 +3530,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8518,
-    "local_rel_path": "images/rugs/黃色西瓜地毯_Yellow_watermelon_rug.png",
+    "local_rel_path": "images/rugs/黃色西瓜地毯_Yellow_watermelon_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
@@ -3547,7 +3547,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8988,
-    "local_rel_path": "images/rugs/黃色圖案廚房地墊_Yellow-design_kitchen_mat.png",
+    "local_rel_path": "images/rugs/黃色圖案廚房地墊_Yellow-design_kitchen_mat.webp",
     "grid_size": "2.0 × 1.0",
     "size_category": "S",
     "size_label": "小型 (S)"
@@ -3564,7 +3564,7 @@
     "width": 128,
     "height": 128,
     "filesize": 8527,
-    "local_rel_path": "images/rugs/耀西蛋地毯_Yoshi's_Egg_rug.png",
+    "local_rel_path": "images/rugs/耀西蛋地毯_Yoshi's_Egg_rug.webp",
     "grid_size": "3.0 × 3.0",
     "size_category": "M",
     "size_label": "中型 (M)"
