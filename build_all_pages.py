@@ -1084,25 +1084,12 @@ def generate_gallery_page(
                 }}
             }}
 
-            // High-throughput parallel worker pool (16 concurrent parallel downloads)
-            var CONCURRENCY = 16;
-            var nextIndex = 0;
-
-            function loadNext() {{
-                if (nextIndex >= total) return;
-                var idx = nextIndex++;
-                var item = galleryData[idx];
+            // Full-speed native browser HTTP/2 multiplexing (parallel downloads at maximum pipe bandwidth)
+            galleryData.forEach(function(item) {{
                 var img = new Image();
-                img.onload = img.onerror = function() {{
-                    onSingleImageDone();
-                    loadNext();
-                }};
+                img.onload = img.onerror = onSingleImageDone;
                 img.src = item.local_rel_path;
-            }}
-
-            for (var c = 0; c < Math.min(CONCURRENCY, total); c++) {{
-                loadNext();
-            }}
+            }});
         }})();
 
         function loadFavorites() {{
@@ -1419,10 +1406,10 @@ def generate_gallery_page(
         // Initialize favorites on load
         loadFavorites();
 
-        // Register Service Worker for permanent client-side cache
+        // Clean up any Service Worker to ensure maximum native HTTP/2 download speed
         if ('serviceWorker' in navigator) {{
-            window.addEventListener('load', function() {{
-                navigator.serviceWorker.register('sw.js').catch(function() {{}});
+            navigator.serviceWorker.getRegistrations().then(function(regs) {{
+                for (var r of regs) r.unregister();
             }});
         }}
     </script>
@@ -1831,8 +1818,8 @@ def generate_index_page(stats_counts):
 
     <script>
         if ('serviceWorker' in navigator) {{
-            window.addEventListener('load', function() {{
-                navigator.serviceWorker.register('sw.js').catch(function() {{}});
+            navigator.serviceWorker.getRegistrations().then(function(regs) {{
+                for (var r of regs) r.unregister();
             }});
         }}
     </script>
