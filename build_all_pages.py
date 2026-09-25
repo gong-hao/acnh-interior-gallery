@@ -586,10 +586,10 @@ def generate_gallery_page(
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            max-width: 90vw;
-            max-height: 100vh;
+            max-width: 92vw;
+            max-height: 98vh;
             z-index: 1000;
-            padding: 16px 80px 100px 80px;
+            padding: 4px 60px;
             box-sizing: border-box;
         }}
         .lightbox-img-wrapper {{
@@ -597,27 +597,27 @@ def generate_gallery_page(
             align-items: center;
             justify-content: center;
             max-width: 90vw;
-            max-height: calc(100vh - 280px);
+            max-height: calc(100vh - 170px);
         }}
         .lightbox-img-wrapper img {{
             max-width: 100%;
-            max-height: calc(100vh - 280px);
+            max-height: calc(100vh - 170px);
             object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.5);
         }}
         .lightbox-info {{
-            margin-top: 10px;
+            margin-top: 8px;
             text-align: center;
             color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             flex-shrink: 0;
         }}
         .modal-caption {{
-            font-size: 1.15rem;
+            font-size: 1.08rem;
         }}
         .lightbox-actions {{
             display: flex;
@@ -628,10 +628,10 @@ def generate_gallery_page(
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.4);
             color: #fff;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -652,29 +652,29 @@ def generate_gallery_page(
 
         /* Bottom Thumbnail Strip */
         .thumb-strip-wrapper {{
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin-top: 8px;
+            margin-bottom: 2px;
             z-index: 1002;
             background: rgba(20, 24, 30, 0.75);
-            padding: 6px 14px;
-            border-radius: 30px;
+            padding: 4px 10px;
+            border-radius: 26px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-            max-width: 92vw;
+            max-width: 90vw;
             overflow-x: auto;
+            flex-shrink: 0;
         }}
         .thumb-strip {{
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }}
         .thumb-item {{
-            width: 48px;
-            height: 48px;
-            border-radius: 8px;
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
             overflow: hidden;
             cursor: pointer;
             opacity: 0.55;
@@ -695,15 +695,38 @@ def generate_gallery_page(
         .thumb-item.active {{
             opacity: 1;
             border-color: #2a9d8f;
-            transform: scale(1.16);
-            box-shadow: 0 0 14px rgba(42, 157, 143, 0.9);
+            transform: scale(1.14);
+            box-shadow: 0 0 12px rgba(42, 157, 143, 0.9);
             z-index: 2;
         }}
         .thumb-strip-arrow {{
             color: #888;
-            font-size: 0.85rem;
-            padding: 0 4px;
+            font-size: 0.8rem;
+            padding: 0 3px;
             user-select: none;
+        }}
+
+        @media (max-width: 768px) {{
+            .lightbox-main {{
+                padding: 4px 10px;
+                max-width: 98vw;
+            }}
+            .lightbox-img-wrapper, .lightbox-img-wrapper img {{
+                max-width: 98vw;
+                max-height: calc(100vh - 155px);
+            }}
+            .thumb-item {{
+                width: 36px;
+                height: 36px;
+            }}
+            .nav-zone {{
+                width: 50px;
+            }}
+            .nav-btn {{
+                width: 42px;
+                height: 42px;
+                font-size: 1.4rem;
+            }}
         }}
 
         /* Confirm Modal Dialog */
@@ -962,7 +985,7 @@ def generate_gallery_page(
             <button class="nav-btn next-btn" id="nextBtn" onclick="navigateLightbox(1, event)">&#10095;</button>
         </div>
         
-        <!-- Center Image & Info -->
+        <!-- Center Image, Info & Thumbnails -->
         <div class="lightbox-main" onclick="event.stopPropagation()">
             <div class="lightbox-img-wrapper">
                 <img id="lightboxImg" src="" alt="">
@@ -976,11 +999,10 @@ def generate_gallery_page(
                     <div class="lightbox-counter" id="lightboxCounter"></div>
                 </div>
             </div>
-        </div>
-
-        <!-- Bottom Thumbnail Strip / Pager -->
-        <div class="thumb-strip-wrapper" onclick="event.stopPropagation()">
-            <div class="thumb-strip" id="thumbStrip"></div>
+            <!-- Bottom Thumbnail Strip / Pager -->
+            <div class="thumb-strip-wrapper" onclick="event.stopPropagation()">
+                <div class="thumb-strip" id="thumbStrip"></div>
+            </div>
         </div>
     </div>
 
@@ -1062,11 +1084,25 @@ def generate_gallery_page(
                 }}
             }}
 
-            galleryData.forEach(function(item) {{
+            // High-throughput parallel worker pool (16 concurrent parallel downloads)
+            var CONCURRENCY = 16;
+            var nextIndex = 0;
+
+            function loadNext() {{
+                if (nextIndex >= total) return;
+                var idx = nextIndex++;
+                var item = galleryData[idx];
                 var img = new Image();
-                img.onload = img.onerror = onSingleImageDone;
+                img.onload = img.onerror = function() {{
+                    onSingleImageDone();
+                    loadNext();
+                }};
                 img.src = item.local_rel_path;
-            }});
+            }}
+
+            for (var c = 0; c < Math.min(CONCURRENCY, total); c++) {{
+                loadNext();
+            }}
         }})();
 
         function loadFavorites() {{
@@ -1256,15 +1292,15 @@ def generate_gallery_page(
             let detailInfo = '';
             if (item.grid_size) {{
                 detailInfo = `
-                    <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-top:8px;">
-                        ${{getRugGridSvg(item.grid_size, 50)}}
-                        <div style="text-align:left; font-size:0.95rem; color:#fff;">
+                    <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px;">
+                        ${{getRugGridSvg(item.grid_size, 38)}}
+                        <div style="text-align:left; font-size:0.88rem; color:#fff;">
                             <div>佔地尺寸: <strong>${{item.grid_size}}</strong>（${{item.size_label}}）</div>
-                            <div style="font-size:0.8rem; color:#bbb; margin-top:2px;">房間 5×5 基準網格</div>
+                            <div style="font-size:0.75rem; color:#bbb; margin-top:1px;">房間 5×5 基準網格</div>
                         </div>
                     </div>`;
             }} else {{
-                detailInfo = `<div style="font-size: 0.85rem; color: #aaa; margin-top: 4px;">解析度: ${{item.width}} &times; ${{item.height}} px</div>`;
+                detailInfo = `<div style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">解析度: ${{item.width}} &times; ${{item.height}} px</div>`;
             }}
 
             document.getElementById('lightboxCaption').innerHTML = 
@@ -1382,6 +1418,13 @@ def generate_gallery_page(
 
         // Initialize favorites on load
         loadFavorites();
+
+        // Register Service Worker for permanent client-side cache
+        if ('serviceWorker' in navigator) {{
+            window.addEventListener('load', function() {{
+                navigator.serviceWorker.register('sw.js').catch(function() {{}});
+            }});
+        }}
     </script>
 </body>
 </html>
@@ -1785,6 +1828,14 @@ def generate_index_page(stats_counts):
         <p>資料與圖片來源：<a href="https://nookipedia.com/" target="_blank" rel="noopener">Nookipedia (Animal Crossing Wiki)</a> 及 Nintendo《集合啦！動物森友會》(Animal Crossing: New Horizons)</p>
         <p style="margin-top: 6px; font-size: 0.82rem; color: #88998a;">非官方社群圖庫工具，僅供個人鑑賞與交流用途。</p>
     </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {{
+            window.addEventListener('load', function() {{
+                navigator.serviceWorker.register('sw.js').catch(function() {{}});
+            }});
+        }}
+    </script>
 </body>
 </html>
 """
