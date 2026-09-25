@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>集合啦！動物森友會 - 地板圖庫全輯</title>
     <style>
         :root {
@@ -19,6 +19,11 @@
             --nav-bg: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
             background-color: var(--bg-color);
@@ -44,8 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }
         .nav-brand {
             display: flex;
@@ -56,12 +60,15 @@
             font-size: 1.25rem;
             font-weight: bold;
             letter-spacing: 0.5px;
+            flex-shrink: 0;
+            order: 1;
         }
         .nav-links {
             display: flex;
             gap: 8px;
             align-items: center;
-            flex-wrap: wrap;
+            margin-left: auto;
+            order: 2;
         }
         .nav-link {
             text-decoration: none;
@@ -91,7 +98,9 @@
             border-radius: 20px;
             border: 1px solid rgba(43, 92, 95, 0.22);
             transition: all 0.2s ease;
+            flex-shrink: 0;
             margin-left: 6px;
+            order: 3;
         }
         .lang-selector-wrap:hover {
             background: #e5ede7;
@@ -125,11 +134,16 @@
             max-width: 1400px;
             margin: 0 auto;
             width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         header {
             margin-bottom: 24px;
             text-align: center;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         h1 {
             font-size: 2.1rem;
@@ -144,6 +158,10 @@
             gap: 10px;
             margin-bottom: 14px;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
         }
         .showing-stats {
             text-align: center;
@@ -162,6 +180,8 @@
             border: 2px solid #ddd;
             border-radius: 24px;
             width: 320px;
+            max-width: 100%;
+            box-sizing: border-box;
             outline: none;
             transition: all 0.3s;
             background: #fff;
@@ -170,16 +190,42 @@
             border-color: var(--primary);
             box-shadow: 0 0 8px rgba(43, 92, 95, 0.2);
         }
+        .filter-buttons-scroll {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+        .filter-btn-break {
+            display: none;
+        }
         .filter-btn {
-            padding: 10px 20px;
-            font-size: 0.95rem;
+            height: 38px;
+            padding: 0 16px;
+            font-size: 0.92rem;
             border: 2px solid #ddd;
-            border-radius: 24px;
+            border-radius: 20px;
             background: #fff;
             color: var(--text-sub);
             cursor: pointer;
             transition: all 0.2s;
             font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            box-sizing: border-box;
+            line-height: 1;
+        }
+        .filter-btn .filter-icon {
+            font-size: 0.95rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         .filter-btn:hover {
             background: #eef3ef;
@@ -208,7 +254,6 @@
             border-color: #e2e8f0;
             color: #718096;
             background: #f8fafc;
-            padding: 10px 16px;
         }
         .filter-btn.clear-fav-btn:hover {
             background: #fee2e2;
@@ -394,19 +439,32 @@
             line-height: 1.6;
         }
 
+        
+        @media (max-width: 360px) {
+            .filter-btn .filter-label {
+                display: none;
+            }
+            .filter-btn {
+                padding: 5px 8px;
+                font-size: 0.78rem;
+            }
+        }
+
         /* Enhanced Lightbox Modal */
         .modal {
             display: none;
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%; height: 100%;
             background: rgba(10, 12, 16, 0.94);
-            z-index: 999;
+            z-index: 9999;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             user-select: none;
             padding: 10px;
             box-sizing: border-box;
+            overflow: hidden;
         }
         .modal.active { display: flex; }
 
@@ -609,26 +667,373 @@
             user-select: none;
         }
 
-        @media (max-width: 768px) {
-            .lightbox-main {
-                padding: 4px 10px;
-                max-width: 98vw;
+                @media (max-width: 640px) {
+            .main-wrapper {
+                padding: 12px 10px;
+                width: 100%;
+                box-sizing: border-box;
+                overflow-x: hidden;
             }
-            .lightbox-img-wrapper, .lightbox-img-wrapper img {
-                max-width: 98vw;
-                max-height: calc(100vh - 155px);
+            header {
+                margin-bottom: 14px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.35rem;
+                margin-bottom: 12px;
+            }
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+                margin-bottom: 8px;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            .search-box {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding: 9px 16px;
+                font-size: 0.92rem;
+            }
+            .filter-buttons-scroll {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 6px 8px;
+                overflow-x: visible;
+                padding: 2px 0 6px 0;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            .filter-btn-break {
+                display: block;
+                flex-basis: 100%;
+                width: 100%;
+                height: 0;
+                margin: 0;
+                padding: 0;
+            }
+            .filter-btn {
+                height: 34px;
+                padding: 0 11px;
+                font-size: 0.82rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+                gap: 4px;
+                border-radius: 17px;
+                box-sizing: border-box;
+                line-height: 1;
+            }
+            .filter-btn .filter-icon {
+                font-size: 0.88rem;
+                line-height: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .showing-stats {
+                font-size: 0.82rem;
+                margin-bottom: 14px;
+            }
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .card {
+                border-radius: 10px;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            .img-container {
+                height: 125px;
+            }
+            .info {
+                padding: 8px 10px;
+            }
+            .info-texts {
+                min-width: 0;
+                overflow: hidden;
+            }
+            .name-zh, .name-primary {
+                font-size: 0.92rem;
+                margin-bottom: 2px;
+                line-height: 1.2;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .name-en, .name-sub1 {
+                font-size: 0.78rem;
+                margin-bottom: 1px;
+                line-height: 1.2;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .name-ja, .name-sub2 {
+                font-size: 0.72rem;
+                margin-bottom: 4px;
+                line-height: 1.2;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .dim {
+                font-size: 0.72rem;
+            }
+            .card-fav-btn {
+                top: 6px;
+                right: 6px;
+                width: 30px;
+                height: 30px;
+            }
+            .card-fav-btn svg {
+                width: 15px;
+                height: 15px;
+            }
+            .rug-grid-box {
+                padding: 2px;
+            }
+            .rug-grid-box svg {
+                width: 36px !important;
+                height: 36px !important;
+            }
+            .nav-container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 14px 6px;
+                gap: 6px 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .nav-brand {
+                order: 1;
+                font-size: 1.12rem;
+                flex: 1;
+            }
+            .lang-selector-wrap {
+                order: 2;
+                margin-left: auto;
+                padding: 2px 6px 2px 8px;
+                flex-shrink: 0;
+            }
+            .lang-select {
+                font-size: 0.8rem;
+                padding: 2px;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                margin-left: 0;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 6px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+                box-sizing: border-box;
+            }
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+            .nav-link {
+                padding: 5px 11px;
+                font-size: 0.82rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            /* Lightbox portrait mobile: keep thumbnails and information, fits comfortably */
+            .lightbox-main {
+                padding: 4px 6px;
+                width: 100%;
+                max-width: 100%;
+                max-height: 100vh;
+                box-sizing: border-box;
+            }
+            .lightbox-img-wrapper {
+                width: 100%;
+                max-width: 100%;
+                max-height: calc(100vh - 190px - env(safe-area-inset-bottom, 0px));
+            }
+            .lightbox-img-wrapper img {
+                max-width: 100%;
+                max-height: calc(100vh - 190px - env(safe-area-inset-bottom, 0px));
+                width: auto;
+                height: auto;
+                object-fit: contain;
+            }
+            .nav-zone {
+                width: 44px;
+            }
+            .nav-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+                background: rgba(20, 20, 20, 0.45);
+            }
+            .thumb-strip-wrapper {
+                margin-top: 6px;
+                margin-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+                max-width: 96%;
+                padding: 3px 8px;
+                box-sizing: border-box;
             }
             .thumb-item {
                 width: 36px;
                 height: 36px;
             }
+            .lightbox-info {
+                margin-top: 6px;
+                gap: 4px;
+            }
+            .modal-caption {
+                font-size: 0.95rem;
+            }
+            .caption-sub {
+                display: inline;
+            }
+            .lightbox-detail-info {
+                display: block;
+            }
+            .lightbox-fav-btn {
+                padding: 5px 12px;
+                font-size: 0.84rem;
+            }
+            .modal-close {
+                top: 8px;
+                right: 12px;
+                font-size: 1.8rem;
+            }
+            /* Preloader card */
+            .preloader-card {
+                padding: 28px 20px;
+                width: 88%;
+            }
+            .preloader-title {
+                font-size: 0.92rem;
+            }
+            .preloader-subtitle {
+                font-size: 1.15rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        
+        /* Landscape / Short Screen Mode: Remove thumbnails, compact bottom bar, MAXIMIZE image! */
+        @media (max-height: 560px) {
+            .thumb-strip-wrapper {
+                display: none !important;
+            }
+            .lightbox-detail-info {
+                display: none !important;
+            }
+            .caption-sub {
+                display: none !important;
+            }
+            .lightbox-main {
+                padding: 2px 4px;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+            }
+            .lightbox-img-wrapper {
+                flex: 1;
+                width: 100%;
+                max-width: 100%;
+                max-height: calc(100vh - 50px - env(safe-area-inset-bottom, 0px));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 0;
+            }
+            .lightbox-img-wrapper img {
+                max-width: 100%;
+                max-height: calc(100vh - 50px - env(safe-area-inset-bottom, 0px));
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 6px;
+            }
+            .lightbox-info {
+                margin-top: auto;
+                margin-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+                background: rgba(20, 24, 30, 0.88);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 20px;
+                padding: 3px 12px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                width: auto;
+                max-width: 90%;
+                height: 38px;
+                box-sizing: border-box;
+                flex-shrink: 0;
+                z-index: 1002;
+            }
+            .modal-caption {
+                font-size: 0.86rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+                flex: 1;
+                min-width: 0;
+                line-height: 1.2;
+            }
+            .lightbox-actions {
+                flex-shrink: 0;
+                gap: 8px;
+            }
+            .lightbox-fav-btn {
+                padding: 3px 8px;
+                font-size: 0.76rem;
+                border-radius: 14px;
+                gap: 4px;
+            }
+            .lightbox-counter {
+                font-size: 0.76rem;
+                white-space: nowrap;
+                color: #bbb;
+            }
+            .modal-close {
+                top: 6px;
+                right: 10px;
+                font-size: 1.6rem;
+            }
             .nav-zone {
-                width: 50px;
+                width: 44px;
             }
             .nav-btn {
-                width: 42px;
-                height: 42px;
-                font-size: 1.4rem;
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+                background: rgba(20, 20, 20, 0.45);
             }
         }
 
@@ -874,14 +1279,14 @@
                 <a href="wallpapers.html" class="nav-link " id="navWallpapers">壁紙 (312)</a>
                 <a href="floors.html" class="nav-link active" id="navFloors">地板 (215)</a>
                 <a href="rugs.html" class="nav-link " id="navRugs">地毯 (210)</a>
-                <div class="lang-selector-wrap">
-                    <span class="lang-globe">🌐</span>
-                    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
-                        <option value="zh-TW">繁體中文</option>
-                        <option value="ja-JP">日本語</option>
-                        <option value="en-US">English</option>
-                    </select>
-                </div>
+            </div>
+            <div class="lang-selector-wrap">
+                <span class="lang-globe">🌐</span>
+                <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="ja-JP">日本語</option>
+                    <option value="en-US">English</option>
+                </select>
             </div>
         </div>
     </nav>
@@ -890,14 +1295,17 @@
         <header>
             <h1 id="headerTitle">集合啦！動物森友會 - 地板圖庫全輯</h1>
             <div class="controls">
-                <input type="text" id="search" class="search-box" placeholder="搜尋名稱 (中/英/日)..." oninput="filterCards()">
-                
-            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)">全部 (215)</button>
-            <button class="filter-btn" id="filterBtnShot" onclick="setFilter('screenshot', this)">實景大圖 (187)</button>
-            <button class="filter-btn" id="filterBtnIcon" onclick="setFilter('icon', this)">尚無大圖 (28)</button>
-            <button class="filter-btn fav-filter-btn" id="favFilterBtn" onclick="setFilter('favorite', this)">♥ 我的最愛 (<span id="favCount">0</span>)</button>
-            <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;">🗑 清空最愛</button>
+                <input type="text" id="search" class="search-box" placeholder="搜尋名稱 (中/日/英)..." oninput="filterCards()">
+                <div class="filter-buttons-scroll">
+                    
+            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)" title="全部項目"><span class="filter-icon">✨</span> <span class="filter-label">全部</span> <span class="filter-count">(215)</span></button>
+            <button class="filter-btn" id="filterBtnShot" onclick="setFilter('screenshot', this)" title="實景照片"><span class="filter-icon">📸</span> <span class="filter-label">實景</span> <span class="filter-count">(187)</span></button>
+            <button class="filter-btn" id="filterBtnIcon" onclick="setFilter('icon', this)" title="尚無大圖 (僅圖示)"><span class="filter-icon">🎨</span> <span class="filter-label">圖示</span> <span class="filter-count">(28)</span></button>
+            <div class="filter-btn-break"></div>
+            <button class="filter-btn fav-filter-btn" id="favFilterBtn" onclick="setFilter('favorite', this)" title="我的最愛"><span class="filter-icon">❤️</span> <span class="filter-label">最愛</span> <span class="filter-count">(<span id="favCount">0</span>)</span></button>
+            <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;"><span class="filter-icon">🗑️</span> <span class="filter-label">清空</span></button>
         
+                </div>
             </div>
             <div id="showingStats" class="showing-stats"></div>
         </header>
@@ -5085,14 +5493,14 @@
                 page_title_wallpapers: '壁紙全輯圖庫',
                 page_title_floors: '地板全輯圖庫',
                 page_title_rugs: '地毯全輯圖庫',
-                filter_all: '全部 ({count})',
-                filter_screenshot: '實景大圖 ({count})',
-                filter_icon: '尚無大圖 ({count})',
-                filter_rug_L: '大型 L ({count})',
-                filter_rug_M: '中型 M ({count})',
-                filter_rug_S: '小型 S ({count})',
-                filter_fav: '♥ 我的最愛 (<span id="favCount">{count}</span>)',
-                clear_fav_btn: '🗑 清空最愛',
+                filter_all_label: '全部',
+                filter_shot_label: '實景',
+                filter_icon_label: '圖示',
+                filter_rug_L_label: 'L',
+                filter_rug_M_label: 'M',
+                filter_rug_S_label: 'S',
+                filter_fav_label: '最愛',
+                clear_fav_label: '清空',
                 search_placeholder: '搜尋名稱 (中/日/英)...',
                 showing_stats: '顯示中: <strong>{match}</strong> / {total} 款',
                 empty_title: '找不到符合條件的項目',
@@ -5131,14 +5539,14 @@
                 page_title_wallpapers: 'Wallpapers Gallery',
                 page_title_floors: 'Flooring Gallery',
                 page_title_rugs: 'Rugs Gallery',
-                filter_all: 'All ({count})',
-                filter_screenshot: 'Screenshots ({count})',
-                filter_icon: 'Icons Only ({count})',
-                filter_rug_L: 'Large L ({count})',
-                filter_rug_M: 'Medium M ({count})',
-                filter_rug_S: 'Small S ({count})',
-                filter_fav: '♥ Favorites (<span id="favCount">{count}</span>)',
-                clear_fav_btn: '🗑 Clear Favorites',
+                filter_all_label: 'All',
+                filter_shot_label: 'Photos',
+                filter_icon_label: 'Icons',
+                filter_rug_L_label: 'L',
+                filter_rug_M_label: 'M',
+                filter_rug_S_label: 'S',
+                filter_fav_label: 'Fav',
+                clear_fav_label: 'Clear',
                 search_placeholder: 'Search name (EN / ZH / JA)...',
                 showing_stats: 'Showing: <strong>{match}</strong> / {total} items',
                 empty_title: 'No matching items found',
@@ -5177,14 +5585,14 @@
                 page_title_wallpapers: 'かべがみ図鑑 全集',
                 page_title_floors: 'ゆかいた図鑑 全集',
                 page_title_rugs: 'ラグ図鑑 全集',
-                filter_all: 'すべて ({count})',
-                filter_screenshot: '実機写真 ({count})',
-                filter_icon: 'アイコンのみ ({count})',
-                filter_rug_L: 'Lサイズ ({count})',
-                filter_rug_M: 'Mサイズ ({count})',
-                filter_rug_S: 'Sサイズ ({count})',
-                filter_fav: '♥ お気に入り (<span id="favCount">{count}</span>)',
-                clear_fav_btn: '🗑 お気に入りを全消去',
+                filter_all_label: 'すべて',
+                filter_shot_label: '写真',
+                filter_icon_label: 'アイコン',
+                filter_rug_L_label: 'L',
+                filter_rug_M_label: 'M',
+                filter_rug_S_label: 'S',
+                filter_fav_label: 'お気に入り',
+                clear_fav_label: '消去',
                 search_placeholder: '名前で検索 (日 / 英 / 中)...',
                 showing_stats: '表示中: <strong>{match}</strong> / {total} 種',
                 empty_title: '該当する項目が見つかりません',
@@ -5318,27 +5726,27 @@
             if (searchInput) searchInput.placeholder = d.search_placeholder;
 
             const btnAll = document.getElementById('filterBtnAll');
-            if (btnAll) btnAll.textContent = d.filter_all.replace('{count}', STATS.total);
+            if (btnAll) btnAll.innerHTML = `<span class="filter-icon">✨</span> <span class="filter-label">${d.filter_all_label}</span> <span class="filter-count">(${STATS.total})</span>`;
 
             if (STATS.page_type === 'rugs') {
                 const btnL = document.getElementById('filterBtnL');
-                if (btnL) btnL.textContent = d.filter_rug_L.replace('{count}', STATS.count_L);
+                if (btnL) btnL.innerHTML = `<span class="filter-label">${d.filter_rug_L_label}</span> <span class="filter-count">(${STATS.count_L})</span>`;
                 const btnM = document.getElementById('filterBtnM');
-                if (btnM) btnM.textContent = d.filter_rug_M.replace('{count}', STATS.count_M);
+                if (btnM) btnM.innerHTML = `<span class="filter-label">${d.filter_rug_M_label}</span> <span class="filter-count">(${STATS.count_M})</span>`;
                 const btnS = document.getElementById('filterBtnS');
-                if (btnS) btnS.textContent = d.filter_rug_S.replace('{count}', STATS.count_S);
+                if (btnS) btnS.innerHTML = `<span class="filter-label">${d.filter_rug_S_label}</span> <span class="filter-count">(${STATS.count_S})</span>`;
             } else {
                 const btnShot = document.getElementById('filterBtnShot');
-                if (btnShot) btnShot.textContent = d.filter_screenshot.replace('{count}', STATS.has_shot);
+                if (btnShot) btnShot.innerHTML = `<span class="filter-icon">📸</span> <span class="filter-label">${d.filter_shot_label}</span> <span class="filter-count">(${STATS.has_shot})</span>`;
                 const btnIcon = document.getElementById('filterBtnIcon');
-                if (btnIcon) btnIcon.textContent = d.filter_icon.replace('{count}', STATS.no_shot);
+                if (btnIcon) btnIcon.innerHTML = `<span class="filter-icon">🎨</span> <span class="filter-label">${d.filter_icon_label}</span> <span class="filter-count">(${STATS.no_shot})</span>`;
             }
 
             const favFilterBtn = document.getElementById('favFilterBtn');
-            if (favFilterBtn) favFilterBtn.innerHTML = d.filter_fav.replace('{count}', favorites.size);
+            if (favFilterBtn) favFilterBtn.innerHTML = `<span class="filter-icon">❤️</span> <span class="filter-label">${d.filter_fav_label}</span> <span class="filter-count">(<span id="favCount">${favorites.size}</span>)</span>`;
 
             const clearFavBtn = document.getElementById('clearFavBtn');
-            if (clearFavBtn) clearFavBtn.textContent = d.clear_fav_btn;
+            if (clearFavBtn) clearFavBtn.innerHTML = `<span class="filter-icon">🗑️</span> <span class="filter-label">${d.clear_fav_label}</span>`;
 
             const emptyTitle = document.getElementById('emptyTitle');
             if (emptyTitle) emptyTitle.textContent = d.empty_title;
@@ -5630,6 +6038,7 @@
             }
             updateLightbox();
             document.getElementById('lightboxModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function getRugGridSvg(gridSize, size) {
@@ -5658,7 +6067,7 @@
             if (item.grid_size) {
                 const szLbl = getLocalizedRugSizeLabel(item.size_category, currentLang);
                 detailInfo = `
-                    <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px;">
+                    <div class="lightbox-detail-info" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px;">
                         ${getRugGridSvg(item.grid_size, 38)}
                         <div style="text-align:left; font-size:0.88rem; color:#fff;">
                             <div>${d.rug_footprint.replace('{grid}', item.grid_size).replace('{label}', szLbl)}</div>
@@ -5666,16 +6075,16 @@
                         </div>
                     </div>`;
             } else {
-                detailInfo = `<div style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">${d.res_label.replace('{w}', item.width).replace('{h}', item.height)}</div>`;
+                detailInfo = `<div class="lightbox-detail-info" style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">${d.res_label.replace('{w}', item.width).replace('{h}', item.height)}</div>`;
             }
 
             let captionText = '';
             if (currentLang === 'en-US') {
-                captionText = `<strong>${item.name_en}</strong> / ${item.name_ja} (${item.name_zh})`;
+                captionText = `<span class="caption-primary"><strong>${item.name_en}</strong></span> <span class="caption-sub">/ ${item.name_ja} (${item.name_zh})</span>`;
             } else if (currentLang === 'ja-JP') {
-                captionText = `<strong>${item.name_ja}</strong> / ${item.name_en} (${item.name_zh})`;
+                captionText = `<span class="caption-primary"><strong>${item.name_ja}</strong></span> <span class="caption-sub">/ ${item.name_en} (${item.name_zh})</span>`;
             } else {
-                captionText = `<strong>${item.name_zh}</strong> / ${item.name_ja} (${item.name_en})`;
+                captionText = `<span class="caption-primary"><strong>${item.name_zh}</strong></span> <span class="caption-sub">/ ${item.name_ja} (${item.name_en})</span>`;
             }
 
             document.getElementById('lightboxCaption').innerHTML = captionText + detailInfo;
@@ -5770,7 +6179,51 @@
                 return;
             }
             document.getElementById('lightboxModal').classList.remove('active');
+            document.body.style.overflow = '';
         }
+
+        // Mobile Touch Swipe Navigation & Pull-to-close
+        (function setupTouchGestures() {
+            var modal = document.getElementById('lightboxModal');
+            if (!modal) return;
+            var startX = 0;
+            var startY = 0;
+            var endX = 0;
+            var endY = 0;
+
+            modal.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                    endX = startX;
+                    endY = startY;
+                }
+            }, { passive: true });
+
+            modal.addEventListener('touchmove', function(e) {
+                if (e.touches.length === 1) {
+                    endX = e.touches[0].clientX;
+                    endY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            modal.addEventListener('touchend', function(e) {
+                var diffX = endX - startX;
+                var diffY = endY - startY;
+                var absX = Math.abs(diffX);
+                var absY = Math.abs(diffY);
+
+                if (absX > 40 && absX > absY * 1.4) {
+                    if (diffX < 0) {
+                        navigateLightbox(1);
+                    } else {
+                        navigateLightbox(-1);
+                    }
+                } else if (diffY > 80 && absY > absX * 1.5) {
+                    closeLightbox();
+                }
+            }, { passive: true });
+        })();
 
         // Keyboard Shortcuts
         document.addEventListener('keydown', (e) => {

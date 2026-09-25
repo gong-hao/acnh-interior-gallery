@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>集合啦！動物森友會 - 室內裝潢圖庫全輯 (壁紙 / 地板 / 地毯)</title>
     <style>
         :root {
@@ -11,12 +11,19 @@
             --bg-color: #f6f8f5;
             --card-bg: #ffffff;
             --text-main: #333333;
-            --text-sub: #556052;
+            --text-sub: #666666;
             --accent: #f5a623;
             --accent-red: #ff4757;
             --tag-green: #2a9d8f;
+            --tag-orange: #e76f51;
+            --nav-bg: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
             background-color: var(--bg-color);
@@ -28,7 +35,7 @@
         
         /* Top Navigation Bar */
         .site-nav {
-            background: #ffffff;
+            background: var(--nav-bg);
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
             position: sticky;
@@ -36,14 +43,13 @@
             z-index: 100;
         }
         .nav-container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 14px 24px;
+            padding: 12px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }
         .nav-brand {
             display: flex;
@@ -51,20 +57,23 @@
             gap: 8px;
             text-decoration: none;
             color: var(--primary);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: bold;
             letter-spacing: 0.5px;
+            flex-shrink: 0;
+            order: 1;
         }
         .nav-links {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
-            flex-wrap: wrap;
+            margin-left: auto;
+            order: 2;
         }
         .nav-link {
             text-decoration: none;
             color: var(--text-sub);
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.95rem;
             font-weight: 600;
@@ -89,7 +98,9 @@
             border-radius: 20px;
             border: 1px solid rgba(43, 92, 95, 0.22);
             transition: all 0.2s ease;
+            flex-shrink: 0;
             margin-left: 6px;
+            order: 3;
         }
         .lang-selector-wrap:hover {
             background: #e5ede7;
@@ -308,6 +319,134 @@
         .site-footer a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 640px) {
+            .nav-container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 14px 6px;
+                gap: 6px 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .nav-brand {
+                order: 1;
+                font-size: 1.12rem;
+                flex: 1;
+            }
+            .lang-selector-wrap {
+                order: 2;
+                margin-left: auto;
+                padding: 2px 6px 2px 8px;
+                flex-shrink: 0;
+            }
+            .lang-select {
+                font-size: 0.8rem;
+                padding: 2px;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                margin-left: 0;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 6px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+                box-sizing: border-box;
+            }
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+            .nav-link {
+                padding: 5px 11px;
+                font-size: 0.82rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            .hero {
+                padding: 30px 16px 20px;
+            }
+            .hero-badge {
+                font-size: 0.82rem;
+                padding: 4px 12px;
+                margin-bottom: 12px;
+            }
+            .hero h1 {
+                font-size: 1.75rem;
+                margin-bottom: 12px;
+            }
+            .hero p {
+                font-size: 0.92rem;
+                line-height: 1.6;
+            }
+            .portal-grid {
+                padding: 0 14px;
+                grid-template-columns: 1fr;
+                gap: 18px;
+                margin-bottom: 36px;
+            }
+            .card-body {
+                padding: 20px 18px;
+            }
+            .card-title {
+                font-size: 1.35rem;
+            }
+            .card-desc {
+                font-size: 0.88rem;
+                margin-bottom: 18px;
+            }
+            .card-specs {
+                gap: 8px;
+                margin-bottom: 18px;
+            }
+            .spec-tag {
+                font-size: 0.76rem;
+                padding: 3px 8px;
+            }
+            .enter-btn {
+                padding: 10px 16px;
+                font-size: 0.92rem;
+            }
+            .features {
+                margin: 0 14px 40px;
+                padding: 24px 16px;
+                border-radius: 20px;
+            }
+            .features-title {
+                font-size: 1.35rem;
+                margin-bottom: 22px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .feature-item {
+                padding: 8px 4px;
+            }
+            .feature-icon {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+            .feature-name {
+                font-size: 1.05rem;
+                margin-bottom: 6px;
+            }
+            .feature-desc {
+                font-size: 0.86rem;
+            }
+            .site-footer {
+                padding: 20px 14px;
+                font-size: 0.82rem;
+            }
+        }
     </style>
     <script>
         function getInitialLanguage() {
@@ -340,14 +479,14 @@
                 <a href="wallpapers.html" class="nav-link" id="navWallpapers">壁紙 (312)</a>
                 <a href="floors.html" class="nav-link" id="navFloors">地板 (215)</a>
                 <a href="rugs.html" class="nav-link" id="navRugs">地毯 (210)</a>
-                <div class="lang-selector-wrap">
-                    <span class="lang-globe">🌐</span>
-                    <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
-                        <option value="zh-TW">繁體中文</option>
-                        <option value="ja-JP">日本語</option>
-                        <option value="en-US">English</option>
-                    </select>
-                </div>
+            </div>
+            <div class="lang-selector-wrap">
+                <span class="lang-globe">🌐</span>
+                <select id="langSelect" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Language Selector">
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="ja-JP">日本語</option>
+                    <option value="en-US">English</option>
+                </select>
             </div>
         </div>
     </nav>
