@@ -94,7 +94,10 @@ def generate_gallery_page(
         <div class="card" data-index="{idx}" data-type="{filter_type}" data-name="{name_zh.lower()} {name_en.lower()} {name_ja.lower()}" onclick="openLightboxByIndex({idx})">
             <button class="card-fav-btn" id="fav-btn-{idx}" onclick="toggleFavorite('{safe_en}', event)" title="加入我的最愛"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
             <div class="img-container">
-                <img src="{rel_path}" alt="{name_zh}" loading="lazy">
+                <div class="img-placeholder" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                </div>
+                <img src="{rel_path}" alt="{name_zh}" onload="this.classList.add('loaded');if(this.parentElement)this.parentElement.classList.add('loaded');" onerror="if(this.parentElement)this.parentElement.classList.add('error');">
             </div>
             <div class="info">
                 <div class="info-content">
@@ -478,20 +481,72 @@ def generate_gallery_page(
         .img-container {{
             width: 100%;
             height: 200px;
-            background-color: #e9ecef;
+            background-color: #eef2ed;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             position: relative;
         }}
+        /* Skeleton Shimmer Loading State */
+        .img-container::before {{
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, #eef2ed 0%, #f7faf6 50%, #eef2ed 100%);
+            background-size: 200% 100%;
+            animation: imgShimmer 1.6s infinite linear;
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }}
+        .img-container.loaded::before {{
+            opacity: 0;
+            pointer-events: none;
+        }}
+        @keyframes imgShimmer {{
+            0% {{ background-position: 200% 0; }}
+            100% {{ background-position: -200% 0; }}
+        }}
+        .img-placeholder {{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }}
+        .img-placeholder svg {{
+            width: 36px;
+            height: 36px;
+            fill: #b5c7b7;
+            opacity: 0.65;
+            animation: imgPulse 1.4s ease-in-out infinite alternate;
+        }}
+        .img-container.loaded .img-placeholder {{
+            opacity: 0;
+        }}
+        @keyframes imgPulse {{
+            0% {{ transform: scale(0.92); opacity: 0.45; }}
+            100% {{ transform: scale(1.06); opacity: 0.8; }}
+        }}
         .img-container img {{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s;
+            position: relative;
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.35s ease, transform 0.3s ease;
         }}
-        .card:hover .img-container img {{
+        .img-container img.loaded {{
+            opacity: 1;
+        }}
+        .card:hover .img-container img.loaded {{
             transform: scale(1.05);
         }}
         .info {{
@@ -1065,17 +1120,9 @@ def generate_gallery_page(
                 right: 12px;
                 font-size: 1.8rem;
             }}
-            /* Preloader card */
-            .preloader-card {{
-                padding: 28px 20px;
-                width: 88%;
-            }}
-            .preloader-title {{
-                font-size: 0.92rem;
-            }}
-            .preloader-subtitle {{
-                font-size: 1.15rem;
-                margin-bottom: 20px;
+            .img-placeholder svg {{
+                width: 28px;
+                height: 28px;
             }}
         }}
 
@@ -1290,84 +1337,6 @@ def generate_gallery_page(
         .site-footer a:hover {{
             text-decoration: underline;
         }}
-
-        /* Full-Page Preloader Overlay */
-        .preloader-overlay {{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(244, 247, 246, 0.96);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 99999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }}
-        .preloader-card {{
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 40px 36px;
-            max-width: 480px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 12px 36px rgba(43, 92, 95, 0.15);
-            border: 2px solid rgba(43, 92, 95, 0.1);
-        }}
-        .preloader-title {{
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-sub);
-            margin-bottom: 6px;
-        }}
-        .preloader-subtitle {{
-            font-size: 1.45rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 26px;
-        }}
-        .preloader-bar-track {{
-            width: 100%;
-            height: 12px;
-            background: #e6ede8;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 14px;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
-        }}
-        .preloader-bar-fill {{
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #2a9d8f, #48cae4);
-            border-radius: 20px;
-            transition: width 0.12s ease-out;
-        }}
-        .preloader-info {{
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.92rem;
-            color: var(--text-sub);
-            font-weight: 600;
-            margin-bottom: 22px;
-        }}
-        .preloader-skip-btn {{
-            background: transparent;
-            border: 1px solid #ccd8cf;
-            color: #607267;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }}
-        .preloader-skip-btn:hover {{
-            background: #eef3ef;
-            color: var(--primary);
-            border-color: var(--primary);
-        }}
     </style>
     <script>
         function getInitialLanguage() {{
@@ -1389,28 +1358,17 @@ def generate_gallery_page(
         var currentLang = getInitialLanguage();
         document.documentElement.lang = currentLang;
 
-        try {{
-            localStorage.removeItem('acnh_preloaded_{page_type}');
-        }} catch(e) {{}}
+        // Register Service Worker for persistent Cache Storage & offline support
+        if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {{
+            window.addEventListener('load', function() {{
+                navigator.serviceWorker.register('sw.js', {{ scope: './' }}).catch(function(err) {{
+                    console.warn('SW registration skipped:', err);
+                }});
+            }});
+        }}
     </script>
 </head>
 <body>
-    <!-- Full-Page Preloader Overlay -->
-    <div class="preloader-overlay" id="preloaderOverlay">
-        <div class="preloader-card">
-            <div class="preloader-title">集合啦！動物森友會</div>
-            <div class="preloader-subtitle">{page_title}・正在讀取全輯高清圖片</div>
-            <div class="preloader-bar-track">
-                <div class="preloader-bar-fill" id="preloaderBarFill"></div>
-            </div>
-            <div class="preloader-info">
-                <span id="preloaderCounter">準備讀取中...</span>
-                <span id="preloaderPercent">0%</span>
-            </div>
-            <button class="preloader-skip-btn" onclick="dismissPreloader()" title="跳過預載直接瀏覽">跳過等待直接瀏覽 ➔</button>
-        </div>
-    </div>
-
     <!-- Top Navigation Bar -->
     <nav class="site-nav">
         <div class="nav-container">
@@ -1803,16 +1761,6 @@ def generate_gallery_page(
             const emptyDesc = document.getElementById('emptyDesc');
             if (emptyDesc) emptyDesc.textContent = d.empty_desc;
 
-            const preSub = document.querySelector('.preloader-subtitle');
-            if (preSub) {{
-                if (STATS.page_type === 'wallpapers') preSub.textContent = d.preloader_sub_wallpapers;
-                else if (STATS.page_type === 'floors') preSub.textContent = d.preloader_sub_floors;
-                else if (STATS.page_type === 'rugs') preSub.textContent = d.preloader_sub_rugs;
-            }}
-            const preTitle = document.querySelector('.preloader-title');
-            if (preTitle) preTitle.textContent = d.preloader_title;
-            const preSkip = document.querySelector('.preloader-skip-btn');
-            if (preSkip) preSkip.textContent = d.preloader_skip;
 
             const prevBtn = document.getElementById('prevBtn');
             if (prevBtn) prevBtn.title = d.lightbox_prev;
@@ -1844,101 +1792,52 @@ def generate_gallery_page(
             }}
         }}
 
-        // Global Image Preloader & Progress Bar
-        var preloaderDismissed = false;
-        function dismissPreloader() {{
-            if (preloaderDismissed) return;
-            preloaderDismissed = true;
-            var overlay = document.getElementById('preloaderOverlay');
-            if (overlay) {{
-                overlay.style.opacity = '0';
-                overlay.style.visibility = 'hidden';
-                setTimeout(function() {{
-                    overlay.style.display = 'none';
-                }}, 400);
-            }}
-        }}
-
-        (function startImagePreload() {{
-            var total = galleryData.length;
-            if (total === 0) {{
-                dismissPreloader();
-                return;
-            }}
-
-            var startTime = Date.now();
-            var loaded = 0;
-            var barFill = document.getElementById('preloaderBarFill');
-            var counter = document.getElementById('preloaderCounter');
-            var percent = document.getElementById('preloaderPercent');
-            var animFrameId = null;
-            var preloadDone = false;
-
-            function updateProgressUI() {{
-                var pct = Math.min(100, Math.floor((loaded / total) * 100));
-                if (barFill) barFill.style.width = pct + '%';
-                if (percent) percent.textContent = pct + '%';
-                var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
-                if (counter) {{
-                    counter.textContent = d.preloader_counter.replace('{{loaded}}', loaded).replace('{{total}}', total);
-                }}
-            }}
-
-            function finishPreloader() {{
-                if (preloadDone) return;
-                preloadDone = true;
-                if (safetyTimer) clearTimeout(safetyTimer);
-
-                if (barFill) barFill.style.width = '100%';
-                if (percent) percent.textContent = '100%';
-                var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
-                if (counter) counter.textContent = d.preloader_done.split('{{total}}').join(total);
-
-                // Minimum dwell time: at least 500ms from start to prevent screen flickering
-                var elapsed = Date.now() - startTime;
-                var remaining = Math.max(0, 500 - elapsed);
-
-                // Brief 250ms completion pause so the user sees 100% completed
-                setTimeout(function() {{
-                    dismissPreloader();
-                }}, remaining + 250);
-            }}
-
-            function onSingleImageDone() {{
-                loaded++;
-                if (!animFrameId) {{
-                    animFrameId = requestAnimationFrame(function() {{
-                        animFrameId = null;
-                        updateProgressUI();
-                    }});
-                }}
-
-                if (loaded >= total) {{
-                    finishPreloader();
-                }}
-            }}
-
-            // Safety fallback timeout: dismiss after 8s if network stalls
-            var safetyTimer = setTimeout(function() {{
-                finishPreloader();
-            }}, 8000);
-
-            // Parallel preloading with onload/onerror/complete detection for each image
-            galleryData.forEach(function(item) {{
-                var img = new Image();
-                var finished = false;
-                function done() {{
-                    if (finished) return;
-                    finished = true;
-                    img.onload = img.onerror = null;
-                    onSingleImageDone();
-                }}
-                img.onload = img.onerror = done;
-                img.src = item.local_rel_path;
-                if (img.complete) {{
-                    done();
+        // Instant revelation for already-cached or quickly loaded images
+        function markCompleteImages() {{
+            document.querySelectorAll('.img-container img').forEach(function(img) {{
+                if (img.complete && img.naturalWidth > 0) {{
+                    img.classList.add('loaded');
+                    if (img.parentElement) img.parentElement.classList.add('loaded');
                 }}
             }});
+        }}
+        if (document.readyState === 'loading') {{
+            document.addEventListener('DOMContentLoaded', markCompleteImages);
+        }} else {{
+            markCompleteImages();
+        }}
+
+        // Gentle background prefetcher (runs during browser idle time, max 3 concurrent)
+        (function initIdlePrefetcher() {{
+            var index = 0;
+            var concurrency = 3;
+            var active = 0;
+
+            function processQueue() {{
+                while (active < concurrency && index < galleryData.length) {{
+                    var item = galleryData[index++];
+                    if (!item || !item.local_rel_path) continue;
+                    active++;
+                    var img = new Image();
+                    img.onload = img.onerror = function() {{
+                        active--;
+                        if ('requestIdleCallback' in window) {{
+                            window.requestIdleCallback(processQueue, {{ timeout: 2000 }});
+                        }} else {{
+                            setTimeout(processQueue, 150);
+                        }}
+                    }};
+                    img.src = item.local_rel_path;
+                }}
+            }}
+
+            setTimeout(function() {{
+                if ('requestIdleCallback' in window) {{
+                    window.requestIdleCallback(processQueue, {{ timeout: 3000 }});
+                }} else {{
+                    setTimeout(processQueue, 300);
+                }}
+            }}, 2500);
         }})();
 
         function loadFavorites() {{
@@ -2171,21 +2070,18 @@ def generate_gallery_page(
             updateLightboxFavBtn();
             renderThumbnailStrip();
 
-            // Preload adjacent images
-            if (currentPos + 1 < filteredIndices.length) {{
-                const nextItem = galleryData[filteredIndices[currentPos + 1]];
-                if (nextItem && nextItem.local_rel_path) {{
-                    const nextImg = new Image();
-                    nextImg.src = nextItem.local_rel_path;
+            // Smart predictive HD image preloading (next 3, prev 2)
+            const offsets = [1, -1, 2, -2, 3];
+            offsets.forEach(offset => {{
+                const targetPos = currentPos + offset;
+                if (targetPos >= 0 && targetPos < filteredIndices.length) {{
+                    const itm = galleryData[filteredIndices[targetPos]];
+                    if (itm && itm.local_rel_path) {{
+                        const preImg = new Image();
+                        preImg.src = itm.local_rel_path;
+                    }}
                 }}
-            }}
-            if (currentPos - 1 >= 0) {{
-                const prevItem = galleryData[filteredIndices[currentPos - 1]];
-                if (prevItem && prevItem.local_rel_path) {{
-                    const prevImg = new Image();
-                    prevImg.src = prevItem.local_rel_path;
-                }}
-            }}
+            }});
         }}
 
         function renderThumbnailStrip() {{
@@ -2813,6 +2709,15 @@ def generate_index_page(stats_counts):
         }}
         var currentLang = getInitialLanguage();
         document.documentElement.lang = currentLang;
+
+        // Register Service Worker for persistent Cache Storage & offline support
+        if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {{
+            window.addEventListener('load', function() {{
+                navigator.serviceWorker.register('sw.js', {{ scope: './' }}).catch(function(err) {{
+                    console.warn('SW registration skipped:', err);
+                }});
+            }});
+        }}
     </script>
 </head>
 <body>
@@ -3217,7 +3122,92 @@ def build_all():
     )
 
     generate_index_page(stats_counts)
+    generate_sw_file(PAGES_DIR)
     print("All pages generated successfully!")
+
+def generate_sw_file(pages_dir):
+    sw_path = os.path.join(pages_dir, "sw.js")
+    sw_code = """// ACNH Interior Gallery Service Worker (Cache Storage)
+const CACHE_NAME = 'acnh-gallery-v2';
+const STATIC_ASSETS = [
+    './index.html',
+    './wallpapers.html',
+    './floors.html',
+    './rugs.html'
+];
+
+self.addEventListener('install', (event) => {
+    self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+            return cache.addAll(STATIC_ASSETS).catch((err) => {
+                console.warn('Initial static asset cache partial fail:', err);
+            });
+        })
+    );
+});
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((keys) => {
+            return Promise.all(
+                keys.map((key) => {
+                    if (key !== CACHE_NAME) {
+                        return caches.delete(key);
+                    }
+                })
+            );
+        }).then(() => self.clients.claim())
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    const req = event.request;
+    if (req.method !== 'GET') return;
+
+    const url = new URL(req.url);
+
+    // Image assets: Cache-First strategy (Instant 0ms retrieval, cache on miss)
+    if (req.destination === 'image' || url.pathname.match(/\\.(webp|jpg|jpeg|png|gif|svg)$/i) || url.pathname.includes('/images/')) {
+        event.respondWith(
+            caches.open(CACHE_NAME).then((cache) => {
+                return cache.match(req).then((cachedResponse) => {
+                    if (cachedResponse) {
+                        return cachedResponse;
+                    }
+                    return fetch(req).then((networkResponse) => {
+                        if (networkResponse && networkResponse.status === 200) {
+                            cache.put(req, networkResponse.clone());
+                        }
+                        return networkResponse;
+                    }).catch(() => {
+                        return cachedResponse || Response.error();
+                    });
+                });
+            })
+        );
+        return;
+    }
+
+    // HTML / JS / Other: Stale-While-Revalidate / Network-First
+    event.respondWith(
+        fetch(req).then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+                const responseClone = networkResponse.clone();
+                caches.open(CACHE_NAME).then((cache) => {
+                    cache.put(req, responseClone);
+                });
+            }
+            return networkResponse;
+        }).catch(() => {
+            return caches.match(req);
+        })
+    );
+});
+"""
+    with open(sw_path, "w", encoding="utf-8") as f:
+        f.write(sw_code)
+    print(f"Generated {sw_path}")
 
 if __name__ == "__main__":
     build_all()

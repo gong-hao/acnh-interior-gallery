@@ -467,6 +467,15 @@
         }
         var currentLang = getInitialLanguage();
         document.documentElement.lang = currentLang;
+
+        // Register Service Worker for persistent Cache Storage & offline support
+        if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function(err) {
+                    console.warn('SW registration skipped:', err);
+                });
+            });
+        }
     </script>
 </head>
 <body>
