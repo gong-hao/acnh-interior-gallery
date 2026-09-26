@@ -258,135 +258,6 @@
     "series_key": "RoomTexFloorParquetIron"
   },
   {
-    "title": "Item:Block flooring (New Horizons)",
-    "name_en": "Block flooring",
-    "name_zh": "超級瑪利歐地板",
-    "name_ja": "スーパーマリオのゆか",
-    "has_in_game_screenshot": true,
-    "target_media_file": "File:Block Flooring NH Screenshot.jpg",
-    "local_filename": "超級瑪利歐地板_Block_flooring.jpg",
-    "image_url": "https://dodo.ac/np/images/0/0f/Block_Flooring_NH_Screenshot.jpg",
-    "width": 1280,
-    "height": 720,
-    "filesize": 394499,
-    "local_rel_path": "images/floors/超級瑪利歐地板_Block_flooring.webp",
-    "internal_id": 13804,
-    "filename_base": "RoomTexFloorMario",
-    "variant_id": 0,
-    "series_id": 13804,
-    "game_sort_order": 210,
-    "nookipedia_id": 14,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "Brown",
-    "color_2": "Brown",
-    "colors_zh": "棕",
-    "colors_ja": "ブラウン",
-    "colors_en": "Brown",
-    "version_added": "1.8.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Mario Floors",
-    "color_rank": 2,
-    "is_special": 1,
-    "style_cluster": 190,
-    "series_is_special": 0,
-    "series_version_rank": 1,
-    "series_style_cluster": 10,
-    "series_anchor_id": 14,
-    "default_sort_order": 6,
-    "series_key": "Series_Mario_floors"
-  },
-  {
-    "title": "Item:Natural-block flooring (New Horizons)",
-    "name_en": "Natural-block flooring",
-    "name_zh": "自然風地板磚塊",
-    "name_ja": "ナチュラルフローリングブロック",
-    "has_in_game_screenshot": true,
-    "target_media_file": "File:Natural-Block Flooring NH Screenshot.jpg",
-    "local_filename": "自然風地板磚塊_Natural-block_flooring.jpg",
-    "image_url": "https://dodo.ac/np/images/0/06/Natural-Block_Flooring_NH_Screenshot.jpg",
-    "width": 1280,
-    "height": 720,
-    "filesize": 192405,
-    "local_rel_path": "images/floors/自然風地板磚塊_Natural-block_flooring.webp",
-    "internal_id": 5033,
-    "filename_base": "RoomTexFloorParquet",
-    "variant_id": 0,
-    "series_id": 5033,
-    "game_sort_order": 97,
-    "nookipedia_id": 127,
-    "source": "Nook's Cranny",
-    "source_group": "shop",
-    "source_zh": "商店購買",
-    "source_ja": "タヌキ商店",
-    "source_en": "Nook's Cranny",
-    "color_1": "Brown",
-    "color_2": "Beige",
-    "colors_zh": "棕 / 米",
-    "colors_ja": "ブラウン / ベージュ",
-    "colors_en": "Brown / Beige",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Parquet",
-    "color_rank": 2,
-    "is_special": 0,
-    "style_cluster": 10,
-    "series_is_special": 0,
-    "series_version_rank": 1,
-    "series_style_cluster": 10,
-    "series_anchor_id": 14,
-    "default_sort_order": 7,
-    "series_key": "Series_Mario_floors"
-  },
-  {
-    "title": "Item:Dark-block flooring (New Horizons)",
-    "name_en": "Dark-block flooring",
-    "name_zh": "深色地板磚塊",
-    "name_ja": "ダークなフローリングブロック",
-    "has_in_game_screenshot": true,
-    "target_media_file": "File:Dark-Block Flooring NH Screenshot.jpg",
-    "local_filename": "深色地板磚塊_Dark-block_flooring.jpg",
-    "image_url": "https://dodo.ac/np/images/e/e5/Dark-Block_Flooring_NH_Screenshot.jpg",
-    "width": 1280,
-    "height": 720,
-    "filesize": 169793,
-    "local_rel_path": "images/floors/深色地板磚塊_Dark-block_flooring.webp",
-    "internal_id": 5035,
-    "filename_base": "RoomTexFloorParquet",
-    "variant_id": 1,
-    "series_id": 5033,
-    "game_sort_order": 98,
-    "nookipedia_id": 64,
-    "source": "Nook's Cranny",
-    "source_group": "shop",
-    "source_zh": "商店購買",
-    "source_ja": "タヌキ商店",
-    "source_en": "Nook's Cranny",
-    "color_1": "Brown",
-    "color_2": "Brown",
-    "colors_zh": "棕",
-    "colors_ja": "ブラウン",
-    "colors_en": "Brown",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Parquet",
-    "color_rank": 2,
-    "is_special": 0,
-    "style_cluster": 10,
-    "series_is_special": 0,
-    "series_version_rank": 1,
-    "series_style_cluster": 10,
-    "series_anchor_id": 14,
-    "default_sort_order": 8,
-    "series_key": "Series_Mario_floors"
-  },
-  {
     "title": "Item:Brown floral flooring (New Horizons)",
     "name_en": "Brown floral flooring",
     "name_zh": "茶色花朵地板",
@@ -426,7 +297,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 17,
-    "default_sort_order": 9,
+    "default_sort_order": 6,
     "series_key": "RoomTexFloorDecoWood"
   },
   {
@@ -469,7 +340,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 17,
-    "default_sort_order": 10,
+    "default_sort_order": 7,
     "series_key": "RoomTexFloorDecoWood"
   },
   {
@@ -512,7 +383,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 17,
-    "default_sort_order": 11,
+    "default_sort_order": 8,
     "series_key": "RoomTexFloorDecoWood"
   },
   {
@@ -555,7 +426,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 17,
-    "default_sort_order": 12,
+    "default_sort_order": 9,
     "series_key": "RoomTexFloorDecoWood"
   },
   {
@@ -598,7 +469,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 22,
-    "default_sort_order": 13,
+    "default_sort_order": 10,
     "series_key": "RoomTexFloorPaintWood"
   },
   {
@@ -641,7 +512,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 22,
-    "default_sort_order": 14,
+    "default_sort_order": 11,
     "series_key": "RoomTexFloorPaintWood"
   },
   {
@@ -684,7 +555,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 22,
-    "default_sort_order": 15,
+    "default_sort_order": 12,
     "series_key": "RoomTexFloorPaintWood"
   },
   {
@@ -727,7 +598,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 22,
-    "default_sort_order": 16,
+    "default_sort_order": 13,
     "series_key": "RoomTexFloorPaintWood"
   },
   {
@@ -770,7 +641,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 45,
-    "default_sort_order": 17,
+    "default_sort_order": 14,
     "series_key": "RoomTexFloorCommon"
   },
   {
@@ -813,7 +684,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 49,
-    "default_sort_order": 18,
+    "default_sort_order": 15,
     "series_key": "RoomTexFloorColorfulWood"
   },
   {
@@ -856,7 +727,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 49,
-    "default_sort_order": 19,
+    "default_sort_order": 16,
     "series_key": "RoomTexFloorColorfulWood"
   },
   {
@@ -899,7 +770,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 50,
-    "default_sort_order": 20,
+    "default_sort_order": 17,
     "series_key": "RoomTexFloorCork"
   },
   {
@@ -942,7 +813,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 53,
-    "default_sort_order": 21,
+    "default_sort_order": 18,
     "series_key": "RoomTexFloorHoneycombWood"
   },
   {
@@ -985,7 +856,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 62,
-    "default_sort_order": 22,
+    "default_sort_order": 19,
     "series_key": "RoomTexFloorCountry"
   },
   {
@@ -1028,7 +899,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 62,
-    "default_sort_order": 23,
+    "default_sort_order": 20,
     "series_key": "RoomTexFloorCountry"
   },
   {
@@ -1071,7 +942,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 63,
-    "default_sort_order": 24,
+    "default_sort_order": 21,
     "series_key": "RoomTexFloorSimpleParquet"
   },
   {
@@ -1114,8 +985,94 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 63,
-    "default_sort_order": 25,
+    "default_sort_order": 22,
     "series_key": "RoomTexFloorSimpleParquet"
+  },
+  {
+    "title": "Item:Natural-block flooring (New Horizons)",
+    "name_en": "Natural-block flooring",
+    "name_zh": "自然風地板磚塊",
+    "name_ja": "ナチュラルフローリングブロック",
+    "has_in_game_screenshot": true,
+    "target_media_file": "File:Natural-Block Flooring NH Screenshot.jpg",
+    "local_filename": "自然風地板磚塊_Natural-block_flooring.jpg",
+    "image_url": "https://dodo.ac/np/images/0/06/Natural-Block_Flooring_NH_Screenshot.jpg",
+    "width": 1280,
+    "height": 720,
+    "filesize": 192405,
+    "local_rel_path": "images/floors/自然風地板磚塊_Natural-block_flooring.webp",
+    "internal_id": 5033,
+    "filename_base": "RoomTexFloorParquet",
+    "variant_id": 0,
+    "series_id": 5033,
+    "game_sort_order": 97,
+    "nookipedia_id": 127,
+    "source": "Nook's Cranny",
+    "source_group": "shop",
+    "source_zh": "商店購買",
+    "source_ja": "タヌキ商店",
+    "source_en": "Nook's Cranny",
+    "color_1": "Brown",
+    "color_2": "Beige",
+    "colors_zh": "棕 / 米",
+    "colors_ja": "ブラウン / ベージュ",
+    "colors_en": "Brown / Beige",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Parquet",
+    "color_rank": 2,
+    "is_special": 0,
+    "style_cluster": 10,
+    "series_is_special": 0,
+    "series_version_rank": 1,
+    "series_style_cluster": 10,
+    "series_anchor_id": 64,
+    "default_sort_order": 23,
+    "series_key": "RoomTexFloorParquet"
+  },
+  {
+    "title": "Item:Dark-block flooring (New Horizons)",
+    "name_en": "Dark-block flooring",
+    "name_zh": "深色地板磚塊",
+    "name_ja": "ダークなフローリングブロック",
+    "has_in_game_screenshot": true,
+    "target_media_file": "File:Dark-Block Flooring NH Screenshot.jpg",
+    "local_filename": "深色地板磚塊_Dark-block_flooring.jpg",
+    "image_url": "https://dodo.ac/np/images/e/e5/Dark-Block_Flooring_NH_Screenshot.jpg",
+    "width": 1280,
+    "height": 720,
+    "filesize": 169793,
+    "local_rel_path": "images/floors/深色地板磚塊_Dark-block_flooring.webp",
+    "internal_id": 5035,
+    "filename_base": "RoomTexFloorParquet",
+    "variant_id": 1,
+    "series_id": 5033,
+    "game_sort_order": 98,
+    "nookipedia_id": 64,
+    "source": "Nook's Cranny",
+    "source_group": "shop",
+    "source_zh": "商店購買",
+    "source_ja": "タヌキ商店",
+    "source_en": "Nook's Cranny",
+    "color_1": "Brown",
+    "color_2": "Brown",
+    "colors_zh": "棕",
+    "colors_ja": "ブラウン",
+    "colors_en": "Brown",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Parquet",
+    "color_rank": 2,
+    "is_special": 0,
+    "style_cluster": 10,
+    "series_is_special": 0,
+    "series_version_rank": 1,
+    "series_style_cluster": 10,
+    "series_anchor_id": 64,
+    "default_sort_order": 24,
+    "series_key": "RoomTexFloorParquet"
   },
   {
     "title": "Item:Modern wood flooring (New Horizons)",
@@ -1157,7 +1114,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 119,
-    "default_sort_order": 26,
+    "default_sort_order": 25,
     "series_key": "RoomTexFloorMixwood"
   },
   {
@@ -1200,7 +1157,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 128,
-    "default_sort_order": 27,
+    "default_sort_order": 26,
     "series_key": "RoomTexFloorFirst"
   },
   {
@@ -1243,7 +1200,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 144,
-    "default_sort_order": 28,
+    "default_sort_order": 27,
     "series_key": "RoomTexFloorSimple"
   },
   {
@@ -1286,7 +1243,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 148,
-    "default_sort_order": 29,
+    "default_sort_order": 28,
     "series_key": "RoomTexFloorBallroom"
   },
   {
@@ -1329,7 +1286,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 156,
-    "default_sort_order": 30,
+    "default_sort_order": 29,
     "series_key": "RoomTexFloorRattan"
   },
   {
@@ -1372,7 +1329,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 166,
-    "default_sort_order": 31,
+    "default_sort_order": 30,
     "series_key": "RoomTexFloorRoseWood"
   },
   {
@@ -1415,7 +1372,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 171,
-    "default_sort_order": 32,
+    "default_sort_order": 31,
     "series_key": "RoomTexFloorSolidWood"
   },
   {
@@ -1458,7 +1415,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 186,
-    "default_sort_order": 33,
+    "default_sort_order": 32,
     "series_key": "RoomTexFloorHalloween"
   },
   {
@@ -1501,7 +1458,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 201,
-    "default_sort_order": 34,
+    "default_sort_order": 33,
     "series_key": "RoomTexFloorHarvest"
   },
   {
@@ -1544,7 +1501,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 213,
-    "default_sort_order": 35,
+    "default_sort_order": 34,
     "series_key": "RoomTexFloorCedar"
   },
   {
@@ -1587,7 +1544,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 1,
-    "default_sort_order": 36,
+    "default_sort_order": 35,
     "series_key": "RoomTexFloorTile"
   },
   {
@@ -1630,7 +1587,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 1,
-    "default_sort_order": 37,
+    "default_sort_order": 36,
     "series_key": "RoomTexFloorTile"
   },
   {
@@ -1673,7 +1630,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 1,
-    "default_sort_order": 38,
+    "default_sort_order": 37,
     "series_key": "RoomTexFloorTile"
   },
   {
@@ -1716,7 +1673,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 1,
-    "default_sort_order": 39,
+    "default_sort_order": 38,
     "series_key": "RoomTexFloorTile"
   },
   {
@@ -1759,7 +1716,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 3,
-    "default_sort_order": 40,
+    "default_sort_order": 39,
     "series_key": "RoomTexFloorArchBrick"
   },
   {
@@ -1802,7 +1759,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 4,
-    "default_sort_order": 41,
+    "default_sort_order": 40,
     "series_key": "RoomTexFloorTileWood"
   },
   {
@@ -1845,7 +1802,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 8,
-    "default_sort_order": 42,
+    "default_sort_order": 41,
     "series_key": "RoomTexFloorBasement"
   },
   {
@@ -1888,7 +1845,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 43,
+    "default_sort_order": 42,
     "series_key": "RoomTexFloorBrick"
   },
   {
@@ -1931,7 +1888,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 44,
+    "default_sort_order": 43,
     "series_key": "RoomTexFloorBrick"
   },
   {
@@ -1974,7 +1931,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 45,
+    "default_sort_order": 44,
     "series_key": "RoomTexFloorBrick"
   },
   {
@@ -2017,7 +1974,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 46,
+    "default_sort_order": 45,
     "series_key": "RoomTexFloorBrick"
   },
   {
@@ -2060,7 +2017,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 29,
-    "default_sort_order": 47,
+    "default_sort_order": 46,
     "series_key": "RoomTexFloorMarbleTile"
   },
   {
@@ -2103,7 +2060,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 29,
-    "default_sort_order": 48,
+    "default_sort_order": 47,
     "series_key": "RoomTexFloorMarbleTile"
   },
   {
@@ -2146,7 +2103,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 29,
-    "default_sort_order": 49,
+    "default_sort_order": 48,
     "series_key": "RoomTexFloorMarbleTile"
   },
   {
@@ -2189,7 +2146,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 46,
-    "default_sort_order": 50,
+    "default_sort_order": 49,
     "series_key": "RoomTexFloorConcrete"
   },
   {
@@ -2232,7 +2189,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 48,
-    "default_sort_order": 51,
+    "default_sort_order": 50,
     "series_key": "RoomTexFloorTileChecker"
   },
   {
@@ -2275,7 +2232,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 48,
-    "default_sort_order": 52,
+    "default_sort_order": 51,
     "series_key": "RoomTexFloorTileChecker"
   },
   {
@@ -2318,7 +2275,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 48,
-    "default_sort_order": 53,
+    "default_sort_order": 52,
     "series_key": "RoomTexFloorTileChecker"
   },
   {
@@ -2361,7 +2318,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 48,
-    "default_sort_order": 54,
+    "default_sort_order": 53,
     "series_key": "RoomTexFloorTileChecker"
   },
   {
@@ -2404,7 +2361,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 54,
-    "default_sort_order": 55,
+    "default_sort_order": 54,
     "series_key": "RoomTexFloorCute"
   },
   {
@@ -2447,7 +2404,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 54,
-    "default_sort_order": 56,
+    "default_sort_order": 55,
     "series_key": "RoomTexFloorCute"
   },
   {
@@ -2490,7 +2447,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 54,
-    "default_sort_order": 57,
+    "default_sort_order": 56,
     "series_key": "RoomTexFloorCute"
   },
   {
@@ -2533,7 +2490,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 54,
-    "default_sort_order": 58,
+    "default_sort_order": 57,
     "series_key": "RoomTexFloorCute"
   },
   {
@@ -2576,7 +2533,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 70,
-    "default_sort_order": 59,
+    "default_sort_order": 58,
     "series_key": "RoomTexFloorFlagStone"
   },
   {
@@ -2619,7 +2576,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 71,
-    "default_sort_order": 60,
+    "default_sort_order": 59,
     "series_key": "RoomTexFloorMosaicTile"
   },
   {
@@ -2662,7 +2619,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 94,
-    "default_sort_order": 61,
+    "default_sort_order": 60,
     "series_key": "RoomTexFloorHempTile"
   },
   {
@@ -2705,7 +2662,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 105,
-    "default_sort_order": 62,
+    "default_sort_order": 61,
     "series_key": "RoomTexFloorKitschTile"
   },
   {
@@ -2748,7 +2705,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 142,
-    "default_sort_order": 63,
+    "default_sort_order": 62,
     "series_key": "RoomTexFloorPatchworkTile"
   },
   {
@@ -2791,7 +2748,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 155,
-    "default_sort_order": 64,
+    "default_sort_order": 63,
     "series_key": "RoomTexFloorSquareTile"
   },
   {
@@ -2834,7 +2791,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 167,
-    "default_sort_order": 65,
+    "default_sort_order": 64,
     "series_key": "RoomTexFloorRubberTile"
   },
   {
@@ -2877,7 +2834,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 185,
-    "default_sort_order": 66,
+    "default_sort_order": 65,
     "series_key": "RoomTexFloorSlate"
   },
   {
@@ -2920,7 +2877,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 189,
-    "default_sort_order": 67,
+    "default_sort_order": 66,
     "series_key": "RoomTexFloorSteel"
   },
   {
@@ -2963,7 +2920,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 190,
-    "default_sort_order": 68,
+    "default_sort_order": 67,
     "series_key": "RoomTexFloorMarble"
   },
   {
@@ -3006,7 +2963,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 197,
-    "default_sort_order": 69,
+    "default_sort_order": 68,
     "series_key": "RoomTexFloorTileTerracotta"
   },
   {
@@ -3049,7 +3006,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 2,
-    "default_sort_order": 70,
+    "default_sort_order": 69,
     "series_key": "RoomTexFloorArabesque"
   },
   {
@@ -3092,7 +3049,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 21,
-    "default_sort_order": 71,
+    "default_sort_order": 70,
     "series_key": "RoomTexFloorRubber"
   },
   {
@@ -3135,7 +3092,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 21,
-    "default_sort_order": 72,
+    "default_sort_order": 71,
     "series_key": "RoomTexFloorRubber"
   },
   {
@@ -3178,7 +3135,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 43,
-    "default_sort_order": 73,
+    "default_sort_order": 72,
     "series_key": "RoomTexFloorPuzzleMat"
   },
   {
@@ -3221,7 +3178,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 43,
-    "default_sort_order": 74,
+    "default_sort_order": 73,
     "series_key": "RoomTexFloorPuzzleMat"
   },
   {
@@ -3264,7 +3221,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 43,
-    "default_sort_order": 75,
+    "default_sort_order": 74,
     "series_key": "RoomTexFloorPuzzleMat"
   },
   {
@@ -3307,7 +3264,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 43,
-    "default_sort_order": 76,
+    "default_sort_order": 75,
     "series_key": "RoomTexFloorPuzzleMat"
   },
   {
@@ -3350,7 +3307,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 101,
-    "default_sort_order": 77,
+    "default_sort_order": 76,
     "series_key": "RoomTexFloorJointMat"
   },
   {
@@ -3393,7 +3350,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 115,
-    "default_sort_order": 78,
+    "default_sort_order": 77,
     "series_key": "RoomTexFloorFishPop"
   },
   {
@@ -3436,7 +3393,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 165,
-    "default_sort_order": 79,
+    "default_sort_order": 78,
     "series_key": "RoomTexFloorRoseCarpet"
   },
   {
@@ -3479,7 +3436,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 179,
-    "default_sort_order": 80,
+    "default_sort_order": 79,
     "series_key": "RoomTexFloorSimpleCarpet"
   },
   {
@@ -3522,7 +3479,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 179,
-    "default_sort_order": 81,
+    "default_sort_order": 80,
     "series_key": "RoomTexFloorSimpleCarpet"
   },
   {
@@ -3565,7 +3522,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 179,
-    "default_sort_order": 82,
+    "default_sort_order": 81,
     "series_key": "RoomTexFloorSimpleCarpet"
   },
   {
@@ -3608,7 +3565,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 179,
-    "default_sort_order": 83,
+    "default_sort_order": 82,
     "series_key": "RoomTexFloorSimpleCarpet"
   },
   {
@@ -3651,7 +3608,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 184,
-    "default_sort_order": 84,
+    "default_sort_order": 83,
     "series_key": "RoomTexFloorSkull"
   },
   {
@@ -3694,7 +3651,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 40,
     "series_anchor_id": 191,
-    "default_sort_order": 85,
+    "default_sort_order": 84,
     "series_key": "RoomTexFloorStripe"
   },
   {
@@ -3737,7 +3694,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 50,
     "series_anchor_id": 168,
-    "default_sort_order": 86,
+    "default_sort_order": 85,
     "series_key": "RoomTexFloorTatami"
   },
   {
@@ -3780,7 +3737,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 50,
     "series_anchor_id": 168,
-    "default_sort_order": 87,
+    "default_sort_order": 86,
     "series_key": "RoomTexFloorTatami"
   },
   {
@@ -3823,7 +3780,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 50,
     "series_anchor_id": 169,
-    "default_sort_order": 88,
+    "default_sort_order": 87,
     "series_key": "RoomTexFloorTatamiPanel"
   },
   {
@@ -3866,7 +3823,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 50,
     "series_anchor_id": 169,
-    "default_sort_order": 89,
+    "default_sort_order": 88,
     "series_key": "RoomTexFloorTatamiPanel"
   },
   {
@@ -3909,7 +3866,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 6,
-    "default_sort_order": 90,
+    "default_sort_order": 89,
     "series_key": "RoomTexFloorLawn"
   },
   {
@@ -3952,7 +3909,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 7,
-    "default_sort_order": 91,
+    "default_sort_order": 90,
     "series_key": "RoomTexFloorBamboo"
   },
   {
@@ -3995,7 +3952,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 9,
-    "default_sort_order": 92,
+    "default_sort_order": 91,
     "series_key": "RoomTexFloorMorocco"
   },
   {
@@ -4038,7 +3995,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 9,
-    "default_sort_order": 93,
+    "default_sort_order": 92,
     "series_key": "RoomTexFloorMorocco"
   },
   {
@@ -4081,7 +4038,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 9,
-    "default_sort_order": 94,
+    "default_sort_order": 93,
     "series_key": "RoomTexFloorMorocco"
   },
   {
@@ -4124,7 +4081,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 9,
-    "default_sort_order": 95,
+    "default_sort_order": 94,
     "series_key": "RoomTexFloorMorocco"
   },
   {
@@ -4167,7 +4124,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 15,
-    "default_sort_order": 96,
+    "default_sort_order": 95,
     "series_key": "RoomTexFloorCamouflage"
   },
   {
@@ -4210,7 +4167,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 15,
-    "default_sort_order": 97,
+    "default_sort_order": 96,
     "series_key": "RoomTexFloorCamouflage"
   },
   {
@@ -4253,7 +4210,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 15,
-    "default_sort_order": 98,
+    "default_sort_order": 97,
     "series_key": "RoomTexFloorCamouflage"
   },
   {
@@ -4296,7 +4253,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 15,
-    "default_sort_order": 99,
+    "default_sort_order": 98,
     "series_key": "RoomTexFloorCamouflage"
   },
   {
@@ -4339,7 +4296,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 16,
-    "default_sort_order": 100,
+    "default_sort_order": 99,
     "series_key": "RoomTexFloorDot"
   },
   {
@@ -4382,7 +4339,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 16,
-    "default_sort_order": 101,
+    "default_sort_order": 100,
     "series_key": "RoomTexFloorDot"
   },
   {
@@ -4425,7 +4382,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 16,
-    "default_sort_order": 102,
+    "default_sort_order": 101,
     "series_key": "RoomTexFloorDot"
   },
   {
@@ -4468,7 +4425,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 16,
-    "default_sort_order": 103,
+    "default_sort_order": 102,
     "series_key": "RoomTexFloorDot"
   },
   {
@@ -4511,7 +4468,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 18,
-    "default_sort_order": 104,
+    "default_sort_order": 103,
     "series_key": "RoomTexFloorHoneycomb"
   },
   {
@@ -4554,7 +4511,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 18,
-    "default_sort_order": 105,
+    "default_sort_order": 104,
     "series_key": "RoomTexFloorHoneycomb"
   },
   {
@@ -4597,7 +4554,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 18,
-    "default_sort_order": 106,
+    "default_sort_order": 105,
     "series_key": "RoomTexFloorHoneycomb"
   },
   {
@@ -4640,7 +4597,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 18,
-    "default_sort_order": 107,
+    "default_sort_order": 106,
     "series_key": "RoomTexFloorHoneycomb"
   },
   {
@@ -4683,7 +4640,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 25,
-    "default_sort_order": 108,
+    "default_sort_order": 107,
     "series_key": "RoomTexFloorArgyleTile"
   },
   {
@@ -4726,7 +4683,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 25,
-    "default_sort_order": 109,
+    "default_sort_order": 108,
     "series_key": "RoomTexFloorArgyleTile"
   },
   {
@@ -4769,7 +4726,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 31,
-    "default_sort_order": 110,
+    "default_sort_order": 109,
     "series_key": "RoomTexFloorEaster"
   },
   {
@@ -4812,7 +4769,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 33,
-    "default_sort_order": 111,
+    "default_sort_order": 110,
     "series_key": "RoomTexFloorSakura"
   },
   {
@@ -4855,7 +4812,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 40,
-    "default_sort_order": 112,
+    "default_sort_order": 111,
     "series_key": "RoomTexFloorAutumun"
   },
   {
@@ -4898,7 +4855,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 44,
-    "default_sort_order": 113,
+    "default_sort_order": 112,
     "series_key": "RoomTexFloorPanel"
   },
   {
@@ -4941,7 +4898,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 44,
-    "default_sort_order": 114,
+    "default_sort_order": 113,
     "series_key": "RoomTexFloorPanel"
   },
   {
@@ -4984,7 +4941,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 61,
-    "default_sort_order": 115,
+    "default_sort_order": 114,
     "series_key": "RoomTexFloorHerringbone"
   },
   {
@@ -5027,7 +4984,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 61,
-    "default_sort_order": 116,
+    "default_sort_order": 115,
     "series_key": "RoomTexFloorHerringbone"
   },
   {
@@ -5070,7 +5027,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 74,
-    "default_sort_order": 117,
+    "default_sort_order": 116,
     "series_key": "RoomTexFloorMushForest"
   },
   {
@@ -5113,7 +5070,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 77,
-    "default_sort_order": 118,
+    "default_sort_order": 117,
     "series_key": "RoomTexFloorGarbage"
   },
   {
@@ -5156,7 +5113,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 78,
-    "default_sort_order": 119,
+    "default_sort_order": 118,
     "series_key": "RoomTexFloorAnimal"
   },
   {
@@ -5199,7 +5156,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 78,
-    "default_sort_order": 120,
+    "default_sort_order": 119,
     "series_key": "RoomTexFloorAnimal"
   },
   {
@@ -5242,7 +5199,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 78,
-    "default_sort_order": 121,
+    "default_sort_order": 120,
     "series_key": "RoomTexFloorAnimal"
   },
   {
@@ -5285,7 +5242,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 78,
-    "default_sort_order": 122,
+    "default_sort_order": 121,
     "series_key": "RoomTexFloorAnimal"
   },
   {
@@ -5328,7 +5285,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 81,
-    "default_sort_order": 123,
+    "default_sort_order": 122,
     "series_key": "RoomTexFloorGold"
   },
   {
@@ -5371,7 +5328,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 87,
-    "default_sort_order": 124,
+    "default_sort_order": 123,
     "series_key": "RoomTexFloorKitchen"
   },
   {
@@ -5414,7 +5371,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 87,
-    "default_sort_order": 125,
+    "default_sort_order": 124,
     "series_key": "RoomTexFloorKitchen"
   },
   {
@@ -5457,7 +5414,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 102,
-    "default_sort_order": 126,
+    "default_sort_order": 125,
     "series_key": "RoomTexFloorJungle"
   },
   {
@@ -5500,7 +5457,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 113,
-    "default_sort_order": 127,
+    "default_sort_order": 126,
     "series_key": "RoomTexFloorLunar"
   },
   {
@@ -5543,7 +5500,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 120,
-    "default_sort_order": 128,
+    "default_sort_order": 127,
     "series_key": "RoomTexFloorBill"
   },
   {
@@ -5586,7 +5543,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 140,
-    "default_sort_order": 129,
+    "default_sort_order": 128,
     "series_key": "RoomTexFloorParty"
   },
   {
@@ -5629,7 +5586,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 146,
-    "default_sort_order": 130,
+    "default_sort_order": 129,
     "series_key": "RoomTexFloorPirates"
   },
   {
@@ -5672,7 +5629,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 173,
-    "default_sort_order": 131,
+    "default_sort_order": 130,
     "series_key": "RoomTexFloorSand"
   },
   {
@@ -5715,7 +5672,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 177,
-    "default_sort_order": 132,
+    "default_sort_order": 131,
     "series_key": "RoomTexFloorSeaView"
   },
   {
@@ -5758,7 +5715,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 183,
-    "default_sort_order": 133,
+    "default_sort_order": 132,
     "series_key": "RoomTexFloorGelande"
   },
   {
@@ -5801,7 +5758,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 60,
     "series_anchor_id": 187,
-    "default_sort_order": 134,
+    "default_sort_order": 133,
     "series_key": "RoomTexFloorSandStar"
   },
   {
@@ -5844,7 +5801,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 60,
     "series_anchor_id": 138,
-    "default_sort_order": 135,
+    "default_sort_order": 134,
     "series_key": "RoomTexFloorGoldRich"
   },
   {
@@ -5887,7 +5844,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 116,
-    "default_sort_order": 136,
+    "default_sort_order": 135,
     "series_key": "RoomSpFloorMermaid"
   },
   {
@@ -5930,7 +5887,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 129,
-    "default_sort_order": 137,
+    "default_sort_order": 136,
     "series_key": "RoomSpFloorOasis"
   },
   {
@@ -5973,7 +5930,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 202,
-    "default_sort_order": 138,
+    "default_sort_order": 137,
     "series_key": "RoomSpFloorFishTank"
   },
   {
@@ -6016,7 +5973,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 203,
-    "default_sort_order": 139,
+    "default_sort_order": 138,
     "series_key": "RoomSpFloorWater"
   },
   {
@@ -6059,7 +6016,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 67,
-    "default_sort_order": 140,
+    "default_sort_order": 139,
     "series_key": "RoomTexFloorCottonSoil"
   },
   {
@@ -6102,7 +6059,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 69,
-    "default_sort_order": 141,
+    "default_sort_order": 140,
     "series_key": "RoomTexFloorFarm"
   },
   {
@@ -6145,7 +6102,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 107,
-    "default_sort_order": 142,
+    "default_sort_order": 141,
     "series_key": "RoomSpFloorVolcano"
   },
   {
@@ -6188,7 +6145,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 162,
-    "default_sort_order": 143,
+    "default_sort_order": 142,
     "series_key": "RoomTexFloorRock"
   },
   {
@@ -6231,7 +6188,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 170,
-    "default_sort_order": 144,
+    "default_sort_order": 143,
     "series_key": "RoomTexFloorDesert"
   },
   {
@@ -6274,7 +6231,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 193,
-    "default_sort_order": 145,
+    "default_sort_order": 144,
     "series_key": "RoomTexFloorBog"
   },
   {
@@ -6317,7 +6274,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 120,
     "series_anchor_id": 204,
-    "default_sort_order": 146,
+    "default_sort_order": 145,
     "series_key": "RoomTexFloorWilderness"
   },
   {
@@ -6360,7 +6317,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 130,
     "series_anchor_id": 60,
-    "default_sort_order": 147,
+    "default_sort_order": 146,
     "series_key": "RoomTexFloorGrassland"
   },
   {
@@ -6403,7 +6360,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 130,
     "series_anchor_id": 60,
-    "default_sort_order": 148,
+    "default_sort_order": 147,
     "series_key": "RoomTexFloorGrassland"
   },
   {
@@ -6446,7 +6403,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 130,
     "series_anchor_id": 124,
-    "default_sort_order": 149,
+    "default_sort_order": 148,
     "series_key": "RoomTexFloorMoss"
   },
   {
@@ -6489,7 +6446,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 130,
     "series_anchor_id": 24,
-    "default_sort_order": 150,
+    "default_sort_order": 149,
     "series_key": "RoomTexFloorCemetery"
   },
   {
@@ -6532,7 +6489,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 130,
     "series_anchor_id": 79,
-    "default_sort_order": 151,
+    "default_sort_order": 150,
     "series_key": "RoomSpFloorGlowMoss"
   },
   {
@@ -6575,7 +6532,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 130,
     "series_anchor_id": 164,
-    "default_sort_order": 152,
+    "default_sort_order": 151,
     "series_key": "RoomSpFloorRopenet"
   },
   {
@@ -6618,7 +6575,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 140,
     "series_anchor_id": 98,
-    "default_sort_order": 153,
+    "default_sort_order": 152,
     "series_key": "RoomSpFloorIce"
   },
   {
@@ -6661,7 +6618,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 140,
     "series_anchor_id": 99,
-    "default_sort_order": 154,
+    "default_sort_order": 153,
     "series_key": "RoomSpFloorIceFloe"
   },
   {
@@ -6704,7 +6661,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 23,
-    "default_sort_order": 155,
+    "default_sort_order": 154,
     "series_key": "RoomTexFloorWrestling"
   },
   {
@@ -6747,7 +6704,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 52,
-    "default_sort_order": 156,
+    "default_sort_order": 155,
     "series_key": "RoomTexFloorSidewalk"
   },
   {
@@ -6790,7 +6747,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 52,
-    "default_sort_order": 157,
+    "default_sort_order": 156,
     "series_key": "RoomTexFloorSidewalk"
   },
   {
@@ -6833,7 +6790,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 82,
-    "default_sort_order": 158,
+    "default_sort_order": 157,
     "series_key": "RoomTexFloorGravel"
   },
   {
@@ -6876,7 +6833,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 95,
-    "default_sort_order": 159,
+    "default_sort_order": 158,
     "series_key": "RoomTexFloorHighway"
   },
   {
@@ -6919,7 +6876,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 136,
-    "default_sort_order": 160,
+    "default_sort_order": 159,
     "series_key": "RoomTexFloorAtelier"
   },
   {
@@ -6962,7 +6919,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 139,
-    "default_sort_order": 161,
+    "default_sort_order": 160,
     "series_key": "RoomTexFloorParking"
   },
   {
@@ -7005,7 +6962,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 153,
-    "default_sort_order": 162,
+    "default_sort_order": 161,
     "series_key": "RoomTexFloorAthletics"
   },
   {
@@ -7048,7 +7005,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 154,
-    "default_sort_order": 163,
+    "default_sort_order": 162,
     "series_key": "RoomTexFloorRuins"
   },
   {
@@ -7091,7 +7048,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 172,
-    "default_sort_order": 164,
+    "default_sort_order": 163,
     "series_key": "RoomTexFloorEmptyLot"
   },
   {
@@ -7134,7 +7091,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 175,
-    "default_sort_order": 165,
+    "default_sort_order": 164,
     "series_key": "RoomTexFloorScramble"
   },
   {
@@ -7177,7 +7134,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 192,
-    "default_sort_order": 166,
+    "default_sort_order": 165,
     "series_key": "RoomTexFloorArena"
   },
   {
@@ -7220,7 +7177,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 150,
     "series_anchor_id": 199,
-    "default_sort_order": 167,
+    "default_sort_order": 166,
     "series_key": "RoomTexFloorPlatform"
   },
   {
@@ -7263,7 +7220,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 150,
     "series_anchor_id": 97,
-    "default_sort_order": 168,
+    "default_sort_order": 167,
     "series_key": "RoomTexFloorSchoolyard"
   },
   {
@@ -7306,7 +7263,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 36,
-    "default_sort_order": 169,
+    "default_sort_order": 168,
     "series_key": "RoomTexFloorGeek"
   },
   {
@@ -7349,7 +7306,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 38,
-    "default_sort_order": 170,
+    "default_sort_order": 169,
     "series_key": "RoomSpFloorCloud"
   },
   {
@@ -7392,7 +7349,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 47,
-    "default_sort_order": 171,
+    "default_sort_order": 170,
     "series_key": "RoomTexFloorConstruction"
   },
   {
@@ -7435,7 +7392,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 51,
-    "default_sort_order": 172,
+    "default_sort_order": 171,
     "series_key": "RoomTexFloorCropCircles"
   },
   {
@@ -7478,7 +7435,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 66,
-    "default_sort_order": 173,
+    "default_sort_order": 172,
     "series_key": "RoomTexFloorStratum"
   },
   {
@@ -7521,7 +7478,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 73,
-    "default_sort_order": 174,
+    "default_sort_order": 173,
     "series_key": "RoomSpFloorRiver"
   },
   {
@@ -7564,7 +7521,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 75,
-    "default_sort_order": 175,
+    "default_sort_order": 174,
     "series_key": "RoomSpFloorTechnology"
   },
   {
@@ -7607,7 +7564,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 96,
-    "default_sort_order": 176,
+    "default_sort_order": 175,
     "series_key": "RoomTexFloorHoney"
   },
   {
@@ -7650,7 +7607,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 160,
     "series_anchor_id": 112,
-    "default_sort_order": 177,
+    "default_sort_order": 176,
     "series_key": "RoomTexFloorLobby"
   },
   {
@@ -7693,7 +7650,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 37,
-    "default_sort_order": 178,
+    "default_sort_order": 177,
     "series_key": "RoomTexFloorSummer"
   },
   {
@@ -7736,7 +7693,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 39,
-    "default_sort_order": 179,
+    "default_sort_order": 178,
     "series_key": "RoomSpFloorClub"
   },
   {
@@ -7779,7 +7736,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 68,
-    "default_sort_order": 180,
+    "default_sort_order": 179,
     "series_key": "RoomTexFloorTheater"
   },
   {
@@ -7822,7 +7779,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 92,
-    "default_sort_order": 181,
+    "default_sort_order": 180,
     "series_key": "RoomTexFloorSchoolgym"
   },
   {
@@ -7865,7 +7822,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 133,
-    "default_sort_order": 182,
+    "default_sort_order": 181,
     "series_key": "RoomTexFloorOperatingRoom"
   },
   {
@@ -7908,7 +7865,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 143,
-    "default_sort_order": 183,
+    "default_sort_order": 182,
     "series_key": "RoomTexFloorHospitalRoom"
   },
   {
@@ -7951,7 +7908,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 160,
-    "default_sort_order": 184,
+    "default_sort_order": 183,
     "series_key": "RoomTexFloorCookery"
   },
   {
@@ -7994,7 +7951,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 161,
-    "default_sort_order": 185,
+    "default_sort_order": 184,
     "series_key": "RoomTexFloorRobo"
   },
   {
@@ -8037,7 +7994,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 163,
-    "default_sort_order": 186,
+    "default_sort_order": 185,
     "series_key": "RoomSpFloorSketch"
   },
   {
@@ -8080,7 +8037,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 188,
-    "default_sort_order": 187,
+    "default_sort_order": 186,
     "series_key": "RoomTexFloorSteampunk"
   },
   {
@@ -8123,7 +8080,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 160,
     "series_anchor_id": 196,
-    "default_sort_order": 188,
+    "default_sort_order": 187,
     "series_key": "RoomTexFloorGlamping"
   },
   {
@@ -8166,7 +8123,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 10,
-    "default_sort_order": 189,
+    "default_sort_order": 188,
     "series_key": "Series_Chocolate_floors"
   },
   {
@@ -8209,7 +8166,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 10,
-    "default_sort_order": 190,
+    "default_sort_order": 189,
     "series_key": "Series_Chocolate_floors"
   },
   {
@@ -8252,7 +8209,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 10,
-    "default_sort_order": 191,
+    "default_sort_order": 190,
     "series_key": "Series_Chocolate_floors"
   },
   {
@@ -8295,7 +8252,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 72,
-    "default_sort_order": 192,
+    "default_sort_order": 191,
     "series_key": "RoomTexFloorRush"
   },
   {
@@ -8338,7 +8295,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 100,
-    "default_sort_order": 193,
+    "default_sort_order": 192,
     "series_key": "RoomTexFloorDynasty"
   },
   {
@@ -8381,7 +8338,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 137,
-    "default_sort_order": 194,
+    "default_sort_order": 193,
     "series_key": "RoomTexFloorPalace"
   },
   {
@@ -8424,7 +8381,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 170,
     "series_anchor_id": 152,
-    "default_sort_order": 195,
+    "default_sort_order": 194,
     "series_key": "RoomTexFloorEgypt"
   },
   {
@@ -8467,7 +8424,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 170,
     "series_anchor_id": 123,
-    "default_sort_order": 196,
+    "default_sort_order": 195,
     "series_key": "RoomTexFloorMoroccanSquareTile"
   },
   {
@@ -8510,7 +8467,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 170,
     "series_anchor_id": 126,
-    "default_sort_order": 197,
+    "default_sort_order": 196,
     "series_key": "RoomTexFloorClassroom"
   },
   {
@@ -8553,7 +8510,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 170,
     "series_anchor_id": 130,
-    "default_sort_order": 198,
+    "default_sort_order": 197,
     "series_key": "RoomTexFloorOldBoard"
   },
   {
@@ -8596,7 +8553,7 @@
     "series_version_rank": 2,
     "series_style_cluster": 170,
     "series_anchor_id": 131,
-    "default_sort_order": 199,
+    "default_sort_order": 198,
     "series_key": "RoomTexFloorLabo"
   },
   {
@@ -8639,7 +8596,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 180,
     "series_anchor_id": 76,
-    "default_sort_order": 200,
+    "default_sort_order": 199,
     "series_key": "RoomSpFloorGalaxy"
   },
   {
@@ -8682,7 +8639,7 @@
     "series_version_rank": 1,
     "series_style_cluster": 180,
     "series_anchor_id": 174,
-    "default_sort_order": 201,
+    "default_sort_order": 200,
     "series_key": "RoomSpFloorSF"
   },
   {
@@ -8725,8 +8682,51 @@
     "series_version_rank": 2,
     "series_style_cluster": 180,
     "series_anchor_id": 114,
-    "default_sort_order": 202,
+    "default_sort_order": 201,
     "series_key": "RoomSpFloorMagic"
+  },
+  {
+    "title": "Item:Block flooring (New Horizons)",
+    "name_en": "Block flooring",
+    "name_zh": "超級瑪利歐地板",
+    "name_ja": "スーパーマリオのゆか",
+    "has_in_game_screenshot": true,
+    "target_media_file": "File:Block Flooring NH Screenshot.jpg",
+    "local_filename": "超級瑪利歐地板_Block_flooring.jpg",
+    "image_url": "https://dodo.ac/np/images/0/0f/Block_Flooring_NH_Screenshot.jpg",
+    "width": 1280,
+    "height": 720,
+    "filesize": 394499,
+    "local_rel_path": "images/floors/超級瑪利歐地板_Block_flooring.webp",
+    "internal_id": 13804,
+    "filename_base": "RoomTexFloorMario",
+    "variant_id": 0,
+    "series_id": 13804,
+    "game_sort_order": 210,
+    "nookipedia_id": 14,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "Brown",
+    "color_2": "Brown",
+    "colors_zh": "棕",
+    "colors_ja": "ブラウン",
+    "colors_en": "Brown",
+    "version_added": "1.8.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Mario Floors",
+    "color_rank": 2,
+    "is_special": 1,
+    "style_cluster": 190,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 190,
+    "series_anchor_id": 14,
+    "default_sort_order": 202,
+    "series_key": "Series_Mario_floors"
   },
   {
     "title": "Item:Kerokerokeroppi flooring (New Horizons)",

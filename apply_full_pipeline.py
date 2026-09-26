@@ -261,7 +261,7 @@ def get_floor_series_key(item):
         return 'Series_Sanrio_floors'
         
     # 2. Mario
-    if 'mario' in tag.lower() or 'block flooring' in nl:
+    if 'mario' in tag.lower() or nl == 'block flooring':
         return 'Series_Mario_floors'
         
     # 3. Zelda
