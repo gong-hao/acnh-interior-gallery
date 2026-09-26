@@ -160,6 +160,10 @@ def generate_gallery_page(
             <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;"><span class="filter-icon">🗑️</span> <span class="filter-label">清空</span></button>
         """
 
+    size_sort_options_html = """
+                        <option value="size_asc" id="optSortSizeAsc">📐 尺寸 (正序)</option>
+                        <option value="size_desc" id="optSortSizeDesc">📐 尺寸 (倒序)</option>""" if page_type == "rugs" else ""
+
     sort_selector_html = f"""
                 <div class="sort-selector-wrap" title="排序方式">
                     <span class="sort-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px;"><path d="M7 20V4m0 0L3 8m4-4l4 4M17 4v16m0 0l4-4m-4 4l-4-4"/></svg></span>
@@ -173,7 +177,7 @@ def generate_gallery_page(
                         <option value="source_asc" id="optSortSourceAsc">🏷️ 出處 (正序)</option>
                         <option value="source_desc" id="optSortSourceDesc">🏷️ 出處 (倒序)</option>
                         <option value="color_asc" id="optSortColorAsc">🎨 顏色 (正序)</option>
-                        <option value="color_desc" id="optSortColorDesc">🎨 顏色 (倒序)</option>
+                        <option value="color_desc" id="optSortColorDesc">🎨 顏色 (倒序)</option>{size_sort_options_html}
                     </select>
                 </div>
     """
@@ -1730,6 +1734,8 @@ def generate_gallery_page(
                 sort_source_desc: '🏷️ 出處 (倒序)',
                 sort_color_asc: '🎨 顏色 (正序)',
                 sort_color_desc: '🎨 顏色 (倒序)',
+                sort_size_asc: '📐 尺寸 (正序)',
+                sort_size_desc: '📐 尺寸 (倒序)',
                 res_label: '解析度: {{w}} &times; {{h}} px',
                 rug_footprint: '佔地尺寸: <strong>{{grid}}</strong>（{{label}}）',
                 rug_grid_hint: '房間 5×5 基準網格',
@@ -1787,6 +1793,8 @@ def generate_gallery_page(
                 sort_source_desc: '🏷️ Source (Descending)',
                 sort_color_asc: '🎨 Color (Ascending)',
                 sort_color_desc: '🎨 Color (Descending)',
+                sort_size_asc: '📐 Size (Ascending)',
+                sort_size_desc: '📐 Size (Descending)',
                 res_label: 'Resolution: {{w}} &times; {{h}} px',
                 rug_footprint: 'Footprint: <strong>{{grid}}</strong> ({{label}})',
                 rug_grid_hint: 'Room 5×5 Reference Grid',
@@ -1844,6 +1852,8 @@ def generate_gallery_page(
                 sort_source_desc: '🏷️ 入手先 (降順)',
                 sort_color_asc: '🎨 カラー (昇順)',
                 sort_color_desc: '🎨 カラー (降順)',
+                sort_size_asc: '📐 サイズ (昇順)',
+                sort_size_desc: '📐 サイズ (降順)',
                 res_label: '解像度: {{w}} &times; {{h}} px',
                 rug_footprint: 'サイズ: <strong>{{grid}}</strong>（{{label}}）',
                 rug_grid_hint: '部屋 5×5 基準グリッド',
@@ -2044,6 +2054,10 @@ def generate_gallery_page(
             if (optColorAsc) optColorAsc.textContent = d.sort_color_asc;
             const optColorDesc = document.getElementById('optSortColorDesc');
             if (optColorDesc) optColorDesc.textContent = d.sort_color_desc;
+            const optSizeAsc = document.getElementById('optSortSizeAsc');
+            if (optSizeAsc) optSizeAsc.textContent = d.sort_size_asc;
+            const optSizeDesc = document.getElementById('optSortSizeDesc');
+            if (optSizeDesc) optSizeDesc.textContent = d.sort_size_desc;
             const sortWrap = document.querySelector('.sort-selector-wrap');
             if (sortWrap) sortWrap.title = d.sort_label;
 
@@ -2231,7 +2245,7 @@ def generate_gallery_page(
         let currentSort = 'default_asc';
         try {{
             const savedSort = localStorage.getItem('acnh_sort_order');
-            const validSorts = ['default_asc', 'default_desc', 'id_asc', 'id_desc', 'name_asc', 'name_desc', 'source_asc', 'source_desc', 'color_asc', 'color_desc'];
+            const validSorts = ['default_asc', 'default_desc', 'id_asc', 'id_desc', 'name_asc', 'name_desc', 'source_asc', 'source_desc', 'color_asc', 'color_desc', 'size_asc', 'size_desc'];
             if (savedSort && validSorts.includes(savedSort)) currentSort = savedSort;
         }} catch (e) {{}}
 
@@ -2272,6 +2286,18 @@ def generate_gallery_page(
                     return (a.color_rank || 99) - (b.color_rank || 99) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
                 }} else if (sortType === 'color_desc') {{
                     return (b.color_rank || 99) - (a.color_rank || 99) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'size_asc') {{
+                    const sMap = {{'S': 1, 'M': 2, 'L': 3}};
+                    const sA = sMap[a.size_category] || 2;
+                    const sB = sMap[b.size_category] || 2;
+                    const diff = sA - sB || (a.area || 0) - (b.area || 0);
+                    return diff || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'size_desc') {{
+                    const sMap = {{'S': 1, 'M': 2, 'L': 3}};
+                    const sA = sMap[a.size_category] || 2;
+                    const sB = sMap[b.size_category] || 2;
+                    const diff = sB - sA || (b.area || 0) - (a.area || 0);
+                    return diff || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
                 }}
                 return (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
             }};
