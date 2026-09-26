@@ -42,7 +42,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 7,
-    "default_sort_order": 0
+    "default_sort_order": 0,
+    "series_key": "RugRectNativeKitchenS"
   },
   {
     "title": "Item:Yellow-design kitchen mat (New Horizons)",
@@ -87,7 +88,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 7,
-    "default_sort_order": 1
+    "default_sort_order": 1,
+    "series_key": "RugRectNativeKitchenS"
   },
   {
     "title": "Item:Red-design kitchen mat (New Horizons)",
@@ -132,7 +134,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 7,
-    "default_sort_order": 2
+    "default_sort_order": 2,
+    "series_key": "RugRectNativeKitchenS"
   },
   {
     "title": "Item:Blue-design kitchen mat (New Horizons)",
@@ -177,7 +180,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 7,
-    "default_sort_order": 3
+    "default_sort_order": 3,
+    "series_key": "RugRectNativeKitchenS"
   },
   {
     "title": "Item:Brown kitchen mat (New Horizons)",
@@ -222,7 +226,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 14,
-    "default_sort_order": 4
+    "default_sort_order": 4,
+    "series_key": "RugRectKitchenS"
   },
   {
     "title": "Item:Yellow kitchen mat (New Horizons)",
@@ -267,7 +272,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 14,
-    "default_sort_order": 5
+    "default_sort_order": 5,
+    "series_key": "RugRectKitchenS"
   },
   {
     "title": "Item:Green kitchen mat (New Horizons)",
@@ -312,7 +318,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 14,
-    "default_sort_order": 6
+    "default_sort_order": 6,
+    "series_key": "RugRectKitchenS"
   },
   {
     "title": "Item:Blue kitchen mat (New Horizons)",
@@ -357,7 +364,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 14,
-    "default_sort_order": 7
+    "default_sort_order": 7,
+    "series_key": "RugRectKitchenS"
   },
   {
     "title": "Item:Mom's lively kitchen mat (New Horizons)",
@@ -402,7 +410,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 92,
-    "default_sort_order": 8
+    "default_sort_order": 8,
+    "series_key": "RugRectMomS"
   },
   {
     "title": "Item:Mom's playful kitchen mat (New Horizons)",
@@ -447,7 +456,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 92,
-    "default_sort_order": 9
+    "default_sort_order": 9,
+    "series_key": "RugRectMomS"
   },
   {
     "title": "Item:Mom's cool kitchen mat (New Horizons)",
@@ -492,7 +502,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 92,
-    "default_sort_order": 10
+    "default_sort_order": 10,
+    "series_key": "RugRectMomS"
   },
   {
     "title": "Item:Mom's reliable kitchen mat (New Horizons)",
@@ -537,7 +548,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 92,
-    "default_sort_order": 11
+    "default_sort_order": 11,
+    "series_key": "RugRectMomS"
   },
   {
     "title": "Item:Shanty mat (New Horizons)",
@@ -582,7 +594,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 148,
-    "default_sort_order": 12
+    "default_sort_order": 12,
+    "series_key": "RugSquareOldStrawL"
   },
   {
     "title": "Item:White simple medium mat (New Horizons)",
@@ -627,7 +640,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 13
+    "default_sort_order": 13,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium brown mat (New Horizons)",
@@ -672,7 +686,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 14
+    "default_sort_order": 14,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium black mat (New Horizons)",
@@ -717,7 +732,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 15
+    "default_sort_order": 15,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium orange mat (New Horizons)",
@@ -762,7 +778,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 16
+    "default_sort_order": 16,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium red mat (New Horizons)",
@@ -807,7 +824,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 17
+    "default_sort_order": 17,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium avocado mat (New Horizons)",
@@ -852,7 +870,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 18
+    "default_sort_order": 18,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium blue mat (New Horizons)",
@@ -897,7 +916,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 19
+    "default_sort_order": 19,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:Simple medium purple mat (New Horizons)",
@@ -942,7 +962,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 152,
-    "default_sort_order": 20
+    "default_sort_order": 20,
+    "series_key": "RugSquareSimpleM"
   },
   {
     "title": "Item:White simple small mat (New Horizons)",
@@ -987,7 +1008,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 21
+    "default_sort_order": 21,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small brown mat (New Horizons)",
@@ -1032,7 +1054,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 22
+    "default_sort_order": 22,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small black mat (New Horizons)",
@@ -1077,7 +1100,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 23
+    "default_sort_order": 23,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small orange mat (New Horizons)",
@@ -1122,7 +1146,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 24
+    "default_sort_order": 24,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small red mat (New Horizons)",
@@ -1167,7 +1192,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 25
+    "default_sort_order": 25,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small avocado mat (New Horizons)",
@@ -1212,7 +1238,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 26
+    "default_sort_order": 26,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small blue mat (New Horizons)",
@@ -1257,7 +1284,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 27
+    "default_sort_order": 27,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Simple small purple mat (New Horizons)",
@@ -1302,7 +1330,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 161,
-    "default_sort_order": 28
+    "default_sort_order": 28,
+    "series_key": "RugSquareSimpleS"
   },
   {
     "title": "Item:Sloppy rug (New Horizons)",
@@ -1347,7 +1376,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 10,
     "series_anchor_id": 169,
-    "default_sort_order": 29
+    "default_sort_order": 29,
+    "series_key": "RugOtherSloppyL"
   },
   {
     "title": "Item:Aluminum rug (New Horizons)",
@@ -1392,7 +1422,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 2,
-    "default_sort_order": 30
+    "default_sort_order": 30,
+    "series_key": "RugRectAluminumM"
   },
   {
     "title": "Item:Bell-bag rug (New Horizons)",
@@ -1437,7 +1468,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 4,
-    "default_sort_order": 31
+    "default_sort_order": 31,
+    "series_key": "RugOtherBellM"
   },
   {
     "title": "Item:Black blocks rug (New Horizons)",
@@ -1482,7 +1514,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 5,
-    "default_sort_order": 32
+    "default_sort_order": 32,
+    "series_key": "RugSquareBlockM"
   },
   {
     "title": "Item:Yellow blocks rug (New Horizons)",
@@ -1527,7 +1560,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 5,
-    "default_sort_order": 33
+    "default_sort_order": 33,
+    "series_key": "RugSquareBlockM"
   },
   {
     "title": "Item:Red blocks rug (New Horizons)",
@@ -1572,7 +1606,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 5,
-    "default_sort_order": 34
+    "default_sort_order": 34,
+    "series_key": "RugSquareBlockM"
   },
   {
     "title": "Item:Blue blocks rug (New Horizons)",
@@ -1617,7 +1652,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 5,
-    "default_sort_order": 35
+    "default_sort_order": 35,
+    "series_key": "RugSquareBlockM"
   },
   {
     "title": "Item:White wooden-deck rug (New Horizons)",
@@ -1662,7 +1698,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 6,
-    "default_sort_order": 36
+    "default_sort_order": 36,
+    "series_key": "RugRectDeckM"
   },
   {
     "title": "Item:Brown wooden-deck rug (New Horizons)",
@@ -1707,7 +1744,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 6,
-    "default_sort_order": 37
+    "default_sort_order": 37,
+    "series_key": "RugRectDeckM"
   },
   {
     "title": "Item:Natural wooden-deck rug (New Horizons)",
@@ -1752,7 +1790,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 6,
-    "default_sort_order": 38
+    "default_sort_order": 38,
+    "series_key": "RugRectDeckM"
   },
   {
     "title": "Item:Black wooden-deck rug (New Horizons)",
@@ -1797,7 +1836,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 6,
-    "default_sort_order": 39
+    "default_sort_order": 39,
+    "series_key": "RugRectDeckM"
   },
   {
     "title": "Item:Brown argyle rug (New Horizons)",
@@ -1842,7 +1882,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 8,
-    "default_sort_order": 40
+    "default_sort_order": 40,
+    "series_key": "RugRectArgyleL"
   },
   {
     "title": "Item:Yellow argyle rug (New Horizons)",
@@ -1887,7 +1928,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 8,
-    "default_sort_order": 41
+    "default_sort_order": 41,
+    "series_key": "RugRectArgyleL"
   },
   {
     "title": "Item:Red argyle rug (New Horizons)",
@@ -1932,7 +1974,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 8,
-    "default_sort_order": 42
+    "default_sort_order": 42,
+    "series_key": "RugRectArgyleL"
   },
   {
     "title": "Item:Blue argyle rug (New Horizons)",
@@ -1977,7 +2020,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 8,
-    "default_sort_order": 43
+    "default_sort_order": 43,
+    "series_key": "RugRectArgyleL"
   },
   {
     "title": "Item:Monochromatic dotted rug (New Horizons)",
@@ -2022,7 +2066,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 10,
-    "default_sort_order": 44
+    "default_sort_order": 44,
+    "series_key": "RugRectDotL"
   },
   {
     "title": "Item:Red dotted rug (New Horizons)",
@@ -2067,7 +2112,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 10,
-    "default_sort_order": 45
+    "default_sort_order": 45,
+    "series_key": "RugRectDotL"
   },
   {
     "title": "Item:Retro dotted rug (New Horizons)",
@@ -2112,7 +2158,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 10,
-    "default_sort_order": 46
+    "default_sort_order": 46,
+    "series_key": "RugRectDotL"
   },
   {
     "title": "Item:Blue dotted rug (New Horizons)",
@@ -2157,7 +2204,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 10,
-    "default_sort_order": 47
+    "default_sort_order": 47,
+    "series_key": "RugRectDotL"
   },
   {
     "title": "Item:Yellow kilim-style carpet (New Horizons)",
@@ -2202,7 +2250,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 48
+    "default_sort_order": 48,
+    "series_key": "RugSquareKirimL"
   },
   {
     "title": "Item:Red kilim-style carpet (New Horizons)",
@@ -2247,7 +2296,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 49
+    "default_sort_order": 49,
+    "series_key": "RugSquareKirimL"
   },
   {
     "title": "Item:Green kilim-style carpet (New Horizons)",
@@ -2292,7 +2342,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 50
+    "default_sort_order": 50,
+    "series_key": "RugSquareKirimL"
   },
   {
     "title": "Item:Blue kilim-style carpet (New Horizons)",
@@ -2337,7 +2388,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 13,
-    "default_sort_order": 51
+    "default_sort_order": 51,
+    "series_key": "RugSquareKirimL"
   },
   {
     "title": "Item:Ivory medium round mat (New Horizons)",
@@ -2382,7 +2434,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 15,
-    "default_sort_order": 52
+    "default_sort_order": 52,
+    "series_key": "RugRoundSimpleM"
   },
   {
     "title": "Item:Yellow medium round mat (New Horizons)",
@@ -2427,7 +2480,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 15,
-    "default_sort_order": 53
+    "default_sort_order": 53,
+    "series_key": "RugRoundSimpleM"
   },
   {
     "title": "Item:Red medium round mat (New Horizons)",
@@ -2472,7 +2526,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 15,
-    "default_sort_order": 54
+    "default_sort_order": 54,
+    "series_key": "RugRoundSimpleM"
   },
   {
     "title": "Item:Blue medium round mat (New Horizons)",
@@ -2517,7 +2572,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 15,
-    "default_sort_order": 55
+    "default_sort_order": 55,
+    "series_key": "RugRoundSimpleM"
   },
   {
     "title": "Item:Yellow Persian rug (New Horizons)",
@@ -2562,7 +2618,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 17,
-    "default_sort_order": 56
+    "default_sort_order": 56,
+    "series_key": "RugSquarePersianL"
   },
   {
     "title": "Item:Red Persian rug (New Horizons)",
@@ -2607,7 +2664,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 17,
-    "default_sort_order": 57
+    "default_sort_order": 57,
+    "series_key": "RugSquarePersianL"
   },
   {
     "title": "Item:Blue Persian rug (New Horizons)",
@@ -2652,7 +2710,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 17,
-    "default_sort_order": 58
+    "default_sort_order": 58,
+    "series_key": "RugSquarePersianL"
   },
   {
     "title": "Item:Purple Persian rug (New Horizons)",
@@ -2697,7 +2756,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 17,
-    "default_sort_order": 59
+    "default_sort_order": 59,
+    "series_key": "RugSquarePersianL"
   },
   {
     "title": "Item:Brown shaggy rug (New Horizons)",
@@ -2742,7 +2802,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 18,
-    "default_sort_order": 60
+    "default_sort_order": 60,
+    "series_key": "RugSquareShaggyL"
   },
   {
     "title": "Item:Green shaggy rug (New Horizons)",
@@ -2787,7 +2848,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 18,
-    "default_sort_order": 61
+    "default_sort_order": 61,
+    "series_key": "RugSquareShaggyL"
   },
   {
     "title": "Item:Blue shaggy rug (New Horizons)",
@@ -2832,7 +2894,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 18,
-    "default_sort_order": 62
+    "default_sort_order": 62,
+    "series_key": "RugSquareShaggyL"
   },
   {
     "title": "Item:Purple shaggy rug (New Horizons)",
@@ -2877,7 +2940,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 18,
-    "default_sort_order": 63
+    "default_sort_order": 63,
+    "series_key": "RugSquareShaggyL"
   },
   {
     "title": "Item:Ivory small round mat (New Horizons)",
@@ -2922,7 +2986,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 19,
-    "default_sort_order": 64
+    "default_sort_order": 64,
+    "series_key": "RugRoundSimpleS"
   },
   {
     "title": "Item:Yellow small round mat (New Horizons)",
@@ -2967,7 +3032,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 19,
-    "default_sort_order": 65
+    "default_sort_order": 65,
+    "series_key": "RugRoundSimpleS"
   },
   {
     "title": "Item:Red small round mat (New Horizons)",
@@ -3012,7 +3078,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 19,
-    "default_sort_order": 66
+    "default_sort_order": 66,
+    "series_key": "RugRoundSimpleS"
   },
   {
     "title": "Item:Blue small round mat (New Horizons)",
@@ -3057,7 +3124,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 19,
-    "default_sort_order": 67
+    "default_sort_order": 67,
+    "series_key": "RugRoundSimpleS"
   },
   {
     "title": "Item:Yellow stripes rug (New Horizons)",
@@ -3102,7 +3170,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 20,
-    "default_sort_order": 68
+    "default_sort_order": 68,
+    "series_key": "RugRectBorderL"
   },
   {
     "title": "Item:Peach stripes rug (New Horizons)",
@@ -3147,7 +3216,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 20,
-    "default_sort_order": 69
+    "default_sort_order": 69,
+    "series_key": "RugRectBorderL"
   },
   {
     "title": "Item:Green stripes rug (New Horizons)",
@@ -3192,7 +3262,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 20,
-    "default_sort_order": 70
+    "default_sort_order": 70,
+    "series_key": "RugRectBorderL"
   },
   {
     "title": "Item:Blue stripes rug (New Horizons)",
@@ -3237,7 +3308,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 20,
-    "default_sort_order": 71
+    "default_sort_order": 71,
+    "series_key": "RugRectBorderL"
   },
   {
     "title": "Item:Yellow vinyl sheet (New Horizons)",
@@ -3282,7 +3354,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 21,
-    "default_sort_order": 72
+    "default_sort_order": 72,
+    "series_key": "RugRectVinylM"
   },
   {
     "title": "Item:Red vinyl sheet (New Horizons)",
@@ -3327,7 +3400,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 21,
-    "default_sort_order": 73
+    "default_sort_order": 73,
+    "series_key": "RugRectVinylM"
   },
   {
     "title": "Item:Blue vinyl sheet (New Horizons)",
@@ -3372,7 +3446,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 21,
-    "default_sort_order": 74
+    "default_sort_order": 74,
+    "series_key": "RugRectVinylM"
   },
   {
     "title": "Item:Colorful vinyl sheet (New Horizons)",
@@ -3417,7 +3492,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 21,
-    "default_sort_order": 75
+    "default_sort_order": 75,
+    "series_key": "RugRectVinylM"
   },
   {
     "title": "Item:Monochromatic wavy rug (New Horizons)",
@@ -3462,7 +3538,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 22,
-    "default_sort_order": 76
+    "default_sort_order": 76,
+    "series_key": "RugRectWaveL"
   },
   {
     "title": "Item:Red wavy rug (New Horizons)",
@@ -3507,7 +3584,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 22,
-    "default_sort_order": 77
+    "default_sort_order": 77,
+    "series_key": "RugRectWaveL"
   },
   {
     "title": "Item:Blue wavy rug (New Horizons)",
@@ -3552,7 +3630,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 22,
-    "default_sort_order": 78
+    "default_sort_order": 78,
+    "series_key": "RugRectWaveL"
   },
   {
     "title": "Item:Modern wavy rug (New Horizons)",
@@ -3597,7 +3676,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 22,
-    "default_sort_order": 79
+    "default_sort_order": 79,
+    "series_key": "RugRectWaveL"
   },
   {
     "title": "Item:White wedding rug (New Horizons)",
@@ -3642,7 +3722,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 23,
-    "default_sort_order": 80
+    "default_sort_order": 80,
+    "series_key": "RugRectJuneBrideM"
   },
   {
     "title": "Item:Red wedding rug (New Horizons)",
@@ -3687,7 +3768,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 23,
-    "default_sort_order": 81
+    "default_sort_order": 81,
+    "series_key": "RugRectJuneBrideM"
   },
   {
     "title": "Item:Blue wedding rug (New Horizons)",
@@ -3732,7 +3814,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 23,
-    "default_sort_order": 82
+    "default_sort_order": 82,
+    "series_key": "RugRectJuneBrideM"
   },
   {
     "title": "Item:Botanical rug (New Horizons)",
@@ -3777,7 +3860,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 26,
-    "default_sort_order": 83
+    "default_sort_order": 83,
+    "series_key": "RugRectBotanicalL"
   },
   {
     "title": "Item:Festive rug (New Horizons)",
@@ -3822,7 +3906,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 50,
-    "default_sort_order": 84
+    "default_sort_order": 84,
+    "series_key": "RugSquareChristmasL"
   },
   {
     "title": "Item:Yellow checked rug (New Horizons)",
@@ -3867,7 +3952,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 60,
-    "default_sort_order": 85
+    "default_sort_order": 85,
+    "series_key": "RugSquareCheckQuiltL"
   },
   {
     "title": "Item:Red-and-blue checked rug (New Horizons)",
@@ -3912,7 +3998,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 60,
-    "default_sort_order": 86
+    "default_sort_order": 86,
+    "series_key": "RugSquareCheckQuiltL"
   },
   {
     "title": "Item:Peach checked rug (New Horizons)",
@@ -3957,7 +4044,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 60,
-    "default_sort_order": 87
+    "default_sort_order": 87,
+    "series_key": "RugSquareCheckQuiltL"
   },
   {
     "title": "Item:Green checked rug (New Horizons)",
@@ -4002,7 +4090,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 60,
-    "default_sort_order": 88
+    "default_sort_order": 88,
+    "series_key": "RugSquareCheckQuiltL"
   },
   {
     "title": "Item:Iron entrance mat (New Horizons)",
@@ -4047,7 +4136,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 70,
-    "default_sort_order": 89
+    "default_sort_order": 89,
+    "series_key": "RugRectIronmatS"
   },
   {
     "title": "Item:Ivory simple bath mat (New Horizons)",
@@ -4092,7 +4182,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 72,
-    "default_sort_order": 90
+    "default_sort_order": 90,
+    "series_key": "RugRectBathmatS"
   },
   {
     "title": "Item:Simple pink bath mat (New Horizons)",
@@ -4137,7 +4228,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 72,
-    "default_sort_order": 91
+    "default_sort_order": 91,
+    "series_key": "RugRectBathmatS"
   },
   {
     "title": "Item:Simple green bath mat (New Horizons)",
@@ -4182,7 +4274,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 72,
-    "default_sort_order": 92
+    "default_sort_order": 92,
+    "series_key": "RugRectBathmatS"
   },
   {
     "title": "Item:Simple navy bath mat (New Horizons)",
@@ -4227,7 +4320,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 72,
-    "default_sort_order": 93
+    "default_sort_order": 93,
+    "series_key": "RugRectBathmatS"
   },
   {
     "title": "Item:Lacy rug (New Horizons)",
@@ -4272,7 +4366,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 76,
-    "default_sort_order": 94
+    "default_sort_order": 94,
+    "series_key": "RugRoundLaceM"
   },
   {
     "title": "Item:Nook Inc. botanical rug (New Horizons)",
@@ -4317,7 +4412,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 105,
-    "default_sort_order": 95
+    "default_sort_order": 95,
+    "series_key": "RugOtherTanukiM"
   },
   {
     "title": "Item:Nook Inc. rug (New Horizons)",
@@ -4362,7 +4458,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 106,
-    "default_sort_order": 96
+    "default_sort_order": 96,
+    "series_key": "RugOtherLeafM"
   },
   {
     "title": "Item:Nook Inc. silk rug (New Horizons)",
@@ -4407,7 +4504,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 107,
-    "default_sort_order": 97
+    "default_sort_order": 97,
+    "series_key": "RugRectTanukiL"
   },
   {
     "title": "Item:Oval entrance mat (New Horizons)",
@@ -4452,7 +4550,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 109,
-    "default_sort_order": 98
+    "default_sort_order": 98,
+    "series_key": "RugOtherCountryS"
   },
   {
     "title": "Item:Pirate rug (New Horizons)",
@@ -4497,7 +4596,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 117,
-    "default_sort_order": 99
+    "default_sort_order": 99,
+    "series_key": "RugRectPiratesM"
   },
   {
     "title": "Item:Red carpet (New Horizons)",
@@ -4542,7 +4642,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 126,
-    "default_sort_order": 100
+    "default_sort_order": 100,
+    "series_key": "RugRectElegantM"
   },
   {
     "title": "Item:Rough rug (New Horizons)",
@@ -4587,7 +4688,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 143,
-    "default_sort_order": 101
+    "default_sort_order": 101,
+    "series_key": "RugRectDoormatS"
   },
   {
     "title": "Item:Rubber mud mat (New Horizons)",
@@ -4632,7 +4734,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 146,
-    "default_sort_order": 102
+    "default_sort_order": 102,
+    "series_key": "RugRectRubberScraperS"
   },
   {
     "title": "Item:Shell rug (New Horizons)",
@@ -4677,7 +4780,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 149,
-    "default_sort_order": 103
+    "default_sort_order": 103,
+    "series_key": "RugOtherShellM"
   },
   {
     "title": "Item:Snowflake rug (New Horizons)",
@@ -4722,7 +4826,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 171,
-    "default_sort_order": 104
+    "default_sort_order": 104,
+    "series_key": "RugRoundSnowM"
   },
   {
     "title": "Item:Spooky rug (New Horizons)",
@@ -4767,7 +4872,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 172,
-    "default_sort_order": 105
+    "default_sort_order": 105,
+    "series_key": "RugSquareHalloweenL"
   },
   {
     "title": "Item:Summer-shell rug (New Horizons)",
@@ -4812,7 +4918,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 175,
-    "default_sort_order": 106
+    "default_sort_order": 106,
+    "series_key": "RugOtherShellSnailM"
   },
   {
     "title": "Item:Tatami mat (New Horizons)",
@@ -4857,7 +4964,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 177,
-    "default_sort_order": 107
+    "default_sort_order": 107,
+    "series_key": "RugRectTatamiM"
   },
   {
     "title": "Item:Tropical rug (New Horizons)",
@@ -4902,7 +5010,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 179,
-    "default_sort_order": 108
+    "default_sort_order": 108,
+    "series_key": "RugRoundIslandM"
   },
   {
     "title": "Item:Turkey Day rug (New Horizons)",
@@ -4947,7 +5056,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 20,
     "series_anchor_id": 180,
-    "default_sort_order": 109
+    "default_sort_order": 109,
+    "series_key": "RugSquareHarvestL"
   },
   {
     "title": "Item:Acorn rug (New Horizons)",
@@ -4992,7 +5102,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 1,
-    "default_sort_order": 110
+    "default_sort_order": 110,
+    "series_key": "RugOtherAcornM"
   },
   {
     "title": "Item:White exercise mat (New Horizons)",
@@ -5037,7 +5148,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 11,
-    "default_sort_order": 111
+    "default_sort_order": 111,
+    "series_key": "RugRectMatM"
   },
   {
     "title": "Item:Red exercise mat (New Horizons)",
@@ -5082,7 +5194,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 11,
-    "default_sort_order": 112
+    "default_sort_order": 112,
+    "series_key": "RugRectMatM"
   },
   {
     "title": "Item:Green exercise mat (New Horizons)",
@@ -5127,7 +5240,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 11,
-    "default_sort_order": 113
+    "default_sort_order": 113,
+    "series_key": "RugRectMatM"
   },
   {
     "title": "Item:Blue exercise mat (New Horizons)",
@@ -5172,7 +5286,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 11,
-    "default_sort_order": 114
+    "default_sort_order": 114,
+    "series_key": "RugRectMatM"
   },
   {
     "title": "Item:Yellow Hawaiian quilt rug (New Horizons)",
@@ -5217,7 +5332,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 12,
-    "default_sort_order": 115
+    "default_sort_order": 115,
+    "series_key": "RugSquareHawaiianL"
   },
   {
     "title": "Item:Pink Hawaiian quilt rug (New Horizons)",
@@ -5262,7 +5378,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 12,
-    "default_sort_order": 116
+    "default_sort_order": 116,
+    "series_key": "RugSquareHawaiianL"
   },
   {
     "title": "Item:Green Hawaiian quilt rug (New Horizons)",
@@ -5307,7 +5424,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 12,
-    "default_sort_order": 117
+    "default_sort_order": 117,
+    "series_key": "RugSquareHawaiianL"
   },
   {
     "title": "Item:Blue Hawaiian quilt rug (New Horizons)",
@@ -5352,7 +5470,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 12,
-    "default_sort_order": 118
+    "default_sort_order": 118,
+    "series_key": "RugSquareHawaiianL"
   },
   {
     "title": "Item:Brown cow-print rug (New Horizons)",
@@ -5397,7 +5516,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 28,
-    "default_sort_order": 119
+    "default_sort_order": 119,
+    "series_key": "RugOtherAnimalM"
   },
   {
     "title": "Item:Light-brown cow-print rug (New Horizons)",
@@ -5442,7 +5562,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 28,
-    "default_sort_order": 120
+    "default_sort_order": 120,
+    "series_key": "RugOtherAnimalM"
   },
   {
     "title": "Item:Coconut mat (New Horizons)",
@@ -5487,7 +5608,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 36,
-    "default_sort_order": 121
+    "default_sort_order": 121,
+    "series_key": "RugRectCoconutmatS"
   },
   {
     "title": "Item:White square tile (New Horizons)",
@@ -5532,7 +5654,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 41,
-    "default_sort_order": 122
+    "default_sort_order": 122,
+    "series_key": "RugSquareWoodS"
   },
   {
     "title": "Item:Light square tile (New Horizons)",
@@ -5577,7 +5700,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 41,
-    "default_sort_order": 123
+    "default_sort_order": 123,
+    "series_key": "RugSquareWoodS"
   },
   {
     "title": "Item:Natural-wood square tile (New Horizons)",
@@ -5622,7 +5746,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 41,
-    "default_sort_order": 124
+    "default_sort_order": 124,
+    "series_key": "RugSquareWoodS"
   },
   {
     "title": "Item:Dark square tile (New Horizons)",
@@ -5667,7 +5792,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 41,
-    "default_sort_order": 125
+    "default_sort_order": 125,
+    "series_key": "RugSquareWoodS"
   },
   {
     "title": "Item:Light stones rug (New Horizons)",
@@ -5712,7 +5838,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 42,
-    "default_sort_order": 126
+    "default_sort_order": 126,
+    "series_key": "RugSquareStoneS"
   },
   {
     "title": "Item:Dark stones rug (New Horizons)",
@@ -5757,7 +5884,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 42,
-    "default_sort_order": 127
+    "default_sort_order": 127,
+    "series_key": "RugSquareStoneS"
   },
   {
     "title": "Item:White-wood flooring sheet (New Horizons)",
@@ -5802,7 +5930,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 43,
-    "default_sort_order": 128
+    "default_sort_order": 128,
+    "series_key": "RugRectDisplayStandS"
   },
   {
     "title": "Item:Light-wood flooring sheet (New Horizons)",
@@ -5847,7 +5976,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 43,
-    "default_sort_order": 129
+    "default_sort_order": 129,
+    "series_key": "RugRectDisplayStandS"
   },
   {
     "title": "Item:Natural-wood flooring sheet (New Horizons)",
@@ -5892,7 +6022,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 43,
-    "default_sort_order": 130
+    "default_sort_order": 130,
+    "series_key": "RugRectDisplayStandS"
   },
   {
     "title": "Item:Dark-wood flooring sheet (New Horizons)",
@@ -5937,7 +6068,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 43,
-    "default_sort_order": 131
+    "default_sort_order": 131,
+    "series_key": "RugRectDisplayStandS"
   },
   {
     "title": "Item:White-wood flooring tile (New Horizons)",
@@ -5982,7 +6114,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 44,
-    "default_sort_order": 132
+    "default_sort_order": 132,
+    "series_key": "RugSquareDisplayStandS"
   },
   {
     "title": "Item:Light-wood flooring tile (New Horizons)",
@@ -6027,7 +6160,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 44,
-    "default_sort_order": 133
+    "default_sort_order": 133,
+    "series_key": "RugSquareDisplayStandS"
   },
   {
     "title": "Item:Natural-wood flooring tile (New Horizons)",
@@ -6072,7 +6206,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 44,
-    "default_sort_order": 134
+    "default_sort_order": 134,
+    "series_key": "RugSquareDisplayStandS"
   },
   {
     "title": "Item:Dark-wood flooring tile (New Horizons)",
@@ -6117,7 +6252,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 44,
-    "default_sort_order": 135
+    "default_sort_order": 135,
+    "series_key": "RugSquareDisplayStandS"
   },
   {
     "title": "Item:Elegant brown rug (New Horizons)",
@@ -6162,7 +6298,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 46,
-    "default_sort_order": 136
+    "default_sort_order": 136,
+    "series_key": "RugSquareElegantL"
   },
   {
     "title": "Item:Elegant beige rug (New Horizons)",
@@ -6207,7 +6344,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 46,
-    "default_sort_order": 137
+    "default_sort_order": 137,
+    "series_key": "RugSquareElegantL"
   },
   {
     "title": "Item:Elegant black rug (New Horizons)",
@@ -6252,7 +6390,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 46,
-    "default_sort_order": 138
+    "default_sort_order": 138,
+    "series_key": "RugSquareElegantL"
   },
   {
     "title": "Item:Elegant blue rug (New Horizons)",
@@ -6297,7 +6436,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 46,
-    "default_sort_order": 139
+    "default_sort_order": 139,
+    "series_key": "RugSquareElegantL"
   },
   {
     "title": "Item:Frozen floor tiles (New Horizons)",
@@ -6342,7 +6482,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 55,
-    "default_sort_order": 140
+    "default_sort_order": 140,
+    "series_key": "RugSquareIceS"
   },
   {
     "title": "Item:Glowing-moss rug (New Horizons)",
@@ -6387,7 +6528,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 56,
-    "default_sort_order": 141
+    "default_sort_order": 141,
+    "series_key": "RugRectGlowMossM"
   },
   {
     "title": "Item:Gray brick rug (New Horizons)",
@@ -6432,7 +6574,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 57,
-    "default_sort_order": 142
+    "default_sort_order": 142,
+    "series_key": "RugSquareBrickS"
   },
   {
     "title": "Item:Red brick rug (New Horizons)",
@@ -6477,7 +6620,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 57,
-    "default_sort_order": 143
+    "default_sort_order": 143,
+    "series_key": "RugSquareBrickS"
   },
   {
     "title": "Item:Gray floor tiles (New Horizons)",
@@ -6522,7 +6666,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 58,
-    "default_sort_order": 144
+    "default_sort_order": 144,
+    "series_key": "RugSquareTileS"
   },
   {
     "title": "Item:Red exquisite rug (New Horizons)",
@@ -6567,7 +6712,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 62,
-    "default_sort_order": 145
+    "default_sort_order": 145,
+    "series_key": "RugRectChinamatS"
   },
   {
     "title": "Item:Green exquisite rug (New Horizons)",
@@ -6612,7 +6758,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 62,
-    "default_sort_order": 146
+    "default_sort_order": 146,
+    "series_key": "RugRectChinamatS"
   },
   {
     "title": "Item:Imperial rug (New Horizons)",
@@ -6657,7 +6804,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 69,
-    "default_sort_order": 147
+    "default_sort_order": 147,
+    "series_key": "RugSquareChinaL"
   },
   {
     "title": "Item:Large Paradise Planning rug (New Horizons)",
@@ -6702,7 +6850,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 79,
-    "default_sort_order": 148
+    "default_sort_order": 148,
+    "series_key": "RugSquarePatternL"
   },
   {
     "title": "Item:Round glowing-moss rug (New Horizons)",
@@ -6747,7 +6896,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 144,
-    "default_sort_order": 149
+    "default_sort_order": 149,
+    "series_key": "RugRoundGlowMossS"
   },
   {
     "title": "Item:Round vine rug (New Horizons)",
@@ -6792,7 +6942,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 145,
-    "default_sort_order": 150
+    "default_sort_order": 150,
+    "series_key": "RugRoundVineS"
   },
   {
     "title": "Item:Simple entrance mat (New Horizons)",
@@ -6837,7 +6988,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 150,
-    "default_sort_order": 151
+    "default_sort_order": 151,
+    "series_key": "RugRectEntranceS"
   },
   {
     "title": "Item:Small Paradise Planning mat (New Horizons)",
@@ -6882,7 +7034,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 170,
-    "default_sort_order": 152
+    "default_sort_order": 152,
+    "series_key": "RugRectPatternS"
   },
   {
     "title": "Item:Stage rug (New Horizons)",
@@ -6927,7 +7080,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 173,
-    "default_sort_order": 153
+    "default_sort_order": 153,
+    "series_key": "RugRoundStageM"
   },
   {
     "title": "Item:Tree-stump rug (New Horizons)",
@@ -6972,7 +7126,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 178,
-    "default_sort_order": 154
+    "default_sort_order": 154,
+    "series_key": "RugOtherStumpM"
   },
   {
     "title": "Item:Yellow star rug (New Horizons)",
@@ -7017,7 +7172,54 @@
     "series_version_rank": 2,
     "series_style_cluster": 20,
     "series_anchor_id": 205,
-    "default_sort_order": 155
+    "default_sort_order": 155,
+    "series_key": "RugOtherStarM"
+  },
+  {
+    "title": "Item:Orange rug (New Horizons)",
+    "name_en": "Orange rug",
+    "name_zh": "橘子地毯",
+    "name_ja": "オレンジのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Orange_Rug_NH_Icon.png",
+    "local_filename": "橘子地毯_Orange_rug.png",
+    "image_url": "https://dodo.ac/np/images/1/1d/Orange_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 9771,
+    "local_rel_path": "images/rugs/橘子地毯_Orange_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7330,
+    "filename_base": "RugOtherOrangeM",
+    "variant_id": 0,
+    "series_id": 7330,
+    "game_sort_order": 17,
+    "nookipedia_id": 108,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Orange",
+    "color_2": "Orange",
+    "colors_zh": "橘",
+    "colors_ja": "オレンジ",
+    "colors_en": "Orange",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Fruit Rugs",
+    "color_rank": 5,
+    "is_special": 1,
+    "style_cluster": 110,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 110,
+    "series_anchor_id": 3,
+    "default_sort_order": 156,
+    "series_key": "Series_Fruit_Rugs_1.0"
   },
   {
     "title": "Item:Apple rug (New Horizons)",
@@ -7062,7 +7264,146 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 3,
-    "default_sort_order": 156
+    "default_sort_order": 157,
+    "series_key": "Series_Fruit_Rugs_1.0"
+  },
+  {
+    "title": "Item:Cherry rug (New Horizons)",
+    "name_en": "Cherry rug",
+    "name_zh": "櫻桃地毯",
+    "name_ja": "さくらんぼのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Cherry_Rug_NH_Icon.png",
+    "local_filename": "櫻桃地毯_Cherry_rug.png",
+    "image_url": "https://dodo.ac/np/images/d/dd/Cherry_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 7090,
+    "local_rel_path": "images/rugs/櫻桃地毯_Cherry_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7328,
+    "filename_base": "RugOtherCherryM",
+    "variant_id": 0,
+    "series_id": 7328,
+    "game_sort_order": 15,
+    "nookipedia_id": 33,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Red",
+    "color_2": "Red",
+    "colors_zh": "紅",
+    "colors_ja": "レッド",
+    "colors_en": "Red",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Fruit Rugs",
+    "color_rank": 6,
+    "is_special": 1,
+    "style_cluster": 110,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 110,
+    "series_anchor_id": 3,
+    "default_sort_order": 158,
+    "series_key": "Series_Fruit_Rugs_1.0"
+  },
+  {
+    "title": "Item:Peach rug (New Horizons)",
+    "name_en": "Peach rug",
+    "name_zh": "桃子地毯",
+    "name_ja": "モモのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Peach_Rug_NH_Icon.png",
+    "local_filename": "桃子地毯_Peach_rug.png",
+    "image_url": "https://dodo.ac/np/images/8/80/Peach_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8956,
+    "local_rel_path": "images/rugs/桃子地毯_Peach_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7331,
+    "filename_base": "RugOtherPeachM",
+    "variant_id": 0,
+    "series_id": 7331,
+    "game_sort_order": 18,
+    "nookipedia_id": 111,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Pink",
+    "color_2": "Pink",
+    "colors_zh": "粉紅",
+    "colors_ja": "ピンク",
+    "colors_en": "Pink",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Fruit Rugs",
+    "color_rank": 6,
+    "is_special": 1,
+    "style_cluster": 110,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 110,
+    "series_anchor_id": 3,
+    "default_sort_order": 159,
+    "series_key": "Series_Fruit_Rugs_1.0"
+  },
+  {
+    "title": "Item:Pear rug (New Horizons)",
+    "name_en": "Pear rug",
+    "name_zh": "梨子地毯",
+    "name_ja": "ナシのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Pear_Rug_NH_Icon.png",
+    "local_filename": "梨子地毯_Pear_rug.png",
+    "image_url": "https://dodo.ac/np/images/9/95/Pear_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 9643,
+    "local_rel_path": "images/rugs/梨子地毯_Pear_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7332,
+    "filename_base": "RugOtherPearM",
+    "variant_id": 0,
+    "series_id": 7332,
+    "game_sort_order": 19,
+    "nookipedia_id": 113,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Green",
+    "color_2": "Green",
+    "colors_zh": "綠",
+    "colors_ja": "グリーン",
+    "colors_en": "Green",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Fruit Rugs",
+    "color_rank": 7,
+    "is_special": 1,
+    "style_cluster": 110,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 110,
+    "series_anchor_id": 3,
+    "default_sort_order": 160,
+    "series_key": "Series_Fruit_Rugs_1.0"
   },
   {
     "title": "Item:Bunny Day rug (New Horizons)",
@@ -7107,52 +7448,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 32,
-    "default_sort_order": 157
-  },
-  {
-    "title": "Item:Cherry rug (New Horizons)",
-    "name_en": "Cherry rug",
-    "name_zh": "櫻桃地毯",
-    "name_ja": "さくらんぼのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Cherry_Rug_NH_Icon.png",
-    "local_filename": "櫻桃地毯_Cherry_rug.png",
-    "image_url": "https://dodo.ac/np/images/d/dd/Cherry_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 7090,
-    "local_rel_path": "images/rugs/櫻桃地毯_Cherry_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7328,
-    "filename_base": "RugOtherCherryM",
-    "variant_id": 0,
-    "series_id": 7328,
-    "game_sort_order": 15,
-    "nookipedia_id": 33,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Red",
-    "color_2": "Red",
-    "colors_zh": "紅",
-    "colors_ja": "レッド",
-    "colors_en": "Red",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Fruit Rugs",
-    "color_rank": 6,
-    "is_special": 1,
-    "style_cluster": 110,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 110,
-    "series_anchor_id": 33,
-    "default_sort_order": 158
+    "default_sort_order": 161,
+    "series_key": "RugOtherEasterM"
   },
   {
     "title": "Item:Earth rug (New Horizons)",
@@ -7197,7 +7494,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 45,
-    "default_sort_order": 159
+    "default_sort_order": 162,
+    "series_key": "RugRoundEarthM"
   },
   {
     "title": "Item:Fish rug (New Horizons)",
@@ -7242,7 +7540,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 51,
-    "default_sort_order": 160
+    "default_sort_order": 163,
+    "series_key": "RugOtherFishM"
   },
   {
     "title": "Item:Fluffy rug (New Horizons)",
@@ -7287,7 +7586,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 52,
-    "default_sort_order": 161
+    "default_sort_order": 164,
+    "series_key": "RugOtherCloudM"
   },
   {
     "title": "Item:Football rug (New Horizons)",
@@ -7332,7 +7632,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 53,
-    "default_sort_order": 162
+    "default_sort_order": 165,
+    "series_key": "RugOtherFootballM"
   },
   {
     "title": "Item:Ladybug rug (New Horizons)",
@@ -7377,7 +7678,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 77,
-    "default_sort_order": 163
+    "default_sort_order": 166,
+    "series_key": "RugRoundLadybirdM"
   },
   {
     "title": "Item:Lakitu's Cloud rug (New Horizons)",
@@ -7422,7 +7724,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 78,
-    "default_sort_order": 164
+    "default_sort_order": 167,
+    "series_key": "RugOtherMarioBM"
   },
   {
     "title": "Item:Mermaid rug (New Horizons)",
@@ -7467,7 +7770,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 90,
-    "default_sort_order": 165
+    "default_sort_order": 168,
+    "series_key": "RugOtherMermaidM"
   },
   {
     "title": "Item:Mush rug (New Horizons)",
@@ -7512,142 +7816,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 99,
-    "default_sort_order": 166
-  },
-  {
-    "title": "Item:Orange rug (New Horizons)",
-    "name_en": "Orange rug",
-    "name_zh": "橘子地毯",
-    "name_ja": "オレンジのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Orange_Rug_NH_Icon.png",
-    "local_filename": "橘子地毯_Orange_rug.png",
-    "image_url": "https://dodo.ac/np/images/1/1d/Orange_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 9771,
-    "local_rel_path": "images/rugs/橘子地毯_Orange_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7330,
-    "filename_base": "RugOtherOrangeM",
-    "variant_id": 0,
-    "series_id": 7330,
-    "game_sort_order": 17,
-    "nookipedia_id": 108,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Orange",
-    "color_2": "Orange",
-    "colors_zh": "橘",
-    "colors_ja": "オレンジ",
-    "colors_en": "Orange",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Fruit Rugs",
-    "color_rank": 5,
-    "is_special": 1,
-    "style_cluster": 110,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 110,
-    "series_anchor_id": 108,
-    "default_sort_order": 167
-  },
-  {
-    "title": "Item:Peach rug (New Horizons)",
-    "name_en": "Peach rug",
-    "name_zh": "桃子地毯",
-    "name_ja": "モモのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Peach_Rug_NH_Icon.png",
-    "local_filename": "桃子地毯_Peach_rug.png",
-    "image_url": "https://dodo.ac/np/images/8/80/Peach_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8956,
-    "local_rel_path": "images/rugs/桃子地毯_Peach_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7331,
-    "filename_base": "RugOtherPeachM",
-    "variant_id": 0,
-    "series_id": 7331,
-    "game_sort_order": 18,
-    "nookipedia_id": 111,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Pink",
-    "color_2": "Pink",
-    "colors_zh": "粉紅",
-    "colors_ja": "ピンク",
-    "colors_en": "Pink",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Fruit Rugs",
-    "color_rank": 6,
-    "is_special": 1,
-    "style_cluster": 110,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 110,
-    "series_anchor_id": 111,
-    "default_sort_order": 168
-  },
-  {
-    "title": "Item:Pear rug (New Horizons)",
-    "name_en": "Pear rug",
-    "name_zh": "梨子地毯",
-    "name_ja": "ナシのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Pear_Rug_NH_Icon.png",
-    "local_filename": "梨子地毯_Pear_rug.png",
-    "image_url": "https://dodo.ac/np/images/9/95/Pear_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 9643,
-    "local_rel_path": "images/rugs/梨子地毯_Pear_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7332,
-    "filename_base": "RugOtherPearM",
-    "variant_id": 0,
-    "series_id": 7332,
-    "game_sort_order": 19,
-    "nookipedia_id": 113,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Green",
-    "color_2": "Green",
-    "colors_zh": "綠",
-    "colors_ja": "グリーン",
-    "colors_en": "Green",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Fruit Rugs",
-    "color_rank": 7,
-    "is_special": 1,
-    "style_cluster": 110,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 110,
-    "series_anchor_id": 113,
-    "default_sort_order": 169
+    "default_sort_order": 169,
+    "series_key": "RugOtherMushM"
   },
   {
     "title": "Item:White heart rug (New Horizons)",
@@ -7692,7 +7862,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 115,
-    "default_sort_order": 170
+    "default_sort_order": 170,
+    "series_key": "RugOtherHeartM"
   },
   {
     "title": "Item:Pink heart rug (New Horizons)",
@@ -7737,7 +7908,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 115,
-    "default_sort_order": 171
+    "default_sort_order": 171,
+    "series_key": "RugOtherHeartM"
   },
   {
     "title": "Item:Turquoise heart rug (New Horizons)",
@@ -7782,7 +7954,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 115,
-    "default_sort_order": 172
+    "default_sort_order": 172,
+    "series_key": "RugOtherHeartM"
   },
   {
     "title": "Item:Purple heart rug (New Horizons)",
@@ -7827,7 +8000,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 115,
-    "default_sort_order": 173
+    "default_sort_order": 173,
+    "series_key": "RugOtherHeartM"
   },
   {
     "title": "Item:White rose rug (New Horizons)",
@@ -7872,7 +8046,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 116,
-    "default_sort_order": 174
+    "default_sort_order": 174,
+    "series_key": "RugOtherRoseM"
   },
   {
     "title": "Item:Yellow rose rug (New Horizons)",
@@ -7917,7 +8092,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 116,
-    "default_sort_order": 175
+    "default_sort_order": 175,
+    "series_key": "RugOtherRoseM"
   },
   {
     "title": "Item:Pink rose rug (New Horizons)",
@@ -7962,7 +8138,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 116,
-    "default_sort_order": 176
+    "default_sort_order": 176,
+    "series_key": "RugOtherRoseM"
   },
   {
     "title": "Item:Red rose rug (New Horizons)",
@@ -8007,7 +8184,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 116,
-    "default_sort_order": 177
+    "default_sort_order": 177,
+    "series_key": "RugOtherRoseM"
   },
   {
     "title": "Item:Shamrock rug (New Horizons)",
@@ -8052,7 +8230,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 147,
-    "default_sort_order": 178
+    "default_sort_order": 178,
+    "series_key": "RugOtherShamrockM"
   },
   {
     "title": "Item:Sunflower rug (New Horizons)",
@@ -8097,7 +8276,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 176,
-    "default_sort_order": 179
+    "default_sort_order": 179,
+    "series_key": "RugOtherSunflowerM"
   },
   {
     "title": "Item:Yoshi's Egg rug (New Horizons)",
@@ -8142,682 +8322,8 @@
     "series_version_rank": 1,
     "series_style_cluster": 110,
     "series_anchor_id": 210,
-    "default_sort_order": 180
-  },
-  {
-    "title": "Item:White message mat (New Horizons)",
-    "name_en": "White message mat",
-    "name_zh": "白色訊息地墊",
-    "name_ja": "しろいメッセージマット",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:White_Message_Mat_NH_Icon.png",
-    "local_filename": "白色訊息地墊_White_message_mat.png",
-    "image_url": "https://dodo.ac/np/images/a/a0/White_Message_Mat_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8048,
-    "local_rel_path": "images/rugs/白色訊息地墊_White_message_mat.webp",
-    "grid_size": "2.0 × 1.0",
-    "size_category": "S",
-    "size_label": "小型 (S)",
-    "internal_id": 7338,
-    "filename_base": "RugOtherMessageS",
-    "variant_id": 0,
-    "series_id": 7338,
-    "game_sort_order": 45,
-    "nookipedia_id": 184,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "White",
-    "color_2": "White",
-    "colors_zh": "白",
-    "colors_ja": "ホワイト",
-    "colors_en": "White",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Message Mats",
-    "color_rank": 1,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 16,
-    "default_sort_order": 181
-  },
-  {
-    "title": "Item:Yellow message mat (New Horizons)",
-    "name_en": "Yellow message mat",
-    "name_zh": "黃色訊息地墊",
-    "name_ja": "きいろいメッセージマット",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Yellow_Message_Mat_NH_Icon.png",
-    "local_filename": "黃色訊息地墊_Yellow_message_mat.png",
-    "image_url": "https://dodo.ac/np/images/a/a5/Yellow_Message_Mat_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 7589,
-    "local_rel_path": "images/rugs/黃色訊息地墊_Yellow_message_mat.webp",
-    "grid_size": "2.0 × 1.0",
-    "size_category": "S",
-    "size_label": "小型 (S)",
-    "internal_id": 9311,
-    "filename_base": "RugOtherMessageS",
-    "variant_id": 2,
-    "series_id": 7338,
-    "game_sort_order": 47,
-    "nookipedia_id": 201,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "Yellow",
-    "color_2": "Yellow",
-    "colors_zh": "黃",
-    "colors_ja": "イエロー",
-    "colors_en": "Yellow",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Message Mats",
-    "color_rank": 5,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 16,
-    "default_sort_order": 182
-  },
-  {
-    "title": "Item:Red message mat (New Horizons)",
-    "name_en": "Red message mat",
-    "name_zh": "紅色訊息地墊",
-    "name_ja": "あかいメッセージマット",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Red_Message_Mat_NH_Icon.png",
-    "local_filename": "紅色訊息地墊_Red_message_mat.png",
-    "image_url": "https://dodo.ac/np/images/0/04/Red_Message_Mat_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 7783,
-    "local_rel_path": "images/rugs/紅色訊息地墊_Red_message_mat.webp",
-    "grid_size": "2.0 × 1.0",
-    "size_category": "S",
-    "size_label": "小型 (S)",
-    "internal_id": 9312,
-    "filename_base": "RugOtherMessageS",
-    "variant_id": 3,
-    "series_id": 7338,
-    "game_sort_order": 48,
-    "nookipedia_id": 132,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "Red",
-    "color_2": "Red",
-    "colors_zh": "紅",
-    "colors_ja": "レッド",
-    "colors_en": "Red",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Message Mats",
-    "color_rank": 6,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 16,
-    "default_sort_order": 183
-  },
-  {
-    "title": "Item:Blue message mat (New Horizons)",
-    "name_en": "Blue message mat",
-    "name_zh": "藍色訊息地墊",
-    "name_ja": "あおいメッセージマット",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Blue_Message_Mat_NH_Icon.png",
-    "local_filename": "藍色訊息地墊_Blue_message_mat.png",
-    "image_url": "https://dodo.ac/np/images/b/b0/Blue_Message_Mat_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8193,
-    "local_rel_path": "images/rugs/藍色訊息地墊_Blue_message_mat.webp",
-    "grid_size": "2.0 × 1.0",
-    "size_category": "S",
-    "size_label": "小型 (S)",
-    "internal_id": 9310,
-    "filename_base": "RugOtherMessageS",
-    "variant_id": 1,
-    "series_id": 7338,
-    "game_sort_order": 46,
-    "nookipedia_id": 16,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "Blue",
-    "color_2": "Blue",
-    "colors_zh": "藍",
-    "colors_ja": "ブルー",
-    "colors_en": "Blue",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Message Mats",
-    "color_rank": 8,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 16,
-    "default_sort_order": 184
-  },
-  {
-    "title": "Item:Light bamboo rug (New Horizons)",
-    "name_en": "Light bamboo rug",
-    "name_zh": "淺色竹地毯",
-    "name_ja": "ライトなバンブーラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Light_Bamboo_Rug_NH_Icon.png",
-    "local_filename": "淺色竹地毯_Light_bamboo_rug.png",
-    "image_url": "https://dodo.ac/np/images/c/c5/Light_Bamboo_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 11367,
-    "local_rel_path": "images/rugs/淺色竹地毯_Light_bamboo_rug.webp",
-    "grid_size": "3.0 × 2.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 11113,
-    "filename_base": "RugRectBambooM",
-    "variant_id": 0,
-    "series_id": 11113,
-    "game_sort_order": 128,
-    "nookipedia_id": 82,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Beige",
-    "color_2": "Brown",
-    "colors_zh": "米 / 棕",
-    "colors_ja": "ベージュ / ブラウン",
-    "colors_en": "Beige / Brown",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Wood Rugs",
-    "color_rank": 2,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 40,
-    "default_sort_order": 185
-  },
-  {
-    "title": "Item:Dark bamboo rug (New Horizons)",
-    "name_en": "Dark bamboo rug",
-    "name_zh": "深色竹地毯",
-    "name_ja": "ダークなバンブーラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Dark_Bamboo_Rug_NH_Icon.png",
-    "local_filename": "深色竹地毯_Dark_bamboo_rug.png",
-    "image_url": "https://dodo.ac/np/images/7/70/Dark_Bamboo_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 11065,
-    "local_rel_path": "images/rugs/深色竹地毯_Dark_bamboo_rug.webp",
-    "grid_size": "3.0 × 2.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 11114,
-    "filename_base": "RugRectBambooM",
-    "variant_id": 1,
-    "series_id": 11113,
-    "game_sort_order": 129,
-    "nookipedia_id": 40,
-    "source": "Crafting",
-    "source_group": "diy",
-    "source_zh": "DIY製作",
-    "source_ja": "DIYレシピ",
-    "source_en": "Crafting",
-    "color_1": "Brown",
-    "color_2": "Brown",
-    "colors_zh": "棕",
-    "colors_ja": "ブラウン",
-    "colors_en": "Brown",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Wood Rugs",
-    "color_rank": 2,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 40,
-    "default_sort_order": 186
-  },
-  {
-    "title": "Item:Fossil rug (New Horizons)",
-    "name_en": "Fossil rug",
-    "name_zh": "化石地毯",
-    "name_ja": "かせきのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Fossil_Rug_NH_Icon.png",
-    "local_filename": "化石地毯_Fossil_rug.png",
-    "image_url": "https://dodo.ac/np/images/8/80/Fossil_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8076,
-    "local_rel_path": "images/rugs/化石地毯_Fossil_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7366,
-    "filename_base": "RugOtherFossilM",
-    "variant_id": 0,
-    "series_id": 7366,
-    "game_sort_order": 106,
-    "nookipedia_id": 54,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "Purple",
-    "color_2": "White",
-    "colors_zh": "紫 / 白",
-    "colors_ja": "パープル / ホワイト",
-    "colors_en": "Purple / White",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Park Rugs",
-    "color_rank": 1,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 54,
-    "default_sort_order": 187
-  },
-  {
-    "title": "Item:Magic-circle rug (New Horizons)",
-    "name_en": "Magic-circle rug",
-    "name_zh": "魔法陣地毯",
-    "name_ja": "まほうじんのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Magic-Circle_Rug_NH_Icon.png",
-    "local_filename": "魔法陣地毯_Magic-circle_rug.png",
-    "image_url": "https://dodo.ac/np/images/d/d4/Magic-Circle_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 11121,
-    "local_rel_path": "images/rugs/魔法陣地毯_Magic-circle_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 7367,
-    "filename_base": "RugRoundMagicM",
-    "variant_id": 0,
-    "series_id": 7367,
-    "game_sort_order": 107,
-    "nookipedia_id": 88,
-    "source": "Saharah; Saharah's Co-op",
-    "source_group": "saharah",
-    "source_zh": "駱嵐",
-    "source_ja": "ローラン",
-    "source_en": "Saharah",
-    "color_1": "Purple",
-    "color_2": "Purple",
-    "colors_zh": "紫",
-    "colors_ja": "パープル",
-    "colors_en": "Purple",
-    "version_added": "1.0.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Shaggy Round Rugs",
-    "color_rank": 9,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 88,
-    "default_sort_order": 188
-  },
-  {
-    "title": "Item:Moon rug (New Horizons)",
-    "name_en": "Moon rug",
-    "name_zh": "月之地毯",
-    "name_ja": "つきのラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Moon_Rug_NH_Icon.png",
-    "local_filename": "月之地毯_Moon_rug.png",
-    "image_url": "https://dodo.ac/np/images/1/1e/Moon_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 10757,
-    "local_rel_path": "images/rugs/月之地毯_Moon_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 13287,
-    "filename_base": "RugRoundMoonM",
-    "variant_id": 0,
-    "series_id": 13287,
-    "game_sort_order": 175,
-    "nookipedia_id": 98,
-    "source": "Nook Shopping Seasonal",
-    "source_group": "seasonal",
-    "source_zh": "季節限定",
-    "source_ja": "シーズン限定",
-    "source_en": "Seasonal / Event",
-    "color_1": "Yellow",
-    "color_2": "Yellow",
-    "colors_zh": "黃",
-    "colors_ja": "イエロー",
-    "colors_en": "Yellow",
-    "version_added": "1.4.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Shaggy Round Rugs",
-    "color_rank": 5,
-    "is_special": 1,
-    "style_cluster": 120,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 120,
-    "series_anchor_id": 98,
-    "default_sort_order": 189
-  },
-  {
-    "title": "Item:Cinnamoroll rug (New Horizons)",
-    "name_en": "Cinnamoroll rug",
-    "name_zh": "Cinnamoroll地毯",
-    "name_ja": "シナモロールなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Cinnamoroll_Rug_NH_Icon.png",
-    "local_filename": "Cinnamoroll地毯_Cinnamoroll_rug.png",
-    "image_url": "https://dodo.ac/np/images/7/78/Cinnamoroll_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 6174,
-    "local_rel_path": "images/rugs/Cinnamoroll地毯_Cinnamoroll_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12288,
-    "filename_base": "RugOtherCinnamonM",
-    "variant_id": 0,
-    "series_id": 12288,
-    "game_sort_order": 138,
-    "nookipedia_id": 35,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "White",
-    "color_2": "Aqua",
-    "colors_zh": "白 / 水藍",
-    "colors_ja": "ホワイト / アクア",
-    "colors_en": "White / Aqua",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 1,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 35,
-    "default_sort_order": 190
-  },
-  {
-    "title": "Item:Hello Kitty rug (New Horizons)",
-    "name_en": "Hello Kitty rug",
-    "name_zh": "Hello Kitty地毯",
-    "name_ja": "ハローキティなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Hello_Kitty_Rug_NH_Icon.png",
-    "local_filename": "Hello_Kitty地毯_Hello_Kitty_rug.png",
-    "image_url": "https://dodo.ac/np/images/6/6e/Hello_Kitty_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8984,
-    "local_rel_path": "images/rugs/Hello_Kitty地毯_Hello_Kitty_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12291,
-    "filename_base": "RugOtherKittyM",
-    "variant_id": 0,
-    "series_id": 12291,
-    "game_sort_order": 141,
-    "nookipedia_id": 68,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "White",
-    "color_2": "Red",
-    "colors_zh": "白 / 紅",
-    "colors_ja": "ホワイト / レッド",
-    "colors_en": "White / Red",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 1,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 68,
-    "default_sort_order": 191
-  },
-  {
-    "title": "Item:Kerokerokeroppi rug (New Horizons)",
-    "name_en": "Kerokerokeroppi rug",
-    "name_zh": "Kerokerokeroppi地毯",
-    "name_ja": "けろけろけろっぴなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Kerokerokeroppi_Rug_NH_Icon.png",
-    "local_filename": "Kerokerokeroppi地毯_Kerokerokeroppi_rug.png",
-    "image_url": "https://dodo.ac/np/images/8/8e/Kerokerokeroppi_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 10071,
-    "local_rel_path": "images/rugs/Kerokerokeroppi地毯_Kerokerokeroppi_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12289,
-    "filename_base": "RugRoundKeroppiM",
-    "variant_id": 0,
-    "series_id": 12289,
-    "game_sort_order": 139,
-    "nookipedia_id": 74,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "Green",
-    "color_2": "Beige",
-    "colors_zh": "綠 / 米",
-    "colors_ja": "グリーン / ベージュ",
-    "colors_en": "Green / Beige",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 2,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 74,
-    "default_sort_order": 192
-  },
-  {
-    "title": "Item:Kiki & Lala rug (New Horizons)",
-    "name_en": "Kiki & Lala rug",
-    "name_zh": "Kiki & Lala地毯",
-    "name_ja": "キキ&ララなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Kiki_&_Lala_Rug_NH_Icon.png",
-    "local_filename": "Kiki_&_Lala地毯_Kiki_&_Lala_rug.png",
-    "image_url": "https://dodo.ac/np/images/5/59/Kiki_%26_Lala_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8209,
-    "local_rel_path": "images/rugs/Kiki_&_Lala地毯_Kiki_&_Lala_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12290,
-    "filename_base": "RugOtherKikilalaM",
-    "variant_id": 0,
-    "series_id": 12290,
-    "game_sort_order": 140,
-    "nookipedia_id": 75,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "Pink",
-    "color_2": "Aqua",
-    "colors_zh": "粉紅 / 水藍",
-    "colors_ja": "ピンク / アクア",
-    "colors_en": "Pink / Aqua",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 6,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 75,
-    "default_sort_order": 193
-  },
-  {
-    "title": "Item:My Melody rug (New Horizons)",
-    "name_en": "My Melody rug",
-    "name_zh": "My Melody地毯",
-    "name_ja": "マイメロディなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:My_Melody_Rug_NH_Icon.png",
-    "local_filename": "My_Melody地毯_My_Melody_rug.png",
-    "image_url": "https://dodo.ac/np/images/8/8e/My_Melody_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8611,
-    "local_rel_path": "images/rugs/My_Melody地毯_My_Melody_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12292,
-    "filename_base": "RugOtherMymelodyM",
-    "variant_id": 0,
-    "series_id": 12292,
-    "game_sort_order": 142,
-    "nookipedia_id": 100,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "Pink",
-    "color_2": "White",
-    "colors_zh": "粉紅 / 白",
-    "colors_ja": "ピンク / ホワイト",
-    "colors_en": "Pink / White",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 1,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 100,
-    "default_sort_order": 194
-  },
-  {
-    "title": "Item:Pompompurin rug (New Horizons)",
-    "name_en": "Pompompurin rug",
-    "name_zh": "Pompompurin地毯",
-    "name_ja": "ポムポムプリンなラグ",
-    "has_in_game_screenshot": false,
-    "target_media_file": "File:Pompompurin_Rug_NH_Icon.png",
-    "local_filename": "Pompompurin地毯_Pompompurin_rug.png",
-    "image_url": "https://dodo.ac/np/images/2/25/Pompompurin_Rug_NH_Icon.png",
-    "width": 128,
-    "height": 128,
-    "filesize": 8434,
-    "local_rel_path": "images/rugs/Pompompurin地毯_Pompompurin_rug.webp",
-    "grid_size": "3.0 × 3.0",
-    "size_category": "M",
-    "size_label": "中型 (M)",
-    "internal_id": 12293,
-    "filename_base": "RugOtherPurinM",
-    "variant_id": 0,
-    "series_id": 12293,
-    "game_sort_order": 143,
-    "nookipedia_id": 118,
-    "source": "Nook Shopping Promotion",
-    "source_group": "promo",
-    "source_zh": "聯名合作",
-    "source_ja": "コラボ商品",
-    "source_en": "Promotion / Collab",
-    "color_1": "Yellow",
-    "color_2": "Yellow",
-    "colors_zh": "黃",
-    "colors_ja": "イエロー",
-    "colors_en": "Yellow",
-    "version_added": "1.9.0",
-    "version_rank": 1,
-    "vfx": "No",
-    "tag": "Sanrio Rugs",
-    "color_rank": 5,
-    "is_special": 1,
-    "style_cluster": 130,
-    "series_is_special": 1,
-    "series_version_rank": 1,
-    "series_style_cluster": 130,
-    "series_anchor_id": 118,
-    "default_sort_order": 195
+    "default_sort_order": 180,
+    "series_key": "Series_Mario_rugs"
   },
   {
     "title": "Item:Bone entrance mat (New Horizons)",
@@ -8862,7 +8368,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 25,
-    "default_sort_order": 196
+    "default_sort_order": 181,
+    "series_key": "RugOtherBoneS"
   },
   {
     "title": "Item:Cherry-blossom rug (New Horizons)",
@@ -8907,7 +8414,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 34,
-    "default_sort_order": 197
+    "default_sort_order": 182,
+    "series_key": "RugOtherSakuraM"
   },
   {
     "title": "Item:Cookie rug (New Horizons)",
@@ -8952,7 +8460,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 38,
-    "default_sort_order": 198
+    "default_sort_order": 183,
+    "series_key": "RugRoundBiscuitM"
   },
   {
     "title": "Item:Maple-leaf rug (New Horizons)",
@@ -8997,7 +8506,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 89,
-    "default_sort_order": 199
+    "default_sort_order": 184,
+    "series_key": "RugOtherMapleM"
   },
   {
     "title": "Item:Record rug (New Horizons)",
@@ -9042,7 +8552,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 122,
-    "default_sort_order": 200
+    "default_sort_order": 185,
+    "series_key": "RugRoundRecordM"
   },
   {
     "title": "Item:Yellow watermelon rug (New Horizons)",
@@ -9087,7 +8598,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 137,
-    "default_sort_order": 201
+    "default_sort_order": 186,
+    "series_key": "Series_Watermelon_Rugs_2.0"
   },
   {
     "title": "Item:Red watermelon rug (New Horizons)",
@@ -9132,7 +8644,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 137,
-    "default_sort_order": 202
+    "default_sort_order": 187,
+    "series_key": "Series_Watermelon_Rugs_2.0"
   },
   {
     "title": "Item:Skull rug (New Horizons)",
@@ -9177,7 +8690,422 @@
     "series_version_rank": 2,
     "series_style_cluster": 110,
     "series_anchor_id": 168,
-    "default_sort_order": 203
+    "default_sort_order": 188,
+    "series_key": "RugOtherSkullM"
+  },
+  {
+    "title": "Item:White message mat (New Horizons)",
+    "name_en": "White message mat",
+    "name_zh": "白色訊息地墊",
+    "name_ja": "しろいメッセージマット",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:White_Message_Mat_NH_Icon.png",
+    "local_filename": "白色訊息地墊_White_message_mat.png",
+    "image_url": "https://dodo.ac/np/images/a/a0/White_Message_Mat_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8048,
+    "local_rel_path": "images/rugs/白色訊息地墊_White_message_mat.webp",
+    "grid_size": "2.0 × 1.0",
+    "size_category": "S",
+    "size_label": "小型 (S)",
+    "internal_id": 7338,
+    "filename_base": "RugOtherMessageS",
+    "variant_id": 0,
+    "series_id": 7338,
+    "game_sort_order": 45,
+    "nookipedia_id": 184,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "White",
+    "color_2": "White",
+    "colors_zh": "白",
+    "colors_ja": "ホワイト",
+    "colors_en": "White",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Message Mats",
+    "color_rank": 1,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 16,
+    "default_sort_order": 189,
+    "series_key": "RugOtherMessageS"
+  },
+  {
+    "title": "Item:Yellow message mat (New Horizons)",
+    "name_en": "Yellow message mat",
+    "name_zh": "黃色訊息地墊",
+    "name_ja": "きいろいメッセージマット",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Yellow_Message_Mat_NH_Icon.png",
+    "local_filename": "黃色訊息地墊_Yellow_message_mat.png",
+    "image_url": "https://dodo.ac/np/images/a/a5/Yellow_Message_Mat_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 7589,
+    "local_rel_path": "images/rugs/黃色訊息地墊_Yellow_message_mat.webp",
+    "grid_size": "2.0 × 1.0",
+    "size_category": "S",
+    "size_label": "小型 (S)",
+    "internal_id": 9311,
+    "filename_base": "RugOtherMessageS",
+    "variant_id": 2,
+    "series_id": 7338,
+    "game_sort_order": 47,
+    "nookipedia_id": 201,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "Yellow",
+    "color_2": "Yellow",
+    "colors_zh": "黃",
+    "colors_ja": "イエロー",
+    "colors_en": "Yellow",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Message Mats",
+    "color_rank": 5,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 16,
+    "default_sort_order": 190,
+    "series_key": "RugOtherMessageS"
+  },
+  {
+    "title": "Item:Red message mat (New Horizons)",
+    "name_en": "Red message mat",
+    "name_zh": "紅色訊息地墊",
+    "name_ja": "あかいメッセージマット",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Red_Message_Mat_NH_Icon.png",
+    "local_filename": "紅色訊息地墊_Red_message_mat.png",
+    "image_url": "https://dodo.ac/np/images/0/04/Red_Message_Mat_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 7783,
+    "local_rel_path": "images/rugs/紅色訊息地墊_Red_message_mat.webp",
+    "grid_size": "2.0 × 1.0",
+    "size_category": "S",
+    "size_label": "小型 (S)",
+    "internal_id": 9312,
+    "filename_base": "RugOtherMessageS",
+    "variant_id": 3,
+    "series_id": 7338,
+    "game_sort_order": 48,
+    "nookipedia_id": 132,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "Red",
+    "color_2": "Red",
+    "colors_zh": "紅",
+    "colors_ja": "レッド",
+    "colors_en": "Red",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Message Mats",
+    "color_rank": 6,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 16,
+    "default_sort_order": 191,
+    "series_key": "RugOtherMessageS"
+  },
+  {
+    "title": "Item:Blue message mat (New Horizons)",
+    "name_en": "Blue message mat",
+    "name_zh": "藍色訊息地墊",
+    "name_ja": "あおいメッセージマット",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Blue_Message_Mat_NH_Icon.png",
+    "local_filename": "藍色訊息地墊_Blue_message_mat.png",
+    "image_url": "https://dodo.ac/np/images/b/b0/Blue_Message_Mat_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8193,
+    "local_rel_path": "images/rugs/藍色訊息地墊_Blue_message_mat.webp",
+    "grid_size": "2.0 × 1.0",
+    "size_category": "S",
+    "size_label": "小型 (S)",
+    "internal_id": 9310,
+    "filename_base": "RugOtherMessageS",
+    "variant_id": 1,
+    "series_id": 7338,
+    "game_sort_order": 46,
+    "nookipedia_id": 16,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "Blue",
+    "color_2": "Blue",
+    "colors_zh": "藍",
+    "colors_ja": "ブルー",
+    "colors_en": "Blue",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Message Mats",
+    "color_rank": 8,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 16,
+    "default_sort_order": 192,
+    "series_key": "RugOtherMessageS"
+  },
+  {
+    "title": "Item:Light bamboo rug (New Horizons)",
+    "name_en": "Light bamboo rug",
+    "name_zh": "淺色竹地毯",
+    "name_ja": "ライトなバンブーラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Light_Bamboo_Rug_NH_Icon.png",
+    "local_filename": "淺色竹地毯_Light_bamboo_rug.png",
+    "image_url": "https://dodo.ac/np/images/c/c5/Light_Bamboo_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 11367,
+    "local_rel_path": "images/rugs/淺色竹地毯_Light_bamboo_rug.webp",
+    "grid_size": "3.0 × 2.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 11113,
+    "filename_base": "RugRectBambooM",
+    "variant_id": 0,
+    "series_id": 11113,
+    "game_sort_order": 128,
+    "nookipedia_id": 82,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Beige",
+    "color_2": "Brown",
+    "colors_zh": "米 / 棕",
+    "colors_ja": "ベージュ / ブラウン",
+    "colors_en": "Beige / Brown",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Wood Rugs",
+    "color_rank": 2,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 40,
+    "default_sort_order": 193,
+    "series_key": "Series_Bamboo_Rug_rugs"
+  },
+  {
+    "title": "Item:Dark bamboo rug (New Horizons)",
+    "name_en": "Dark bamboo rug",
+    "name_zh": "深色竹地毯",
+    "name_ja": "ダークなバンブーラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Dark_Bamboo_Rug_NH_Icon.png",
+    "local_filename": "深色竹地毯_Dark_bamboo_rug.png",
+    "image_url": "https://dodo.ac/np/images/7/70/Dark_Bamboo_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 11065,
+    "local_rel_path": "images/rugs/深色竹地毯_Dark_bamboo_rug.webp",
+    "grid_size": "3.0 × 2.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 11114,
+    "filename_base": "RugRectBambooM",
+    "variant_id": 1,
+    "series_id": 11113,
+    "game_sort_order": 129,
+    "nookipedia_id": 40,
+    "source": "Crafting",
+    "source_group": "diy",
+    "source_zh": "DIY製作",
+    "source_ja": "DIYレシピ",
+    "source_en": "Crafting",
+    "color_1": "Brown",
+    "color_2": "Brown",
+    "colors_zh": "棕",
+    "colors_ja": "ブラウン",
+    "colors_en": "Brown",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Wood Rugs",
+    "color_rank": 2,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 40,
+    "default_sort_order": 194,
+    "series_key": "Series_Bamboo_Rug_rugs"
+  },
+  {
+    "title": "Item:Fossil rug (New Horizons)",
+    "name_en": "Fossil rug",
+    "name_zh": "化石地毯",
+    "name_ja": "かせきのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Fossil_Rug_NH_Icon.png",
+    "local_filename": "化石地毯_Fossil_rug.png",
+    "image_url": "https://dodo.ac/np/images/8/80/Fossil_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8076,
+    "local_rel_path": "images/rugs/化石地毯_Fossil_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7366,
+    "filename_base": "RugOtherFossilM",
+    "variant_id": 0,
+    "series_id": 7366,
+    "game_sort_order": 106,
+    "nookipedia_id": 54,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "Purple",
+    "color_2": "White",
+    "colors_zh": "紫 / 白",
+    "colors_ja": "パープル / ホワイト",
+    "colors_en": "Purple / White",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Park Rugs",
+    "color_rank": 1,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 54,
+    "default_sort_order": 195,
+    "series_key": "RugOtherFossilM"
+  },
+  {
+    "title": "Item:Magic-circle rug (New Horizons)",
+    "name_en": "Magic-circle rug",
+    "name_zh": "魔法陣地毯",
+    "name_ja": "まほうじんのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Magic-Circle_Rug_NH_Icon.png",
+    "local_filename": "魔法陣地毯_Magic-circle_rug.png",
+    "image_url": "https://dodo.ac/np/images/d/d4/Magic-Circle_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 11121,
+    "local_rel_path": "images/rugs/魔法陣地毯_Magic-circle_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 7367,
+    "filename_base": "RugRoundMagicM",
+    "variant_id": 0,
+    "series_id": 7367,
+    "game_sort_order": 107,
+    "nookipedia_id": 88,
+    "source": "Saharah; Saharah's Co-op",
+    "source_group": "saharah",
+    "source_zh": "駱嵐",
+    "source_ja": "ローラン",
+    "source_en": "Saharah",
+    "color_1": "Purple",
+    "color_2": "Purple",
+    "colors_zh": "紫",
+    "colors_ja": "パープル",
+    "colors_en": "Purple",
+    "version_added": "1.0.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Shaggy Round Rugs",
+    "color_rank": 9,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 88,
+    "default_sort_order": 196,
+    "series_key": "RugRoundMagicM"
+  },
+  {
+    "title": "Item:Moon rug (New Horizons)",
+    "name_en": "Moon rug",
+    "name_zh": "月之地毯",
+    "name_ja": "つきのラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Moon_Rug_NH_Icon.png",
+    "local_filename": "月之地毯_Moon_rug.png",
+    "image_url": "https://dodo.ac/np/images/1/1e/Moon_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 10757,
+    "local_rel_path": "images/rugs/月之地毯_Moon_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 13287,
+    "filename_base": "RugRoundMoonM",
+    "variant_id": 0,
+    "series_id": 13287,
+    "game_sort_order": 175,
+    "nookipedia_id": 98,
+    "source": "Nook Shopping Seasonal",
+    "source_group": "seasonal",
+    "source_zh": "季節限定",
+    "source_ja": "シーズン限定",
+    "source_en": "Seasonal / Event",
+    "color_1": "Yellow",
+    "color_2": "Yellow",
+    "colors_zh": "黃",
+    "colors_ja": "イエロー",
+    "colors_en": "Yellow",
+    "version_added": "1.4.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Shaggy Round Rugs",
+    "color_rank": 5,
+    "is_special": 1,
+    "style_cluster": 120,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 120,
+    "series_anchor_id": 98,
+    "default_sort_order": 197,
+    "series_key": "RugRoundMoonM"
   },
   {
     "title": "Item:Light bamboo bath mat (New Horizons)",
@@ -9222,7 +9150,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 120,
     "series_anchor_id": 39,
-    "default_sort_order": 204
+    "default_sort_order": 198,
+    "series_key": "Series_Bamboo_Bath_Mat_rugs"
   },
   {
     "title": "Item:Dark bamboo bath mat (New Horizons)",
@@ -9267,7 +9196,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 120,
     "series_anchor_id": 39,
-    "default_sort_order": 205
+    "default_sort_order": 199,
+    "series_key": "Series_Bamboo_Bath_Mat_rugs"
   },
   {
     "title": "Item:Yellow bamboo mat (New Horizons)",
@@ -9312,7 +9242,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 120,
     "series_anchor_id": 59,
-    "default_sort_order": 206
+    "default_sort_order": 200,
+    "series_key": "Series_Bamboo_Mat_rugs"
   },
   {
     "title": "Item:Green bamboo mat (New Horizons)",
@@ -9357,7 +9288,8 @@
     "series_version_rank": 2,
     "series_style_cluster": 120,
     "series_anchor_id": 59,
-    "default_sort_order": 207
+    "default_sort_order": 201,
+    "series_key": "Series_Bamboo_Mat_rugs"
   },
   {
     "title": "Item:Starry-skies rug (New Horizons)",
@@ -9402,7 +9334,284 @@
     "series_version_rank": 2,
     "series_style_cluster": 120,
     "series_anchor_id": 174,
-    "default_sort_order": 208
+    "default_sort_order": 202,
+    "series_key": "RugRoundZodiacM"
+  },
+  {
+    "title": "Item:Cinnamoroll rug (New Horizons)",
+    "name_en": "Cinnamoroll rug",
+    "name_zh": "Cinnamoroll地毯",
+    "name_ja": "シナモロールなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Cinnamoroll_Rug_NH_Icon.png",
+    "local_filename": "Cinnamoroll地毯_Cinnamoroll_rug.png",
+    "image_url": "https://dodo.ac/np/images/7/78/Cinnamoroll_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 6174,
+    "local_rel_path": "images/rugs/Cinnamoroll地毯_Cinnamoroll_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12288,
+    "filename_base": "RugOtherCinnamonM",
+    "variant_id": 0,
+    "series_id": 12288,
+    "game_sort_order": 138,
+    "nookipedia_id": 35,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "White",
+    "color_2": "Aqua",
+    "colors_zh": "白 / 水藍",
+    "colors_ja": "ホワイト / アクア",
+    "colors_en": "White / Aqua",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 1,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 203,
+    "series_key": "Series_Sanrio_rugs"
+  },
+  {
+    "title": "Item:Hello Kitty rug (New Horizons)",
+    "name_en": "Hello Kitty rug",
+    "name_zh": "Hello Kitty地毯",
+    "name_ja": "ハローキティなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Hello_Kitty_Rug_NH_Icon.png",
+    "local_filename": "Hello_Kitty地毯_Hello_Kitty_rug.png",
+    "image_url": "https://dodo.ac/np/images/6/6e/Hello_Kitty_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8984,
+    "local_rel_path": "images/rugs/Hello_Kitty地毯_Hello_Kitty_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12291,
+    "filename_base": "RugOtherKittyM",
+    "variant_id": 0,
+    "series_id": 12291,
+    "game_sort_order": 141,
+    "nookipedia_id": 68,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "White",
+    "color_2": "Red",
+    "colors_zh": "白 / 紅",
+    "colors_ja": "ホワイト / レッド",
+    "colors_en": "White / Red",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 1,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 204,
+    "series_key": "Series_Sanrio_rugs"
+  },
+  {
+    "title": "Item:My Melody rug (New Horizons)",
+    "name_en": "My Melody rug",
+    "name_zh": "My Melody地毯",
+    "name_ja": "マイメロディなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:My_Melody_Rug_NH_Icon.png",
+    "local_filename": "My_Melody地毯_My_Melody_rug.png",
+    "image_url": "https://dodo.ac/np/images/8/8e/My_Melody_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8611,
+    "local_rel_path": "images/rugs/My_Melody地毯_My_Melody_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12292,
+    "filename_base": "RugOtherMymelodyM",
+    "variant_id": 0,
+    "series_id": 12292,
+    "game_sort_order": 142,
+    "nookipedia_id": 100,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "Pink",
+    "color_2": "White",
+    "colors_zh": "粉紅 / 白",
+    "colors_ja": "ピンク / ホワイト",
+    "colors_en": "Pink / White",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 1,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 205,
+    "series_key": "Series_Sanrio_rugs"
+  },
+  {
+    "title": "Item:Kerokerokeroppi rug (New Horizons)",
+    "name_en": "Kerokerokeroppi rug",
+    "name_zh": "Kerokerokeroppi地毯",
+    "name_ja": "けろけろけろっぴなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Kerokerokeroppi_Rug_NH_Icon.png",
+    "local_filename": "Kerokerokeroppi地毯_Kerokerokeroppi_rug.png",
+    "image_url": "https://dodo.ac/np/images/8/8e/Kerokerokeroppi_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 10071,
+    "local_rel_path": "images/rugs/Kerokerokeroppi地毯_Kerokerokeroppi_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12289,
+    "filename_base": "RugRoundKeroppiM",
+    "variant_id": 0,
+    "series_id": 12289,
+    "game_sort_order": 139,
+    "nookipedia_id": 74,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "Green",
+    "color_2": "Beige",
+    "colors_zh": "綠 / 米",
+    "colors_ja": "グリーン / ベージュ",
+    "colors_en": "Green / Beige",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 2,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 206,
+    "series_key": "Series_Sanrio_rugs"
+  },
+  {
+    "title": "Item:Pompompurin rug (New Horizons)",
+    "name_en": "Pompompurin rug",
+    "name_zh": "Pompompurin地毯",
+    "name_ja": "ポムポムプリンなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Pompompurin_Rug_NH_Icon.png",
+    "local_filename": "Pompompurin地毯_Pompompurin_rug.png",
+    "image_url": "https://dodo.ac/np/images/2/25/Pompompurin_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8434,
+    "local_rel_path": "images/rugs/Pompompurin地毯_Pompompurin_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12293,
+    "filename_base": "RugOtherPurinM",
+    "variant_id": 0,
+    "series_id": 12293,
+    "game_sort_order": 143,
+    "nookipedia_id": 118,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "Yellow",
+    "color_2": "Yellow",
+    "colors_zh": "黃",
+    "colors_ja": "イエロー",
+    "colors_en": "Yellow",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 5,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 207,
+    "series_key": "Series_Sanrio_rugs"
+  },
+  {
+    "title": "Item:Kiki & Lala rug (New Horizons)",
+    "name_en": "Kiki & Lala rug",
+    "name_zh": "Kiki & Lala地毯",
+    "name_ja": "キキ&ララなラグ",
+    "has_in_game_screenshot": false,
+    "target_media_file": "File:Kiki_&_Lala_Rug_NH_Icon.png",
+    "local_filename": "Kiki_&_Lala地毯_Kiki_&_Lala_rug.png",
+    "image_url": "https://dodo.ac/np/images/5/59/Kiki_%26_Lala_Rug_NH_Icon.png",
+    "width": 128,
+    "height": 128,
+    "filesize": 8209,
+    "local_rel_path": "images/rugs/Kiki_&_Lala地毯_Kiki_&_Lala_rug.webp",
+    "grid_size": "3.0 × 3.0",
+    "size_category": "M",
+    "size_label": "中型 (M)",
+    "internal_id": 12290,
+    "filename_base": "RugOtherKikilalaM",
+    "variant_id": 0,
+    "series_id": 12290,
+    "game_sort_order": 140,
+    "nookipedia_id": 75,
+    "source": "Nook Shopping Promotion",
+    "source_group": "promo",
+    "source_zh": "聯名合作",
+    "source_ja": "コラボ商品",
+    "source_en": "Promotion / Collab",
+    "color_1": "Pink",
+    "color_2": "Aqua",
+    "colors_zh": "粉紅 / 水藍",
+    "colors_ja": "ピンク / アクア",
+    "colors_en": "Pink / Aqua",
+    "version_added": "1.9.0",
+    "version_rank": 1,
+    "vfx": "No",
+    "tag": "Sanrio Rugs",
+    "color_rank": 6,
+    "is_special": 1,
+    "style_cluster": 130,
+    "series_is_special": 1,
+    "series_version_rank": 1,
+    "series_style_cluster": 130,
+    "series_anchor_id": 35,
+    "default_sort_order": 208,
+    "series_key": "Series_Sanrio_rugs"
   },
   {
     "title": "Item:LEGO® space logo rug (New Horizons)",
@@ -9447,6 +9656,7 @@
     "series_version_rank": 3,
     "series_style_cluster": 130,
     "series_anchor_id": 80,
-    "default_sort_order": 209
+    "default_sort_order": 209,
+    "series_key": "Series_LEGO_rugs"
   }
 ]
