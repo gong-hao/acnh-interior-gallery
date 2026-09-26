@@ -1368,9 +1368,6 @@ def generate_gallery_page(
             color: var(--primary);
             border-color: var(--primary);
         }}
-        html.preloaded .preloader-overlay {{
-            display: none !important;
-        }}
     </style>
     <script>
         function getInitialLanguage() {{
@@ -1393,9 +1390,7 @@ def generate_gallery_page(
         document.documentElement.lang = currentLang;
 
         try {{
-            if (localStorage.getItem('acnh_preloaded_{page_type}')) {{
-                document.documentElement.classList.add('preloaded');
-            }}
+            localStorage.removeItem('acnh_preloaded_{page_type}');
         }} catch(e) {{}}
     </script>
 </head>
@@ -1866,19 +1861,18 @@ def generate_gallery_page(
 
         (function startImagePreload() {{
             var total = galleryData.length;
-            if (total === 0 || document.documentElement.classList.contains('preloaded')) {{
+            if (total === 0) {{
                 dismissPreloader();
-                galleryData.forEach(function(item) {{
-                    var img = new Image();
-                    img.src = item.local_rel_path;
-                }});
                 return;
             }}
+
+            var startTime = Date.now();
             var loaded = 0;
             var barFill = document.getElementById('preloaderBarFill');
             var counter = document.getElementById('preloaderCounter');
             var percent = document.getElementById('preloaderPercent');
             var animFrameId = null;
+            var preloadDone = false;
 
             function updateProgressUI() {{
                 var pct = Math.min(100, Math.floor((loaded / total) * 100));
@@ -1888,6 +1882,26 @@ def generate_gallery_page(
                 if (counter) {{
                     counter.textContent = d.preloader_counter.replace('{{loaded}}', loaded).replace('{{total}}', total);
                 }}
+            }}
+
+            function finishPreloader() {{
+                if (preloadDone) return;
+                preloadDone = true;
+                if (safetyTimer) clearTimeout(safetyTimer);
+
+                if (barFill) barFill.style.width = '100%';
+                if (percent) percent.textContent = '100%';
+                var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
+                if (counter) counter.textContent = d.preloader_done.split('{{total}}').join(total);
+
+                // Minimum dwell time: at least 500ms from start to prevent screen flickering
+                var elapsed = Date.now() - startTime;
+                var remaining = Math.max(0, 500 - elapsed);
+
+                // Brief 250ms completion pause so the user sees 100% completed
+                setTimeout(function() {{
+                    dismissPreloader();
+                }}, remaining + 250);
             }}
 
             function onSingleImageDone() {{
@@ -1900,21 +1914,30 @@ def generate_gallery_page(
                 }}
 
                 if (loaded >= total) {{
-                    updateProgressUI();
-                    var d = I18N_DATA[currentLang] || I18N_DATA['zh-TW'];
-                    if (counter) counter.textContent = d.preloader_done.replace('{{total}}', total);
-                    try {{
-                        localStorage.setItem('acnh_preloaded_{page_type}', 'true');
-                    }} catch (e) {{}}
-                    setTimeout(dismissPreloader, 400);
+                    finishPreloader();
                 }}
             }}
 
-            // Full-speed native browser HTTP/2 multiplexing (parallel downloads at maximum pipe bandwidth)
+            // Safety fallback timeout: dismiss after 8s if network stalls
+            var safetyTimer = setTimeout(function() {{
+                finishPreloader();
+            }}, 8000);
+
+            // Parallel preloading with onload/onerror/complete detection for each image
             galleryData.forEach(function(item) {{
                 var img = new Image();
-                img.onload = img.onerror = onSingleImageDone;
+                var finished = false;
+                function done() {{
+                    if (finished) return;
+                    finished = true;
+                    img.onload = img.onerror = null;
+                    onSingleImageDone();
+                }}
+                img.onload = img.onerror = done;
                 img.src = item.local_rel_path;
+                if (img.complete) {{
+                    done();
+                }}
             }});
         }})();
 
