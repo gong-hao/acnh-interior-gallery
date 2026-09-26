@@ -42,22 +42,22 @@ def generate_gallery_page(
     out_filename, # "wallpapers.html", ...
     stats_counts, # dict of total counts for nav
 ):
-    # Sorting logic
+    # Precalculate area and dimensions for rugs for size sorting
     if page_type == "rugs":
-        def rug_sort_key(item):
-            grid = item.get("grid_size", "")
+        for it in items_data:
+            grid = it.get("grid_size", "")
             m = re.search(r'(\d+(?:\.\d+)?)\s*[×xX]\s*(\d+(?:\.\d+)?)', grid)
             if m:
                 w = float(m.group(1))
                 h = float(m.group(2))
-                area = w * h
+                it["area"] = w * h
+                it["max_side"] = max(w, h)
             else:
-                w, h, area = 0, 0, 0
-            return (-area, -max(w, h), -min(w, h), item.get("name_en", "").lower())
-        sorted_items = sorted(items_data, key=rug_sort_key)
-    else:
-        # Sort: items with in-game screenshots first, then alphabetically by English name
-        sorted_items = sorted(items_data, key=lambda x: (not x.get("has_in_game_screenshot", False), x.get("name_en", "").lower()))
+                it["area"] = 0
+                it["max_side"] = 0
+
+    # Default sort: 5-level architectural practicality & smoothness order
+    sorted_items = sorted(items_data, key=lambda x: x.get("default_sort_order", 0))
     
     for idx, it in enumerate(sorted_items):
         it["index"] = idx
@@ -74,6 +74,11 @@ def generate_gallery_page(
         has_shot = item.get("has_in_game_screenshot", False)
         width = item.get("width", 0)
         height = item.get("height", 0)
+        source_zh = item.get("source_zh", "")
+        source_en = item.get("source_en", "")
+        colors_zh = item.get("colors_zh", "")
+        colors_en = item.get("colors_en", "")
+        nookipedia_id = item.get("nookipedia_id", "")
         
         if page_type == "rugs":
             grid_sz = item.get("grid_size", "")
@@ -89,9 +94,13 @@ def generate_gallery_page(
         
         # Escape quotes
         safe_en = name_en.replace("'", "\\'")
+        data_name = f"{name_zh.lower()} {name_en.lower()} {name_ja.lower()} {source_zh.lower()} {source_en.lower()} {colors_zh.lower()} {colors_en.lower()} {nookipedia_id}"
+        
+        color_tag_html = f'<span class="card-meta-tag tag-color" id="color-{idx}" title="顏色">{colors_zh}</span>' if colors_zh else ""
+        source_tag_html = f'<span class="card-meta-tag tag-src" id="src-{idx}" title="出處">{source_zh}</span>' if source_zh else ""
         
         card = f"""
-        <div class="card" data-index="{idx}" data-type="{filter_type}" data-name="{name_zh.lower()} {name_en.lower()} {name_ja.lower()}" onclick="openLightboxByIndex({idx})">
+        <div class="card" id="card-{idx}" data-index="{idx}" data-type="{filter_type}" data-name="{data_name}" onclick="openLightboxByIndex({idx})">
             <button class="card-fav-btn" id="fav-btn-{idx}" onclick="toggleFavorite('{safe_en}', event)" title="加入我的最愛"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
             <div class="img-container">
                 <div class="img-placeholder" aria-hidden="true">
@@ -105,6 +114,10 @@ def generate_gallery_page(
                         <h3 class="name-zh name-primary" id="title-{idx}">{name_zh}</h3>
                         <p class="name-ja name-sub1" id="sub1-{idx}">{name_ja}</p>
                         <p class="name-en name-sub2" id="sub2-{idx}">{name_en}</p>
+                        <div class="card-meta-tags">
+                            {source_tag_html}
+                            {color_tag_html}
+                        </div>
                         <p class="dim" id="dim-{idx}">{dim_text}</p>
                     </div>
                     {rug_grid_box}
@@ -128,7 +141,7 @@ def generate_gallery_page(
         count_M = sum(1 for x in sorted_items if x.get("size_category") == "M")
         count_S = sum(1 for x in sorted_items if x.get("size_category") == "S")
         filter_buttons_html = f"""
-            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)" title="全部項目"><span class="filter-icon">✨</span> <span class="filter-label">全部</span> <span class="filter-count">({len(sorted_items)})</span></button>
+            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)" title="全部項目"><span class="filter-icon">🎞️</span> <span class="filter-label">全部</span> <span class="filter-count">({len(sorted_items)})</span></button>
             <button class="filter-btn" id="filterBtnL" onclick="setFilter('L', this)" title="大型 L (3×3)"><span class="filter-label">L</span> <span class="filter-count">({count_L})</span></button>
             <button class="filter-btn" id="filterBtnM" onclick="setFilter('M', this)" title="中型 M (2×2)"><span class="filter-label">M</span> <span class="filter-count">({count_M})</span></button>
             <button class="filter-btn" id="filterBtnS" onclick="setFilter('S', this)" title="小型 S (1×1)"><span class="filter-label">S</span> <span class="filter-count">({count_S})</span></button>
@@ -139,13 +152,31 @@ def generate_gallery_page(
     else:
         count_L = count_M = count_S = 0
         filter_buttons_html = f"""
-            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)" title="全部項目"><span class="filter-icon">✨</span> <span class="filter-label">全部</span> <span class="filter-count">({len(sorted_items)})</span></button>
-            <button class="filter-btn" id="filterBtnShot" onclick="setFilter('screenshot', this)" title="實景照片"><span class="filter-icon">📸</span> <span class="filter-label">實景</span> <span class="filter-count">({has_screenshot_count})</span></button>
-            <button class="filter-btn" id="filterBtnIcon" onclick="setFilter('icon', this)" title="尚無大圖 (僅圖示)"><span class="filter-icon">🎨</span> <span class="filter-label">圖示</span> <span class="filter-count">({no_screenshot_count})</span></button>
+            <button class="filter-btn active" id="filterBtnAll" onclick="setFilter('all', this)" title="全部項目"><span class="filter-icon">🎞️</span> <span class="filter-label">全部</span> <span class="filter-count">({len(sorted_items)})</span></button>
+            <button class="filter-btn" id="filterBtnShot" onclick="setFilter('screenshot', this)" title="實景照片"><span class="filter-icon">📷</span> <span class="filter-label">實景</span> <span class="filter-count">({has_screenshot_count})</span></button>
+            <button class="filter-btn" id="filterBtnIcon" onclick="setFilter('icon', this)" title="尚無大圖 (僅圖示)"><span class="filter-icon">🏷️</span> <span class="filter-label">圖示</span> <span class="filter-count">({no_screenshot_count})</span></button>
             <div class="filter-btn-break"></div>
             <button class="filter-btn fav-filter-btn" id="favFilterBtn" onclick="setFilter('favorite', this)" title="我的最愛"><span class="filter-icon">❤️</span> <span class="filter-label">最愛</span> <span class="filter-count">(<span id="favCount">0</span>)</span></button>
             <button class="filter-btn clear-fav-btn" id="clearFavBtn" onclick="clearFavorites()" title="清空所有已收藏的項目" style="display: none;"><span class="filter-icon">🗑️</span> <span class="filter-label">清空</span></button>
         """
+
+    sort_selector_html = f"""
+                <div class="sort-selector-wrap" title="排序方式">
+                    <span class="sort-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px;"><path d="M7 20V4m0 0L3 8m4-4l4 4M17 4v16m0 0l4-4m-4 4l-4-4"/></svg></span>
+                    <select id="sortSelect" class="sort-select" onchange="changeSort(this.value)" aria-label="排序方式">
+                        <option value="default_asc" id="optSortDefaultAsc">🌟 預設排序 (正序)</option>
+                        <option value="default_desc" id="optSortDefaultDesc">🌟 預設排序 (倒序)</option>
+                        <option value="id_asc" id="optSortIdAsc">🔢 序號 (正序)</option>
+                        <option value="id_desc" id="optSortIdDesc">🔢 序號 (倒序)</option>
+                        <option value="name_asc" id="optSortNameAsc">🔤 英文名稱 (正序)</option>
+                        <option value="name_desc" id="optSortNameDesc">🔤 英文名稱 (倒序)</option>
+                        <option value="source_asc" id="optSortSourceAsc">🏷️ 出處 (正序)</option>
+                        <option value="source_desc" id="optSortSourceDesc">🏷️ 出處 (倒序)</option>
+                        <option value="color_asc" id="optSortColorAsc">🎨 顏色 (正序)</option>
+                        <option value="color_desc" id="optSortColorDesc">🎨 顏色 (倒序)</option>
+                    </select>
+                </div>
+    """
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -324,20 +355,81 @@ def generate_gallery_page(
             font-weight: 700;
         }}
         .search-box {{
-            padding: 10px 18px;
-            font-size: 1rem;
+            height: 38px;
+            padding: 0 16px;
+            font-size: 0.92rem;
             border: 2px solid #ddd;
-            border-radius: 24px;
-            width: 320px;
+            border-radius: 20px;
+            width: 250px;
             max-width: 100%;
             box-sizing: border-box;
             outline: none;
-            transition: all 0.3s;
+            transition: all 0.2s;
             background: #fff;
+            color: var(--text-main);
         }}
         .search-box:focus {{
             border-color: var(--primary);
             box-shadow: 0 0 8px rgba(43, 92, 95, 0.2);
+        }}
+        .sort-selector-wrap {{
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            height: 38px;
+            padding: 0 10px 0 12px;
+            box-sizing: border-box;
+            transition: all 0.2s;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            gap: 6px;
+        }}
+        .sort-selector-wrap:hover, .sort-selector-wrap:focus-within {{
+            border-color: var(--primary);
+            box-shadow: 0 0 8px rgba(43, 92, 95, 0.15);
+        }}
+        .sort-icon {{
+            font-size: 0.95rem;
+            line-height: 1;
+        }}
+        .sort-select {{
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 4px 4px 4px 0;
+            font-family: inherit;
+        }}
+        .sort-select option {{
+            background: #fff;
+            color: #333;
+            font-weight: 500;
+            padding: 6px;
+        }}
+        .id-badge {{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 8px;
+            z-index: 5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            pointer-events: none;
         }}
         .filter-buttons-scroll {{
             display: flex;
@@ -585,8 +677,35 @@ def generate_gallery_page(
         .name-ja, .name-sub2 {{
             font-size: 0.85rem;
             color: #888888;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             line-height: 1.25;
+        }}
+        .card-meta-tags {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 3px;
+            margin-bottom: 6px;
+        }}
+        .card-meta-tag {{
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 6px;
+            line-height: 1.25;
+            white-space: nowrap;
+        }}
+        .tag-src {{
+            background: #eef4f0;
+            color: #2b5c5f;
+            border: 1px solid rgba(43, 92, 95, 0.15);
+        }}
+        .tag-color {{
+            background: #fdf5ea;
+            color: #9a6519;
+            border: 1px solid rgba(154, 101, 25, 0.15);
         }}
         .dim {{
             font-size: 0.82rem;
@@ -749,7 +868,8 @@ def generate_gallery_page(
             align-items: center;
             justify-content: center;
             max-width: 92vw;
-            max-height: 98vh;
+            height: 100%;
+            max-height: calc(100vh - 20px);
             z-index: 1000;
             padding: 4px 60px;
             box-sizing: border-box;
@@ -759,11 +879,12 @@ def generate_gallery_page(
             align-items: center;
             justify-content: center;
             max-width: 90vw;
-            max-height: calc(100vh - 170px);
+            max-height: calc(100vh - 220px);
+            flex-shrink: 1;
         }}
         .lightbox-img-wrapper img {{
             max-width: 100%;
-            max-height: calc(100vh - 170px);
+            max-height: calc(100vh - 220px);
             object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.5);
@@ -778,8 +899,35 @@ def generate_gallery_page(
             gap: 6px;
             flex-shrink: 0;
         }}
+        .lightbox-meta-group {{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }}
         .modal-caption {{
             font-size: 1.08rem;
+            color: #fff;
+        }}
+        .lightbox-detail-info {{
+            font-size: 0.82rem;
+            color: #bbb;
+        }}
+        .lightbox-meta-row {{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }}
+        .lightbox-meta-tag {{
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 6px;
+            padding: 2px 8px;
+            color: #fff;
+            font-size: 0.82rem;
+            white-space: nowrap;
         }}
         .lightbox-actions {{
             display: flex;
@@ -898,7 +1046,8 @@ def generate_gallery_page(
                 width: 100%;
                 max-width: 100%;
                 box-sizing: border-box;
-                padding: 9px 16px;
+                height: 38px;
+                padding: 0 16px;
                 font-size: 0.92rem;
             }}
             .filter-buttons-scroll {{
@@ -1069,11 +1218,11 @@ def generate_gallery_page(
             .lightbox-img-wrapper {{
                 width: 100%;
                 max-width: 100%;
-                max-height: calc(100vh - 190px - env(safe-area-inset-bottom, 0px));
+                max-height: calc(100vh - 210px - env(safe-area-inset-bottom, 0px));
             }}
             .lightbox-img-wrapper img {{
                 max-width: 100%;
-                max-height: calc(100vh - 190px - env(safe-area-inset-bottom, 0px));
+                max-height: calc(100vh - 210px - env(safe-area-inset-bottom, 0px));
                 width: auto;
                 height: auto;
                 object-fit: contain;
@@ -1102,6 +1251,12 @@ def generate_gallery_page(
                 margin-top: 6px;
                 gap: 4px;
             }}
+            .lightbox-meta-group {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3px;
+            }}
             .modal-caption {{
                 font-size: 0.95rem;
             }}
@@ -1110,6 +1265,16 @@ def generate_gallery_page(
             }}
             .lightbox-detail-info {{
                 display: block;
+            }}
+            .lightbox-meta-row {{
+                display: flex;
+                justify-content: center;
+                gap: 6px;
+                flex-wrap: wrap;
+            }}
+            .lightbox-meta-tag {{
+                font-size: 0.78rem;
+                padding: 2px 6px;
             }}
             .lightbox-fav-btn {{
                 padding: 5px 12px;
@@ -1138,6 +1303,9 @@ def generate_gallery_page(
             .caption-sub {{
                 display: none !important;
             }}
+            .modal {{
+                padding: 4px;
+            }}
             .lightbox-main {{
                 padding: 2px 4px;
                 width: 100%;
@@ -1151,66 +1319,92 @@ def generate_gallery_page(
                 box-sizing: border-box;
             }}
             .lightbox-img-wrapper {{
-                flex: 1;
+                flex: 1 1 auto;
                 width: 100%;
-                max-width: 100%;
-                max-height: calc(100vh - 50px - env(safe-area-inset-bottom, 0px));
+                max-width: calc(100vw - 110px);
+                max-height: calc(100vh - 54px - env(safe-area-inset-bottom, 0px));
+                min-height: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 0;
+                margin: 0 auto 6px auto;
+                overflow: hidden;
             }}
             .lightbox-img-wrapper img {{
                 max-width: 100%;
-                max-height: calc(100vh - 50px - env(safe-area-inset-bottom, 0px));
+                max-height: calc(100vh - 54px - env(safe-area-inset-bottom, 0px));
                 width: auto;
                 height: auto;
                 object-fit: contain;
                 border-radius: 6px;
             }}
             .lightbox-info {{
-                margin-top: auto;
+                margin-top: 0;
                 margin-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
                 background: rgba(20, 24, 30, 0.88);
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
                 border: 1px solid rgba(255, 255, 255, 0.15);
                 border-radius: 20px;
-                padding: 3px 12px;
+                padding: 0 14px;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                gap: 10px;
+                gap: 12px;
                 width: auto;
-                max-width: 90%;
-                height: 38px;
+                max-width: 92%;
+                height: 40px;
                 box-sizing: border-box;
                 flex-shrink: 0;
                 z-index: 1002;
             }}
+            .lightbox-meta-group {{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                overflow: hidden;
+                flex: 1 1 auto;
+                min-width: 0;
+            }}
             .modal-caption {{
-                font-size: 0.86rem;
+                font-size: 0.88rem;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 text-align: left;
-                flex: 1;
+                flex-shrink: 1;
                 min-width: 0;
                 line-height: 1.2;
+            }}
+            .lightbox-meta-row {{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-shrink: 0;
+            }}
+            .lightbox-meta-tag {{
+                font-size: 0.78rem;
+                padding: 2px 7px;
+                background: rgba(255, 255, 255, 0.18);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                border-radius: 6px;
+                color: #fff;
+                white-space: nowrap;
             }}
             .lightbox-actions {{
                 flex-shrink: 0;
                 gap: 8px;
             }}
             .lightbox-fav-btn {{
-                padding: 3px 8px;
-                font-size: 0.76rem;
+                padding: 4px 10px;
+                font-size: 0.78rem;
                 border-radius: 14px;
                 gap: 4px;
             }}
             .lightbox-counter {{
-                font-size: 0.76rem;
+                font-size: 0.78rem;
                 white-space: nowrap;
                 color: #bbb;
             }}
@@ -1395,6 +1589,7 @@ def generate_gallery_page(
             <h1 id="headerTitle">集合啦！動物森友會 - {page_title}</h1>
             <div class="controls">
                 <input type="text" id="search" class="search-box" placeholder="搜尋名稱 (中/日/英)..." oninput="filterCards()">
+                {sort_selector_html}
                 <div class="filter-buttons-scroll">
                     {filter_buttons_html}
                 </div>
@@ -1430,7 +1625,11 @@ def generate_gallery_page(
                 <img id="lightboxImg" src="" alt="">
             </div>
             <div class="lightbox-info">
-                <div class="modal-caption" id="lightboxCaption"></div>
+                <div class="lightbox-meta-group">
+                    <div class="modal-caption" id="lightboxCaption"></div>
+                    <div class="lightbox-detail-info" id="lightboxDetailInfo"></div>
+                    <div class="lightbox-meta-row" id="lightboxMetaRow"></div>
+                </div>
                 <div class="lightbox-actions">
                     <button class="lightbox-fav-btn" id="lightboxFavBtn" onclick="toggleFavoriteCurrent(event)">
                         <span id="lightboxFavIcon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:-2px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> <span id="lightboxFavText">收藏</span>
@@ -1520,6 +1719,17 @@ def generate_gallery_page(
                 lightbox_prev: '上一張 (← 方向鍵)',
                 lightbox_next: '下一張 (→ 方向鍵)',
                 lightbox_close: '關閉 (Esc)',
+                sort_label: '排序方式',
+                sort_default_asc: '🌟 預設排序 (正序)',
+                sort_default_desc: '🌟 預設排序 (倒序)',
+                sort_id_asc: '🔢 序號 (正序)',
+                sort_id_desc: '🔢 序號 (倒序)',
+                sort_name_asc: '🔤 英文名稱 (正序)',
+                sort_name_desc: '🔤 英文名稱 (倒序)',
+                sort_source_asc: '🏷️ 出處 (正序)',
+                sort_source_desc: '🏷️ 出處 (倒序)',
+                sort_color_asc: '🎨 顏色 (正序)',
+                sort_color_desc: '🎨 顏色 (倒序)',
                 res_label: '解析度: {{w}} &times; {{h}} px',
                 rug_footprint: '佔地尺寸: <strong>{{grid}}</strong>（{{label}}）',
                 rug_grid_hint: '房間 5×5 基準網格',
@@ -1566,6 +1776,17 @@ def generate_gallery_page(
                 lightbox_prev: 'Previous (← Arrow)',
                 lightbox_next: 'Next (→ Arrow)',
                 lightbox_close: 'Close (Esc)',
+                sort_label: 'Sort Order',
+                sort_default_asc: '🌟 Default (Ascending)',
+                sort_default_desc: '🌟 Default (Descending)',
+                sort_id_asc: '🔢 ID (Ascending)',
+                sort_id_desc: '🔢 ID (Descending)',
+                sort_name_asc: '🔤 Name (Ascending)',
+                sort_name_desc: '🔤 Name (Descending)',
+                sort_source_asc: '🏷️ Source (Ascending)',
+                sort_source_desc: '🏷️ Source (Descending)',
+                sort_color_asc: '🎨 Color (Ascending)',
+                sort_color_desc: '🎨 Color (Descending)',
                 res_label: 'Resolution: {{w}} &times; {{h}} px',
                 rug_footprint: 'Footprint: <strong>{{grid}}</strong> ({{label}})',
                 rug_grid_hint: 'Room 5×5 Reference Grid',
@@ -1612,6 +1833,17 @@ def generate_gallery_page(
                 lightbox_prev: '前へ (← キー)',
                 lightbox_next: '次へ (→ キー)',
                 lightbox_close: '閉じる (Esc)',
+                sort_label: '並び替え',
+                sort_default_asc: '🌟 デフォルト (昇順)',
+                sort_default_desc: '🌟 デフォルト (降順)',
+                sort_id_asc: '🔢 登録番号 (昇順)',
+                sort_id_desc: '🔢 登録番号 (降順)',
+                sort_name_asc: '🔤 英語名 (昇順)',
+                sort_name_desc: '🔤 英語名 (降順)',
+                sort_source_asc: '🏷️ 入手先 (昇順)',
+                sort_source_desc: '🏷️ 入手先 (降順)',
+                sort_color_asc: '🎨 カラー (昇順)',
+                sort_color_desc: '🎨 カラー (降順)',
                 res_label: '解像度: {{w}} &times; {{h}} px',
                 rug_footprint: 'サイズ: <strong>{{grid}}</strong>（{{label}}）',
                 rug_grid_hint: '部屋 5×5 基準グリッド',
@@ -1687,6 +1919,15 @@ def generate_gallery_page(
                     if (sub2El) sub2El.textContent = it.name_zh;
                 }}
 
+                const srcEl = document.getElementById('src-' + i);
+                const colEl = document.getElementById('color-' + i);
+                if (srcEl) {{
+                    srcEl.textContent = (lang === 'en-US' ? it.source_en : (lang === 'ja-JP' ? it.source_ja : it.source_zh)) || it.source;
+                }}
+                if (colEl) {{
+                    colEl.textContent = (lang === 'en-US' ? it.colors_en : (lang === 'ja-JP' ? it.colors_ja : it.colors_zh)) || '';
+                }}
+
                 if (favBtn) {{
                     favBtn.title = isFav ? d.fav_remove : d.fav_add;
                 }}
@@ -1734,7 +1975,7 @@ def generate_gallery_page(
             if (searchInput) searchInput.placeholder = d.search_placeholder;
 
             const btnAll = document.getElementById('filterBtnAll');
-            if (btnAll) btnAll.innerHTML = `<span class="filter-icon">✨</span> <span class="filter-label">${{d.filter_all_label}}</span> <span class="filter-count">(${{STATS.total}})</span>`;
+            if (btnAll) btnAll.innerHTML = `<span class="filter-icon">🎞️</span> <span class="filter-label">${{d.filter_all_label}}</span> <span class="filter-count">(${{STATS.total}})</span>`;
 
             if (STATS.page_type === 'rugs') {{
                 const btnL = document.getElementById('filterBtnL');
@@ -1745,9 +1986,9 @@ def generate_gallery_page(
                 if (btnS) btnS.innerHTML = `<span class="filter-label">${{d.filter_rug_S_label}}</span> <span class="filter-count">(${{STATS.count_S}})</span>`;
             }} else {{
                 const btnShot = document.getElementById('filterBtnShot');
-                if (btnShot) btnShot.innerHTML = `<span class="filter-icon">📸</span> <span class="filter-label">${{d.filter_shot_label}}</span> <span class="filter-count">(${{STATS.has_shot}})</span>`;
+                if (btnShot) btnShot.innerHTML = `<span class="filter-icon">📷</span> <span class="filter-label">${{d.filter_shot_label}}</span> <span class="filter-count">(${{STATS.has_shot}})</span>`;
                 const btnIcon = document.getElementById('filterBtnIcon');
-                if (btnIcon) btnIcon.innerHTML = `<span class="filter-icon">🎨</span> <span class="filter-label">${{d.filter_icon_label}}</span> <span class="filter-count">(${{STATS.no_shot}})</span>`;
+                if (btnIcon) btnIcon.innerHTML = `<span class="filter-icon">🏷️</span> <span class="filter-label">${{d.filter_icon_label}}</span> <span class="filter-count">(${{STATS.no_shot}})</span>`;
             }}
 
             const favFilterBtn = document.getElementById('favFilterBtn');
@@ -1782,6 +2023,29 @@ def generate_gallery_page(
             if (footerSrc) footerSrc.innerHTML = d.footer_src;
             const footerNote = document.getElementById('footerNote');
             if (footerNote) footerNote.textContent = d.footer_note;
+
+            const optDefaultAsc = document.getElementById('optSortDefaultAsc');
+            if (optDefaultAsc) optDefaultAsc.textContent = d.sort_default_asc;
+            const optDefaultDesc = document.getElementById('optSortDefaultDesc');
+            if (optDefaultDesc) optDefaultDesc.textContent = d.sort_default_desc;
+            const optIdAsc = document.getElementById('optSortIdAsc');
+            if (optIdAsc) optIdAsc.textContent = d.sort_id_asc.replace('{{total}}', STATS.total);
+            const optIdDesc = document.getElementById('optSortIdDesc');
+            if (optIdDesc) optIdDesc.textContent = d.sort_id_desc;
+            const optNameAsc = document.getElementById('optSortNameAsc');
+            if (optNameAsc) optNameAsc.textContent = d.sort_name_asc;
+            const optNameDesc = document.getElementById('optSortNameDesc');
+            if (optNameDesc) optNameDesc.textContent = d.sort_name_desc;
+            const optSourceAsc = document.getElementById('optSortSourceAsc');
+            if (optSourceAsc) optSourceAsc.textContent = d.sort_source_asc;
+            const optSourceDesc = document.getElementById('optSortSourceDesc');
+            if (optSourceDesc) optSourceDesc.textContent = d.sort_source_desc;
+            const optColorAsc = document.getElementById('optSortColorAsc');
+            if (optColorAsc) optColorAsc.textContent = d.sort_color_asc;
+            const optColorDesc = document.getElementById('optSortColorDesc');
+            if (optColorDesc) optColorDesc.textContent = d.sort_color_desc;
+            const sortWrap = document.querySelector('.sort-selector-wrap');
+            if (sortWrap) sortWrap.title = d.sort_label;
 
             applyCardLanguage(lang);
             filterCards();
@@ -1869,6 +2133,9 @@ def generate_gallery_page(
                 favorites.add(id);
             }}
             saveFavorites();
+            if (currentSort === 'favorite') {{
+                reorderCards();
+            }}
             if (currentFilter === 'favorite') {{
                 filterCards();
             }}
@@ -1909,6 +2176,9 @@ def generate_gallery_page(
             favorites.clear();
             saveFavorites();
             closeConfirmModal();
+            if (currentSort === 'favorite') {{
+                reorderCards();
+            }}
             if (currentFilter === 'favorite') {{
                 filterCards();
             }}
@@ -1958,6 +2228,69 @@ def generate_gallery_page(
             btn.title = isFav ? d.fav_remove : d.fav_add;
         }}
 
+        let currentSort = 'default_asc';
+        try {{
+            const savedSort = localStorage.getItem('acnh_sort_order');
+            const validSorts = ['default_asc', 'default_desc', 'id_asc', 'id_desc', 'name_asc', 'name_desc', 'source_asc', 'source_desc', 'color_asc', 'color_desc'];
+            if (savedSort && validSorts.includes(savedSort)) currentSort = savedSort;
+        }} catch (e) {{}}
+
+        function changeSort(val) {{
+            currentSort = val;
+            try {{
+                localStorage.setItem('acnh_sort_order', val);
+            }} catch (e) {{}}
+            reorderCards();
+            filterCards();
+        }}
+
+        function getSortComparator(sortType) {{
+            return function(idxA, idxB) {{
+                const a = galleryData[idxA];
+                const b = galleryData[idxB];
+                if (sortType === 'default_asc') {{
+                    return (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'default_desc') {{
+                    return (b.default_sort_order ?? 0) - (a.default_sort_order ?? 0);
+                }} else if (sortType === 'id_asc') {{
+                    return (a.nookipedia_id || 9999) - (b.nookipedia_id || 9999);
+                }} else if (sortType === 'id_desc') {{
+                    return (b.nookipedia_id || 9999) - (a.nookipedia_id || 9999);
+                }} else if (sortType === 'name_asc') {{
+                    return (a.name_en || '').localeCompare(b.name_en || '');
+                }} else if (sortType === 'name_desc') {{
+                    return (b.name_en || '').localeCompare(a.name_en || '');
+                }} else if (sortType === 'source_asc') {{
+                    const sA = (a.source_group || '') + (a.source || '');
+                    const sB = (b.source_group || '') + (b.source || '');
+                    return sA.localeCompare(sB) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'source_desc') {{
+                    const sA = (a.source_group || '') + (a.source || '');
+                    const sB = (b.source_group || '') + (b.source || '');
+                    return sB.localeCompare(sA) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'color_asc') {{
+                    return (a.color_rank || 99) - (b.color_rank || 99) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }} else if (sortType === 'color_desc') {{
+                    return (b.color_rank || 99) - (a.color_rank || 99) || (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+                }}
+                return (a.default_sort_order ?? 0) - (b.default_sort_order ?? 0);
+            }};
+        }}
+
+        function reorderCards() {{
+            const grid = document.getElementById('galleryGrid');
+            if (!grid) return;
+            const indices = galleryData.map((_, i) => i);
+            indices.sort(getSortComparator(currentSort));
+
+            const fragment = document.createDocumentFragment();
+            indices.forEach(idx => {{
+                const card = document.getElementById(`card-${{idx}}`);
+                if (card) fragment.appendChild(card);
+            }});
+            grid.appendChild(fragment);
+        }}
+
         function setFilter(type, btn) {{
             currentFilter = type;
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1970,7 +2303,8 @@ def generate_gallery_page(
             const cards = document.querySelectorAll('.card');
             filteredIndices = [];
             
-            cards.forEach((card, idx) => {{
+            cards.forEach(card => {{
+                const idx = parseInt(card.getAttribute('data-index'), 10);
                 const item = galleryData[idx];
                 const type = card.getAttribute('data-type');
                 const name = card.getAttribute('data-name');
@@ -2040,21 +2374,7 @@ def generate_gallery_page(
             img.src = item.local_rel_path;
             img.alt = (currentLang === 'en-US' ? item.name_en : (currentLang === 'ja-JP' ? item.name_ja : item.name_zh));
 
-            let detailInfo = '';
-            if (item.grid_size) {{
-                const szLbl = getLocalizedRugSizeLabel(item.size_category, currentLang);
-                detailInfo = `
-                    <div class="lightbox-detail-info" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px;">
-                        ${{getRugGridSvg(item.grid_size, 38)}}
-                        <div style="text-align:left; font-size:0.88rem; color:#fff;">
-                            <div>${{d.rug_footprint.replace('{{grid}}', item.grid_size).replace('{{label}}', szLbl)}}</div>
-                            <div style="font-size:0.75rem; color:#bbb; margin-top:1px;">${{d.rug_grid_hint}}</div>
-                        </div>
-                    </div>`;
-            }} else {{
-                detailInfo = `<div class="lightbox-detail-info" style="font-size: 0.82rem; color: #aaa; margin-top: 2px;">${{d.res_label.replace('{{w}}', item.width).replace('{{h}}', item.height)}}</div>`;
-            }}
-
+            // Caption (Names)
             let captionText = '';
             if (currentLang === 'en-US') {{
                 captionText = `<span class="caption-primary"><strong>${{item.name_en}}</strong></span> <span class="caption-sub">/ ${{item.name_ja}} (${{item.name_zh}})</span>`;
@@ -2063,8 +2383,41 @@ def generate_gallery_page(
             }} else {{
                 captionText = `<span class="caption-primary"><strong>${{item.name_zh}}</strong></span> <span class="caption-sub">/ ${{item.name_ja}} (${{item.name_en}})</span>`;
             }}
+            document.getElementById('lightboxCaption').innerHTML = captionText;
 
-            document.getElementById('lightboxCaption').innerHTML = captionText + detailInfo;
+            // Detail Info (Resolution or rug footprint)
+            const detailElem = document.getElementById('lightboxDetailInfo');
+            if (detailElem) {{
+                if (item.grid_size) {{
+                    const szLbl = getLocalizedRugSizeLabel(item.size_category, currentLang);
+                    detailElem.innerHTML = `
+                        <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+                            ${{getRugGridSvg(item.grid_size, 34)}}
+                            <div style="text-align:left; font-size:0.86rem; color:#fff;">
+                                <div>${{d.rug_footprint.replace('{{grid}}', item.grid_size).replace('{{label}}', szLbl)}}</div>
+                                <div style="font-size:0.75rem; color:#bbb; margin-top:1px;">${{d.rug_grid_hint}}</div>
+                            </div>
+                        </div>`;
+                }} else {{
+                    detailElem.innerHTML = `${{d.res_label.replace('{{w}}', item.width).replace('{{h}}', item.height)}}`;
+                }}
+            }}
+
+            // Source & Color Meta Tags
+            const metaElem = document.getElementById('lightboxMetaRow');
+            if (metaElem) {{
+                const curSrc = (currentLang === 'en-US' ? item.source_en : (currentLang === 'ja-JP' ? item.source_ja : item.source_zh)) || item.source;
+                const curColor = (currentLang === 'en-US' ? item.colors_en : (currentLang === 'ja-JP' ? item.colors_ja : item.colors_zh)) || '';
+                let tagsHtml = '';
+                if (curSrc) {{
+                    tagsHtml += `<span class="lightbox-meta-tag">🏷️ ${{curSrc}}</span>`;
+                }}
+                if (curColor) {{
+                    tagsHtml += `<span class="lightbox-meta-tag">🎨 ${{curColor}}</span>`;
+                }}
+                metaElem.innerHTML = tagsHtml;
+            }}
+
             document.getElementById('lightboxCounter').textContent = `${{currentPos + 1}} / ${{filteredIndices.length}}`;
 
             updateLightboxFavBtn();
@@ -2213,17 +2566,17 @@ def generate_gallery_page(
             }}
         }});
 
-        // Clean up any Service Worker
-        if ('serviceWorker' in navigator) {{
-            navigator.serviceWorker.getRegistrations().then(function(regs) {{
-                for (var r of regs) r.unregister();
-            }});
-        }}
-
-        // Initialize language and favorites
+        // Initialize language, favorites, and sort order
         loadFavorites();
         var sel = document.getElementById('langSelect');
         if (sel) sel.value = currentLang;
+
+        var sortEl = document.getElementById('sortSelect');
+        if (sortEl) sortEl.value = currentSort;
+        if (currentSort !== 'game_asc') {{
+            reorderCards();
+        }}
+
         applyLanguage(currentLang);
     </script>
 </body>
